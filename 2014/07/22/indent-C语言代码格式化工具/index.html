@@ -1,0 +1,766 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="indent,格式化," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/uploads/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="indent可以让C代码格式化，更方便阅读 安装indent for Windows 下载地址找到Download下载Complete package，然后安装indent for Linux 下载地址在亚洲区中国有几个镜像，点进去找到indent然后下载最新版本.tar.gz 12345tar zxvf indent.tar.gzcd indent./configuremake（如果有错误out">
+<meta name="keywords" content="indent,格式化">
+<meta property="og:type" content="article">
+<meta property="og:title" content="indent-C语言代码格式化工具">
+<meta property="og:url" content="http://yoursite.com/2014/07/22/indent-C语言代码格式化工具/index.html">
+<meta property="og:site_name" content="无名小站">
+<meta property="og:description" content="indent可以让C代码格式化，更方便阅读 安装indent for Windows 下载地址找到Download下载Complete package，然后安装indent for Linux 下载地址在亚洲区中国有几个镜像，点进去找到indent然后下载最新版本.tar.gz 12345tar zxvf indent.tar.gzcd indent./configuremake（如果有错误out">
+<meta property="og:updated_time" content="2017-06-03T14:25:52.252Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="indent-C语言代码格式化工具">
+<meta name="twitter:description" content="indent可以让C代码格式化，更方便阅读 安装indent for Windows 下载地址找到Download下载Complete package，然后安装indent for Linux 下载地址在亚洲区中国有几个镜像，点进去找到indent然后下载最新版本.tar.gz 12345tar zxvf indent.tar.gzcd indent./configuremake（如果有错误out">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2014/07/22/indent-C语言代码格式化工具/"/>
+
+
+
+
+
+  <title>indent-C语言代码格式化工具 | 无名小站</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">无名小站</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">一个兴趣使然的无名小站</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2014/07/22/indent-C语言代码格式化工具/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="y">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/sh.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="无名小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">indent-C语言代码格式化工具</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-07-22T09:22:15+08:00">
+                2014-07-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C-C/" itemprop="url" rel="index">
+                    <span itemprop="name">C/C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>indent可以让C代码格式化，更方便阅读</p>
+<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>indent for Windows <a href="http://gnuwin32.sourceforge.net/packages/indent.htm" target="_blank" rel="external">下载地址</a><br>找到Download下载Complete package，然后安装<br>indent for Linux <a href="http://www.gnu.org/prep/ftp.html" target="_blank" rel="external">下载地址</a><br>在亚洲区中国有几个镜像，点进去找到indent然后下载最新版本.tar.gz</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">tar zxvf indent.tar.gz</div><div class="line"><span class="built_in">cd</span> indent</div><div class="line">./configure</div><div class="line">make（如果有错误output.c:26:26: error: static declaration of ‘output’ follows non-static declaration进入src目录找到output.c第26行删除static改成FILE * output = NULL;）</div><div class="line">make install</div></pre></td></tr></table></figure>
+<h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><p>该工具通过终端运行，终端下输入</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">indent –kr –i8 test.c 代码使用K&amp;R风格，8个字节缩进</div></pre></td></tr></table></figure>
+<p>（Windows用户打开cmd进入indent的bin目录，如果不想麻烦可以把;D:\indent\bin路径加入系统环境变量，以后就不需要每次进入工具目录了，win7右键计算机属性-高级系统设置-高级-环境变量，在系统变量下找到Path把路径添加进去即可）<br>格式化后的代码自动保存在test.c中，另外生成test.c~来保存原来的代码</p>
+<p>格式化前：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;<span class="built_in">printf</span>(<span class="string">"hello\n"</span>);<span class="keyword">return</span> <span class="number">0</span>;&#125;</div></pre></td></tr></table></figure>
+<p>格式化后：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"hello\n"</span>);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><p>不同版本某些参数可能不同，详见文档<br>-bad或–blank-lines-after-declarations 　在声明区段或加上空白行。<br>-bap或–blank-lines-after-procedures 　在程序或加上空白行。<br>-bbb或–blank-lines-after-block-comments 　在注释区段后加上空白行。<br>-bc或–blank-lines-after-commas 　在声明区段中，若出现逗号即换行。<br>-bl或–braces-after-if-line 　if(或是else,for等等)与后面执行区段的”{“不同行，且”}”自成一行。<br>-bli&lt;缩排格数&gt;或–brace-indent&lt;缩排格数&gt; 　设置{ }缩排的格数。<br>-br或–braces-on-if-line 　if(或是else,for等等)与后面执行跛段的”{“不同行，且”}”自成一行。<br>-bs或–blank-before-sizeof 　在sizeof之后空一格。<br>-c&lt;栏数&gt;或–comment-indentation&lt;栏数&gt; 　将注释置于程序码右侧指定的栏位。<br>-cd&lt;栏数&gt;或–declaration-comment-column&lt;栏数&gt; 　将注释置于声明右侧指定的栏位。<br>-cdb或–comment-delimiters-on-blank-lines 　注释符号自成一行。<br>-ce或–cuddle-else 　将else置于”}”(if执行区段的结尾)之后。<br>-ci&lt;缩排格数&gt;或–continuation-indentation&lt;缩排格数&gt; 　叙述过长而换行时，指定换行后缩排的格数。<br>-cli&lt;缩排格数&gt;或–case-indentation-&lt;缩排格数&gt; 　使用case时，switch缩排的格数。<br>-cp&lt;栏数&gt;或-else-endif-column&lt;栏数&gt; 　将注释置于else与elseif叙述右侧定的栏位。<br>-cs或–space-after-cast 　在cast之后空一格。<br>-d&lt;缩排格数&gt;或-line-comments-indentation&lt;缩排格数&gt; 　针对不是放在程序码右侧的注释，设置其缩排格数。<br>-di&lt;栏数&gt;或–declaration-indentation&lt;栏数&gt; 　将声明区段的变量置于指定的栏位。<br>-fc1或–format-first-column-comments 　针对放在每行最前端的注释，设置其格式。<br>-fca或–format-all-comments 　设置所有注释的格式。<br>-gnu或–gnu-style 　指定使用GNU的格式，此为预设值。<br>-i&lt;格数&gt;或–indent-level&lt;格数&gt; 　设置缩排的格数。<br>-ip&lt;格数&gt;或–parameter-indentation&lt;格数&gt; 　设置参数的缩排格数。<br>-kr或–k-and-r-style 　指定使用Kernighan&amp;Ritchie的格式。<br>-lp或–continue-at-parentheses 　叙述过长而换行，且叙述中包含了括弧时，将括弧中的每行起始栏位内容垂直对其排列。<br>-nbad或–no-blank-lines-after-declarations 　在声明区段后不要加上空白行。<br>-nbap或–no-blank-lines-after-procedures 　在程序后不要加上空白行。<br>-nbbb或–no-blank-lines-after-block-comments 　在注释区段后不要加上空白行。<br>-nbc或–no-blank-lines-after-commas 　在声明区段中，即使出现逗号，仍旧不要换行。<br>-ncdb或–no-comment-delimiters-on-blank-lines 　注释符号不要自成一行。<br>-nce或–dont-cuddle-else 　不要将else置于”}”之后。<br>-ncs或–no-space-after-casts 　不要在cast之后空一格。<br>-nfc1或–dont-format-first-column-comments 　不要格式化放在每行最前端的注释。<br>-nfca或–dont-format-comments 　不要格式化任何的注释。<br>-nip或–no-parameter-indentation 　参数不要缩排。<br>-nlp或–dont-line-up-parentheses 　叙述过长而换行，且叙述中包含了括弧时，不用将括弧中的每行起始栏位垂直对其排列。<br>-npcs或–no-space-after-function-call-names 　在调用的函数名称之后，不要加上空格。<br>-npro或–ignore-profile 　不要读取indent的配置文件<br>-npsl或–dont-break-procedure-type 　程序类型与程序名称放在同一行。<br>-nsc或–dont-star-comments 　注解左侧不要加上星号(<em>)。<br>-nsob或–leave-optional-semicolon 　不用处理多余的空白行。<br>-nss或–dont-space-special-semicolon 　若for或while区段仅有一行时，在分号前不加上空格。<br>-nv或–no-verbosity 　不显示详细的信息。<br>-orig或–original 　使用Berkeley的格式。<br>-pcs或–space-after-procedure-calls 　在调用的函数名称与”{“之间加上空格。<br>-psl或–procnames-start-lines 　程序类型置于程序名称的前一行。<br>-sc或–start-left-side-of-comments 　在每行注释左侧加上星号(</em>)。<br>-sob或–swallow-optional-blank-lines 　删除多余的空白行。<br>-ss或–space-special-semicolon 　若for或swile区段今有一行时，在分号前加上空格。<br>-st或–standard-output 　将结果显示在标准输出设备。<br>-T 　数据类型名称缩排。<br>-ts&lt;格数&gt;或–tab-size&lt;格数&gt; 　设置tab的长度。<br>-v或–verbose 　执行时显示详细的信息。<br>-version 　显示版本信息。</p>
+<p><a href="http://baike.baidu.com/link?url=pCO6WHfk5vggaX1-_opIyz1tkTmmbGpoVhWppfPAN_fCHtrp4Gm1YjX6ShXf7dRczASJqXRWD96XjHw0eXGxK_" target="_blank" rel="external">indent百度百科</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/indent/" rel="tag"># indent</a>
+          
+            <a href="/tags/格式化/" rel="tag"># 格式化</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2014/07/16/原码反码补码/" rel="next" title="原码反码补码">
+                <i class="fa fa-chevron-left"></i> 原码反码补码
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2014/07/23/代码的编译连接与执行过程/" rel="prev" title="代码的编译连接与执行过程">
+                代码的编译连接与执行过程 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/sh.png"
+               alt="y" />
+          <p class="site-author-name" itemprop="name">y</p>
+           
+              <p class="site-description motion-element" itemprop="description">很鱼</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/forzxy" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/ywine" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#安装"><span class="nav-number">1.</span> <span class="nav-text">安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何使用"><span class="nav-number">2.</span> <span class="nav-text">如何使用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#附录"><span class="nav-number">3.</span> <span class="nav-text">附录</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">y</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
