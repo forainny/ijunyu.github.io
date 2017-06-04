@@ -1,0 +1,740 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="日志," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/uploads/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="building log4cpp  1234./configuremakemake checkmake install  安装完毕后，会在 /usr/local/ 里的include和lib文件夹里面看到了log4cpp的头文件和库文件  log4cpp有3个主要的组件：categories（类别）、appenders（附加目的地）、和 layouts（布局）。 layout类控制输出日志消息的">
+<meta name="keywords" content="日志">
+<meta property="og:type" content="article">
+<meta property="og:title" content="log4cpp-c++日志库">
+<meta property="og:url" content="http://yoursite.com/2014/07/24/log4cpp-c-日志库/index.html">
+<meta property="og:site_name" content="无名小站">
+<meta property="og:description" content="building log4cpp  1234./configuremakemake checkmake install  安装完毕后，会在 /usr/local/ 里的include和lib文件夹里面看到了log4cpp的头文件和库文件  log4cpp有3个主要的组件：categories（类别）、appenders（附加目的地）、和 layouts（布局）。 layout类控制输出日志消息的">
+<meta property="og:updated_time" content="2017-06-04T07:33:21.989Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="log4cpp-c++日志库">
+<meta name="twitter:description" content="building log4cpp  1234./configuremakemake checkmake install  安装完毕后，会在 /usr/local/ 里的include和lib文件夹里面看到了log4cpp的头文件和库文件  log4cpp有3个主要的组件：categories（类别）、appenders（附加目的地）、和 layouts（布局）。 layout类控制输出日志消息的">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2014/07/24/log4cpp-c-日志库/"/>
+
+
+
+
+
+  <title>log4cpp-c++日志库 | 无名小站</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">无名小站</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">一个兴趣使然的无名小站</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2014/07/24/log4cpp-c-日志库/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="y">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/sh.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="无名小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">log4cpp-c++日志库</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-07-24T15:34:46+08:00">
+                2014-07-24
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C-C/" itemprop="url" rel="index">
+                    <span itemprop="name">C/C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <ol>
+<li><p>building log4cpp</p>
+ <figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">./configure</div><div class="line">make</div><div class="line">make check</div><div class="line">make install</div></pre></td></tr></table></figure>
+<p> 安装完毕后，会在 /usr/local/ 里的include和lib文件夹里面看到了log4cpp的头文件和库文件</p>
+</li>
+<li><p>log4cpp有3个主要的组件：categories（类别）、appenders（附加目的地）、和 layouts（布局）。<br> layout类控制输出日志消息的显示样式（看起来像什么）。<br> appender类用来输出日志（被layout格式化后的）到一些设备上。appender和layout的关系是layout附在appender上，appender类调用layout处理完日志消息后，记录到某个设备上。<br> category 类真正完成记录日志功能，两个主要组成部分是appenders和priority（优先级）。</p>
+</li>
+<li><p>手动使用log4cpp的基本步骤如下：<br> 实例化一个layout 对象；<br> 初始化一个appender 对象；<br> 把layout对象附着在appender对象上；<br> 调用log4cpp::Category::getInstance(“name”). 实例化一个category对象；<br> 把appender对象附到category上（根据additivity的值取代其他appender或者附加在其他appender后）；<br> 设置category的优先级；</p>
+ <figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"log4cpp/Category.hh"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"log4cpp/FileAppender.hh"</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">"log4cpp/BasicLayout.hh"</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">(<span class="keyword">int</span> argc, <span class="keyword">char</span>* argv[])</span></span></div><div class="line">&#123;</div><div class="line">        <span class="comment">// 1实例化一个layout 对象</span></div><div class="line">        log4cpp::Layout* layout = <span class="keyword">new</span> log4cpp::BasicLayout();</div><div class="line">        <span class="comment">// 2. 初始化一个appender 对象</span></div><div class="line">        log4cpp::Appender* appender = <span class="keyword">new</span> log4cpp::FileAppender(<span class="string">"FileAppender"</span>, <span class="string">"./test_log4cpp1.log"</span>);</div><div class="line">        <span class="comment">// 3. 把layout对象附着在appender对象上</span></div><div class="line">        appender-&gt;setLayout(layout);</div><div class="line">        <span class="comment">// 4. 实例化一个category对象</span></div><div class="line">        log4cpp::Category&amp; warn_log = log4cpp::Category::getInstance(<span class="string">"mywarn"</span>); </div><div class="line">        <span class="comment">// 5. 设置additivity为false，替换已有的appender</span></div><div class="line">        warn_log.setAdditivity(<span class="literal">false</span>);</div><div class="line">        <span class="comment">// 5. 把appender对象附到category上</span></div><div class="line">        warn_log.setAppender(appender);</div><div class="line">        <span class="comment">// 6. 设置category的优先级，低于此优先级的日志不被记录</span></div><div class="line">        warn_log.setPriority(log4cpp::Priority::WARN);</div><div class="line">        <span class="comment">// 记录一些日志</span></div><div class="line">        warn_log.info(<span class="string">"Program info which cannot be wirten"</span>);</div><div class="line">        warn_log.debug(<span class="string">"This debug message will fail to write"</span>);</div><div class="line">        warn_log.alert(<span class="string">"Alert info"</span>);</div><div class="line">        <span class="comment">// 其他记录日志方式</span></div><div class="line">        warn_log.<span class="built_in">log</span>(log4cpp::Priority::WARN, <span class="string">"This will be a logged warning"</span>);</div><div class="line">        log4cpp::Priority::PriorityLevel priority;</div><div class="line">        <span class="keyword">bool</span> this_is_critical = <span class="literal">true</span>;</div><div class="line">        <span class="keyword">if</span>(this_is_critical)</div><div class="line">                priority = log4cpp::Priority::CRIT;</div><div class="line">        <span class="keyword">else</span></div><div class="line">                priority = log4cpp::Priority::DEBUG;</div><div class="line">        warn_log.<span class="built_in">log</span>(priority,<span class="string">"Importance depends on context"</span>);</div><div class="line"></div><div class="line">        warn_log.critStream() &lt;&lt; <span class="string">"This will show up &lt;&lt; as "</span> &lt;&lt; <span class="number">1</span> &lt;&lt; <span class="string">" critical message"</span>  &lt;&lt; log4cpp::CategoryStream::ENDLINE;</div><div class="line">        <span class="comment">// clean up and flush all appenders</span></div><div class="line">        log4cpp::Category::shutdown();</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>默认情况下，编译器只会使用/lib和/usr/lib这两个目录下的库文件，虽然g++ -L/usr/local/lib虽然能让链接器找到库进行链接，但是运行时链接器却找不到这个库，如果要让软件运行时库文件的路径也得到扩展，那么我们需要增加这个库路径加上-Wl,-R，即添加g++参数“-Wl,-R动态库库路径”。<br><code>g++ log4cpp.cpp -llog4cpp -lpthread -Wl,-R/usr/local/lib</code></p>
+<p><a href="http://www.ibm.com/developerworks/cn/linux/l-log4cpp/" target="_blank" rel="external">便利的开发工具-log4cpp快速使用指南</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/日志/" rel="tag"># 日志</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2014/07/24/标准IO库缓冲区buffer/" rel="next" title="标准IO库缓冲区buffer">
+                <i class="fa fa-chevron-left"></i> 标准IO库缓冲区buffer
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2014/07/24/使用终端测试网速/" rel="prev" title="使用终端测试网速">
+                使用终端测试网速 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/sh.png"
+               alt="y" />
+          <p class="site-author-name" itemprop="name">y</p>
+           
+              <p class="site-description motion-element" itemprop="description">很鱼</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">64</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">53</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/forzxy" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/ywine" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">y</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

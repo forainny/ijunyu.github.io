@@ -1,0 +1,778 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Objective-C," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/uploads/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="@property和@synthesize用来生成属性的set和get方法 格式： 12@property(属性列表) 类型 属性名@synthesize 属性名 属性列表包括：strong(retain), copy, weak(assign), atomic, nonatomic, readonly, readwrite, getter=name, setter=name strong和wea">
+<meta name="keywords" content="Objective-C">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Objective-C之property属性分析">
+<meta property="og:url" content="http://yoursite.com/2015/09/23/Objective-C之property属性分析/index.html">
+<meta property="og:site_name" content="无名小站">
+<meta property="og:description" content="@property和@synthesize用来生成属性的set和get方法 格式： 12@property(属性列表) 类型 属性名@synthesize 属性名 属性列表包括：strong(retain), copy, weak(assign), atomic, nonatomic, readonly, readwrite, getter=name, setter=name strong和wea">
+<meta property="og:updated_time" content="2017-06-04T11:04:25.857Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Objective-C之property属性分析">
+<meta name="twitter:description" content="@property和@synthesize用来生成属性的set和get方法 格式： 12@property(属性列表) 类型 属性名@synthesize 属性名 属性列表包括：strong(retain), copy, weak(assign), atomic, nonatomic, readonly, readwrite, getter=name, setter=name strong和wea">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2015/09/23/Objective-C之property属性分析/"/>
+
+
+
+
+
+  <title>Objective-C之property属性分析 | 无名小站</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">无名小站</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">一个兴趣使然的无名小站</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/09/23/Objective-C之property属性分析/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="y">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/sh.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="无名小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Objective-C之property属性分析</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-09-23T22:48:51+08:00">
+                2015-09-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Objective-C/" itemprop="url" rel="index">
+                    <span itemprop="name">Objective-C</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>@property和@synthesize用来生成属性的set和get方法</p>
+<p>格式：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">@property</span>(属性列表) 类型 属性名</div><div class="line"><span class="keyword">@synthesize</span> 属性名</div></pre></td></tr></table></figure>
+<p>属性列表包括：strong(retain), copy, weak(assign), atomic, nonatomic, readonly, readwrite, getter=name, setter=name</p>
+<p>strong和weak是引入ARC时加入的关键字</p>
+<p>属性列表与关键字的对应关系</p>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>关键字</th>
+<th>所有权</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>strong, copy, retain</td>
+<td>__strong</td>
+<td>有</td>
+</tr>
+<tr>
+<td>weak</td>
+<td>__weak</td>
+<td>无</td>
+</tr>
+<tr>
+<td>assign, unsafe_unretained</td>
+<td>__unsafe_unretained</td>
+<td>无</td>
+</tr>
+</tbody>
+</table>
+<p>属性默认为assign（如果属性是NSObject（或者它子类的）的对象时，默认为strong）, readwrite, atomic</p>
+<p>@property int i;等价于@property(assign, readwrite, atomic) int i;<br>@property NSString <em>s;等价于@property(strong, readwrite, atomic) NSString </em>s;</p>
+<p>strong和retain类似，对所指的对象引用计数加1（如果所指对象是可变对象的话）</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSMutableString</span> *str = [[<span class="built_in">NSMutableString</span> alloc] initWithUTF8String:<span class="string">"mutablestring"</span>];</div><div class="line">member.strong = str; <span class="comment">// 头文件定义@property(strong) NSString *strong; strong和str指向同一个内存地址</span></div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%ld"</span>, <span class="built_in">CFGetRetainCount</span>((__bridge <span class="built_in">CFTypeRef</span>)(str))); <span class="comment">// 输出2（NSLog可能对引用计数结果有影响，所以在这之前不要使用类似NSLog(@"%@", member.strong);语句，最好在查看引用计数时先屏蔽掉其他NSLog）</span></div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, member.strong); <span class="comment">// 输出mutablestring</span></div><div class="line">[str deleteCharactersInRange:<span class="built_in">NSMakeRange</span>(<span class="number">0</span>, <span class="number">7</span>)];</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, member.strong); <span class="comment">// 输出string</span></div></pre></td></tr></table></figure>
+<p>我改变的是str的内容，但是strong却被同时改变了，这是因为strong和str指向的是同一块内存（可以在Xcode中调试View Memory of “<em>_strong”和View Memory of “</em>str”可以看到它们的Address是一致的），该内存的引用计数为2，所以改变s的内容实际上就改变了strong的内容</p>
+<p>另外如果用一个strong指针来指向不可变对象str，那么str的引用计数不会加1</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSString</span> *str = <span class="string">@"string"</span>; <span class="comment">// @"string"存放在内存的常量区（不可变），生命周期为整个程序的生命周期，引用计数为一个很大的数，不会被改变</span></div><div class="line"><span class="built_in">NSString</span> *__<span class="keyword">strong</span> s = str; <span class="comment">// 试图使str的引用计数加1</span></div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%ld"</span>, <span class="built_in">CFGetRetainCount</span>((__bridge <span class="built_in">CFTypeRef</span>)(str))); <span class="comment">// 引用计数不变</span></div></pre></td></tr></table></figure>
+<p>那么如果我们不想让strong和str指向一个地方，这时copy就派上用场了，copy和strong类似，但是它不影响所指向的对象的引用计数，如果str指向的对象是可变的，那么copy会创建一个所指向对象的不可变副本（你不能修改copy指向的地址的内容，即使这个copy是NSMultableString，[str copy]同理），它们不指向同一个内存地址</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSMutableString</span> *str = [[<span class="built_in">NSMutableString</span> alloc] initWithUTF8String:<span class="string">"mutablestring"</span>]; <span class="comment">// 堆中分配内存</span></div><div class="line">member.cp = str; <span class="comment">// 头文件定义@property(copy) NSString *cp; cp指向str的副本，cp和str指向不同地址</span></div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, member.cp); <span class="comment">// 输出mutablestring</span></div><div class="line">[str deleteCharactersInRange:<span class="built_in">NSMakeRange</span>(<span class="number">0</span>, <span class="number">7</span>)];</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, member.cp); <span class="comment">// 然并卵，cp没有改变，输出mutablestring</span></div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%p %p"</span>, str, member.cp); <span class="comment">// 地址不同</span></div><div class="line"></div><div class="line">member.mscp = str; <span class="comment">// 头文件定义@property(copy) NSMutableString *mscp</span></div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%p %p"</span>, str, member.mscp); <span class="comment">// 地址不同</span></div><div class="line">[member.mscp deleteCharactersInRange:<span class="built_in">NSMakeRange</span>(<span class="number">0</span>, <span class="number">7</span>)]; <span class="comment">// mscp指向不可变的副本，即使它是NSMutableString，也不能修改其指向的内容。运行时报错Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: 'Attempt to mutate immutable object with deleteCharactersInRange:'</span></div></pre></td></tr></table></figure>
+<p>如果str指向的对象不可变，结果又会不一样</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSString</span> *str = [[<span class="built_in">NSString</span> alloc] initWithFormat:<span class="string">@"string"</span>]; <span class="comment">// str虽然在堆中分配内存，但是@"string"实际上是不能被改变的，这个对象会被添加到自动释放池</span></div><div class="line">member.cp = str;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%ld"</span>, <span class="built_in">CFGetRetainCount</span>((__bridge <span class="built_in">CFTypeRef</span>)(str))); <span class="comment">// 引用计数为一个很大值</span></div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%p %p"</span>, str, member.cp); <span class="comment">// cp并没有分配新的空间，因为str指向的内存地址不可改变（也就是说@"string"这个值无法改变，不能变成@"abc"之类的），所以cp和str指向了同一个地址</span></div></pre></td></tr></table></figure>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSString</span> *str = <span class="string">@"string"</span>; <span class="comment">// @"string"存放在内存的常量区（不可变），生命周期为整个程序的生命周期，引用计数为一个很大的数，不会被改变</span></div><div class="line">member.cp = str;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%ld"</span>, <span class="built_in">CFGetRetainCount</span>((__bridge <span class="built_in">CFTypeRef</span>)(str))); <span class="comment">// 一个非常大的引用计数</span></div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%p %p"</span>, str, member.cp); <span class="comment">// cp并没有分配新的空间，因为str指向的内存地址不可改变（也就是说@"string"这个值无法改变，不能变成@"abc"之类的），所以cp和str指向了同一个地址</span></div></pre></td></tr></table></figure>
+<p>weak和assign不会对所指的对象引用计数加1（还是指向的同一个内存地址），它们的区别就是当weak指向的内存区域被释放时，weak指针会被赋值为nil，而如果用的是assign，不会被赋值为nil，再去使用这个指针时，运行时会报错</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSString</span> *str= [[<span class="built_in">NSString</span> alloc] initWithFormat:<span class="string">@"%s"</span>, <span class="string">"Name:zyu"</span>];</div><div class="line">member.weak = str; <span class="comment">// 头文件定义@property(weak) NSString *weak; weak和str指向同一个内存地址</span></div><div class="line">str= <span class="literal">nil</span>; <span class="comment">// str空间释放时，weak被赋值成nil</span></div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, member.weak); <span class="comment">// 输出(null)</span></div></pre></td></tr></table></figure>
+<p>等价于</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSString</span> *str = [[<span class="built_in">NSString</span> alloc] initWithFormat:<span class="string">@"%s"</span>, <span class="string">"Name:zyu"</span>];</div><div class="line"><span class="built_in">NSString</span> * __<span class="keyword">weak</span> _<span class="keyword">weak</span> = str; <span class="comment">// 还可以用关键字来定义weak属性</span></div><div class="line">str = <span class="literal">nil</span>;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, _<span class="keyword">weak</span>); <span class="comment">// 输出(null)</span></div></pre></td></tr></table></figure>
+<p>@当我把”Name:zyu”改成”zyu”时，NSLog输出的结果不是(null)，不知道是不是Xcode的bug。(￣▽￣)</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSString</span> *str= [[<span class="built_in">NSString</span> alloc] initWithFormat:<span class="string">@"%s"</span>, <span class="string">"Name:zyu"</span>];</div><div class="line">member.assign= str; <span class="comment">// 头文件定义@property(assign) NSString *assign; assign和str指向同一个内存地址</span></div><div class="line">str= <span class="literal">nil</span>; <span class="comment">// str空间释放时，assign不会被赋值成nil</span></div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, member.assign); <span class="comment">// 运行时报错EXC_BAD_ACCESS，有时候又不报错，没有任何输出(╯°□°）╯︵ ┻━┻</span></div></pre></td></tr></table></figure>
+<p><a href="http://www.devtalking.com/articles/you-should-to-know-property/" target="_blank" rel="external">Objective-C中的@property</a><br><a href="https://developer.apple.com/library/ios/releasenotes/ObjectiveC/RN-TransitioningToARC/Introduction/Introduction.html" target="_blank" rel="external">Transitioning to ARC Release Notes</a><br><a href="http://www.cnblogs.com/andyque/archive/2011/08/03/2125728.html" target="_blank" rel="external">Objective-c的@property 详解</a><br><a href="http://www.devm.cn/2015/07/16/the-proper-use-of-property-keywords.html" target="_blank" rel="external">如何正确使用property里面的strong,weak等关健字</a><br><a href="http://blog.csdn.net/jymn_chen/article/details/18887841" target="_blank" rel="external">复制对象（一）copy和mutableCopy方法</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Objective-C/" rel="tag"># Objective-C</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/09/23/error-LNK2019-无法解析的外部符号-imp-iob-func/" rel="next" title="error LNK2019: 无法解析的外部符号 __imp____iob_func">
+                <i class="fa fa-chevron-left"></i> error LNK2019: 无法解析的外部符号 __imp____iob_func
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/11/18/Windows下error-LNK2019-无法解析的外部符号-imp-select-20/" rel="prev" title="Windows下error LNK2019: 无法解析的外部符号 __imp__select@20">
+                Windows下error LNK2019: 无法解析的外部符号 __imp__select@20 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/sh.png"
+               alt="y" />
+          <p class="site-author-name" itemprop="name">y</p>
+           
+              <p class="site-description motion-element" itemprop="description">很鱼</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">64</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">53</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/forzxy" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/ywine" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">y</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

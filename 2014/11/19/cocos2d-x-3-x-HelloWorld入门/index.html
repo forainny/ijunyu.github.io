@@ -1,0 +1,736 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="cocos," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/uploads/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="先创建HelloWorld项目，命令行下输入cocos new –p com.game.simple –l cpp –d F:\simple Game，引擎会为我们自动生成一个名为Game的项目，进入proj.win32文件夹用vs2012打开Game.sln，直接运行。第一次编译会需要较长时间，看到cocos2d-x HelloWorld就是运行成功了。 项目中还有其他的文件夹，其中Resour">
+<meta name="keywords" content="cocos">
+<meta property="og:type" content="article">
+<meta property="og:title" content="cocos2d-x 3.x HelloWorld入门">
+<meta property="og:url" content="http://yoursite.com/2014/11/19/cocos2d-x-3-x-HelloWorld入门/index.html">
+<meta property="og:site_name" content="无名小站">
+<meta property="og:description" content="先创建HelloWorld项目，命令行下输入cocos new –p com.game.simple –l cpp –d F:\simple Game，引擎会为我们自动生成一个名为Game的项目，进入proj.win32文件夹用vs2012打开Game.sln，直接运行。第一次编译会需要较长时间，看到cocos2d-x HelloWorld就是运行成功了。 项目中还有其他的文件夹，其中Resour">
+<meta property="og:updated_time" content="2017-06-04T08:15:03.178Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="cocos2d-x 3.x HelloWorld入门">
+<meta name="twitter:description" content="先创建HelloWorld项目，命令行下输入cocos new –p com.game.simple –l cpp –d F:\simple Game，引擎会为我们自动生成一个名为Game的项目，进入proj.win32文件夹用vs2012打开Game.sln，直接运行。第一次编译会需要较长时间，看到cocos2d-x HelloWorld就是运行成功了。 项目中还有其他的文件夹，其中Resour">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2014/11/19/cocos2d-x-3-x-HelloWorld入门/"/>
+
+
+
+
+
+  <title>cocos2d-x 3.x HelloWorld入门 | 无名小站</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">无名小站</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">一个兴趣使然的无名小站</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2014/11/19/cocos2d-x-3-x-HelloWorld入门/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="y">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/sh.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="无名小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">cocos2d-x 3.x HelloWorld入门</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-11-19T20:25:53+08:00">
+                2014-11-19
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/游戏/" itemprop="url" rel="index">
+                    <span itemprop="name">游戏</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>先创建HelloWorld项目，命令行下输入cocos new –p com.game.simple –l cpp –d F:\simple Game，引擎会为我们自动生成一个名为Game的项目，进入proj.win32文件夹用vs2012打开Game.sln，直接运行。第一次编译会需要较长时间，看到cocos2d-x HelloWorld就是运行成功了。</p>
+<p>项目中还有其他的文件夹，其中Resources主要用于存放游戏中需要的图片、音频和配置等资源文件，为了方便管理，可以在其中创建子文件夹。</p>
+<p>proj.win32文件夹中的main.h，main.cpp，resource.h是Windows平台相关的程序文件</p>
+<p>Classes文件夹为HelloWorld项目的主要内容，包括AppDelegate.h，AppDelegate.cpp，HelloWorldScene.h，HelloWorldScene.cpp</p>
+<p>AppDelegate.h和AppDelegate.cpp是cocos2d-x游戏的通用入口文件，包含三个主要的函数</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">virtual</span> <span class="keyword">bool</span> <span class="title">applicationDidFinishLaunching</span><span class="params">()</span></span>;   <span class="comment">// 应用程序启动后将调用这个方法，默认的实现中已经包含了游戏启动后的必要准备</span></div><div class="line"><span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">applicationDidEnterBackground</span><span class="params">()</span></span>;   <span class="comment">// 当应用程序进入后台时，会调用这个方法</span></div><div class="line"><span class="function"><span class="keyword">virtual</span> <span class="keyword">void</span> <span class="title">applicationWillEnterForeground</span><span class="params">()</span></span>;  <span class="comment">// 在应用程序回到前台时被调用</span></div><div class="line"></div><div class="line"><span class="keyword">bool</span> AppDelegate::applicationDidFinishLaunching() &#123;</div><div class="line">    <span class="comment">// 初始化导演类</span></div><div class="line">    <span class="keyword">auto</span> director = Director::getInstance();</div><div class="line">    <span class="keyword">auto</span> glview = director-&gt;getOpenGLView();</div><div class="line">    <span class="keyword">if</span>(!glview) &#123;</div><div class="line">        glview = GLView::create(<span class="string">"My Game"</span>);</div><div class="line">        <span class="comment">// 可以在这里改变GL窗口的大小来调试</span></div><div class="line">        <span class="comment">// glview = GLView::createWithRect("Game", Rect(0, 0, 640, 960));</span></div><div class="line">        director-&gt;setOpenGLView(glview);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">/*</span></div><div class="line">        开启FPS显示（FPS即每秒帧速率，也就是屏幕每秒重绘的次数）</div><div class="line">        启用FPS显示后，当前FPS会在游戏的左下角显示，通常在开发阶段启用</div><div class="line">    */</div><div class="line">    director-&gt;setDisplayStats(<span class="literal">true</span>);</div><div class="line"></div><div class="line">    <span class="comment">// 设置绘制间隔（两次绘制的时间间隔），默认间隔为1/60秒，约等于人眼的刷新频率</span></div><div class="line">    director-&gt;setAnimationInterval(<span class="number">1.0</span> / <span class="number">60</span>);</div><div class="line"></div><div class="line">    <span class="comment">// 创建HelloWorld场景，需要在此处对游戏进行初始化</span></div><div class="line">    <span class="keyword">auto</span> scene = HelloWorld::createScene();</div><div class="line"></div><div class="line">    <span class="comment">// 导演运行这个场景</span></div><div class="line">    director-&gt;runWithScene(scene);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>HelloWorldScene.h和HelloWorldScene.cpp这两个文件定义了HelloWorld项目中默认的场景</p>
+<p>HelloWorldScene定义了一个HelloWorld类，该类继承自Layer，因此HelloWorld本身是一个层，这里也就是定义了一个HelloWorld层。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 在层下创建场景，这是一个静态函数</span></div><div class="line">Scene* HelloWorld::createScene()</div><div class="line">&#123;</div><div class="line">    <span class="comment">// 创建一个空场景</span></div><div class="line">    <span class="keyword">auto</span> scene = Scene::create();</div><div class="line"></div><div class="line">    <span class="comment">// 创建HelloWorld层的实例</span></div><div class="line">    <span class="keyword">auto</span> layer = HelloWorld::create();</div><div class="line"></div><div class="line">    <span class="comment">/*</span></div><div class="line">        把层置入场景中，addChild可以把一个游戏元素放置到另一个元素之中，只有把它放置到已经呈现出来的游戏元素中，它才会呈现出来，我们把HelloWorld放入空场景中，在</div><div class="line">        AppDelegate.cpp中，我们已经让导演运行了该场景，因此HelloWorld层会显示在屏幕上</div><div class="line">    */</div><div class="line">    scene-&gt;addChild(layer);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> scene;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">// 初始化HelloWorld类</span></div><div class="line"><span class="keyword">bool</span> HelloWorld::init()</div><div class="line">&#123;</div><div class="line">    <span class="comment">//////////////////////////////</span></div><div class="line">    <span class="comment">// 1. 首先对父类进行初始化</span></div><div class="line">    <span class="keyword">if</span> ( !Layer::init() )</div><div class="line">    &#123;</div><div class="line">        <span class="keyword">return</span> <span class="literal">false</span>;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="comment">// 返回以点为单位的 OpenGL 视图的可见大小(可视区域大小)，如果不调用EGLView::setDesignResolutionSize()其值等于getWinSize()</span></div><div class="line">    Size visibleSize = Director::getInstance()-&gt;getVisibleSize();</div><div class="line">    <span class="comment">// 返回可视区域的起点坐标</span></div><div class="line">    Vec2 origin = Director::getInstance()-&gt;getVisibleOrigin();</div><div class="line"></div><div class="line">    <span class="comment">/////////////////////////////</span></div><div class="line">    <span class="comment">// 2. add a menu item with "X" image, which is clicked to quit the program</span></div><div class="line">    <span class="comment">//    you may modify it.</span></div><div class="line"></div><div class="line">    <span class="comment">// add a "close" icon to exit the progress. it's an autorelease object</span></div><div class="line">    <span class="comment">// cocos2d-x中菜单由两部分组成，分别是菜单项和菜单本身，MenuItem表示一个菜单项，每个菜单项都是一个独立的按钮；Menu则是菜单，负责将菜单项组织到一起并添加到场景中，Menu可以看成是管理所有菜单项的一个类</span></div><div class="line">    <span class="keyword">auto</span> closeItem = MenuItemImage::create(</div><div class="line">                                           <span class="string">"CloseNormal.png"</span>,</div><div class="line">                                           <span class="string">"CloseSelected.png"</span>,</div><div class="line">                                           CC_CALLBACK_1(HelloWorld::menuCloseCallback, <span class="keyword">this</span>));</div><div class="line"></div><div class="line">    <span class="comment">/*</span></div><div class="line">       setPosition()用于设置节点(Node)的位置，Position指的是锚点(AnchorPoint)在父节点中的坐标值，锚点的两个参量x和y的取值通常都是0到1之间的实数，表示锚点相对于节点长宽的位置。如果把节点的左下角作为锚点，其值为(0,0)；把节点的中心作为锚点，值为(0.5,0.5)；把节点右下角作为锚点，值为(1,0)。精灵的锚点默认值为(0.5,0.5)，也就是图片中心的地方，其他节点默认值为(0,0)。setPosition()也就是把该节点的锚点放到父节点中的哪个位置。</div><div class="line">       如果想把一个精灵放到其父节点的正中心，也就是要把该精灵的锚点放到正中心(因为精灵的锚点默认为(0.5,0.5)，是图片的中心)，就应该这样写sprite-&gt;setPosition(Vec2(父节点宽度/2, 父节点高度/2));</div><div class="line">       对于场景或层等大型节点，它们的_ignoreAnchorPointForPosition属性为true，此时引擎在计算它的坐标时会忽略锚点属性的影响，即认为锚点永远为(0,0)；而其他节点该属性为false，计算坐标时它们的锚点不会被忽略。需要注意的是当设置_ignoreAnchorPointForPosition属性为true时，只有计算节点坐标时才会忽略锚点属性，在计算其他属性时则不会忽略，例如即时设置_ignoreAnchorPointForPosition属性为true，节点旋转时依然会以锚点为中心，而不是左下角(0,0)的位置。</div><div class="line">    */</div><div class="line">    <span class="comment">// getContentSize()是获取节点的内容大小，对于精灵来说，ContentSize是它的纹理显示部分的大小，对于层或场景等全屏的大型节点来说，ContentSize则是屏幕大小</span></div><div class="line">    closeItem-&gt;setPosition(Vec2(origin.x + visibleSize.width - closeItem-&gt;getContentSize().width/<span class="number">2</span> ,</div><div class="line">                            origin.y + closeItem-&gt;getContentSize().height/<span class="number">2</span>));</div><div class="line"></div><div class="line">    <span class="comment">// create menu, it's an autorelease object</span></div><div class="line">    <span class="keyword">auto</span> menu = Menu::create(closeItem, <span class="literal">NULL</span>);</div><div class="line">    menu-&gt;setPosition(Vec2::ZERO);</div><div class="line">    <span class="keyword">this</span>-&gt;addChild(menu, <span class="number">1</span>);    <span class="comment">// void Node::addChild(Node *child, int zOrder);zOrder指的是child的z轴顺序，也就是显示的先后顺序，其值越大，显示位置越靠前</span></div><div class="line"></div><div class="line">    <span class="comment">/////////////////////////////</span></div><div class="line">    <span class="comment">// 3. add your codes below...</span></div><div class="line"></div><div class="line">    <span class="comment">// add a label shows "Hello World"</span></div><div class="line">    <span class="comment">// create and initialize a label</span></div><div class="line"></div><div class="line">    <span class="keyword">auto</span> label = LabelTTF::create(<span class="string">"Hello World"</span>, <span class="string">"Arial"</span>, <span class="number">24</span>);</div><div class="line"></div><div class="line">    <span class="comment">// position the label on the center of the screen</span></div><div class="line">    label-&gt;setPosition(Vec2(origin.x + visibleSize.width/<span class="number">2</span>,</div><div class="line">                            origin.y + visibleSize.height - label-&gt;getContentSize().height));</div><div class="line"></div><div class="line">    <span class="comment">// add the label as a child to this layer</span></div><div class="line">    <span class="keyword">this</span>-&gt;addChild(label, <span class="number">1</span>);</div><div class="line"></div><div class="line">    <span class="comment">// add "HelloWorld" splash screen"</span></div><div class="line">    <span class="keyword">auto</span> sprite = Sprite::create(<span class="string">"HelloWorld.png"</span>);</div><div class="line"></div><div class="line">    <span class="comment">// position the sprite on the center of the screen</span></div><div class="line">    sprite-&gt;setPosition(Vec2(visibleSize.width/<span class="number">2</span> + origin.x, visibleSize.height/<span class="number">2</span> + origin.y));</div><div class="line"></div><div class="line">    <span class="comment">// add the sprite as a child to this layer</span></div><div class="line">    <span class="keyword">this</span>-&gt;addChild(sprite, <span class="number">0</span>);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/cocos/" rel="tag"># cocos</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2014/11/12/C-11之std-bind/" rel="next" title="C++11之std::bind">
+                <i class="fa fa-chevron-left"></i> C++11之std::bind
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2014/11/21/Windows命令行查看端口被哪个程序占用/" rel="prev" title="Windows命令行查看端口被哪个程序占用">
+                Windows命令行查看端口被哪个程序占用 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel sidebar-panel-active">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/sh.png"
+               alt="y" />
+          <p class="site-author-name" itemprop="name">y</p>
+           
+              <p class="site-description motion-element" itemprop="description">很鱼</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">64</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">53</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/forzxy" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/ywine" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">y</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>

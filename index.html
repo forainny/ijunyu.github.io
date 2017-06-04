@@ -277,7 +277,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2014/07/24/标准IO库缓冲区buffer/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/04/15/Cannot-find-autoconf/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="y">
@@ -296,7 +296,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2014/07/24/标准IO库缓冲区buffer/" itemprop="url">标准IO库缓冲区buffer</a></h1>
+                <a class="post-title-link" href="/2016/04/15/Cannot-find-autoconf/" itemprop="url">Cannot find autoconf</a></h1>
         
 
         <div class="post-meta">
@@ -308,8 +308,426 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-07-24T15:33:31+08:00">
-                2014-07-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-04-15T13:52:35+08:00">
+                2016-04-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>Cannotfind autoconf. Please check your autoconf installation and the<br>$PHP_AUTOCONFenvironment variable. Then, rerun this script.</p>
+</blockquote>
+<p>解决方案，终端输入命令：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install m4</div><div class="line">sudo apt-get isntall autoconf</div></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/02/18/Xcode-No-matching-provisioning-profiles-found/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="y">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/sh.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="无名小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/02/18/Xcode-No-matching-provisioning-profiles-found/" itemprop="url">Xcode: No matching provisioning profiles found</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-02-18T15:38:24+08:00">
+                2016-02-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Mac/" itemprop="url" rel="index">
+                    <span itemprop="name">Mac</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li>右键 xcodeproj 文件 -&gt; 显示包内容。</li>
+<li>打开 pbxproj 文件。</li>
+<li>删除所有的 PROVISIONING_PROFILE = “uuid” 整行，重启项目。</li>
+</ol>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://stackoverflow.com/questions/18475964/xcode5-no-matching-provisioning-profiles-found-issue-but-good-at-xcode4" target="_blank" rel="external">Xcode5 “No matching provisioning profiles found issue” (but good at xcode4)</a><br><a href="http://stackoverflow.com/questions/34346436/xcode-7-2-no-matching-provisioning-profiles-found" target="_blank" rel="external">Xcode 7.2 no matching provisioning profiles found</a><br><a href="http://blog.csdn.net/cuibo1123/article/details/39432411" target="_blank" rel="external">xcode6更新证书错误：No matching provisioning profiles found 解决方案</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2016/02/18/Missing-iOS-Distribution-signing-identity-for/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="y">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/sh.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="无名小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2016/02/18/Missing-iOS-Distribution-signing-identity-for/" itemprop="url">Missing iOS Distribution signing identity for</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-02-18T14:36:41+08:00">
+                2016-02-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/iOS/" itemprop="url" rel="index">
+                    <span itemprop="name">iOS</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <ol>
+<li>下载 <a href="https://developer.apple.com/certificationauthority/AppleWWDRCA.cer" target="_blank" rel="external">https://developer.apple.com/certificationauthority/AppleWWDRCA.cer</a></li>
+<li>双击安装到钥匙串。</li>
+<li>钥匙串 -&gt; 显示 -&gt; 显示已过期的证书。</li>
+<li>钥匙串区域选择系统标签。</li>
+<li>删除 Apple Worldwide Developer Relations Certificate Authority certificates。</li>
+</ol>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><p><a href="http://stackoverflow.com/questions/32821189/xcode-7-error-missing-ios-distribution-signing-identity-for" target="_blank" rel="external">Xcode 7 error: “Missing iOS Distribution signing identity for …”</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/11/18/Windows下error-LNK2019-无法解析的外部符号-imp-select-20/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="y">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/sh.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="无名小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2015/11/18/Windows下error-LNK2019-无法解析的外部符号-imp-select-20/" itemprop="url">Windows下error LNK2019: 无法解析的外部符号 __imp__select@20</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-11-18T13:16:18+08:00">
+                2015-11-18
               </time>
             
 
@@ -367,14 +785,7 @@
       
         
           
-            <p>缓冲是标准IO库提供的，目的是尽可能的减少read、write系统调用的次数。</p>
-<p>标准IO库提供了三种类型的缓冲：</p>
-<ol>
-<li>全缓冲：填满标准IO的缓冲区后才进行实际IO操作</li>
-<li>行缓冲：当输入输出遇到换行符时，标准IO库执行IO操作。标准IO库用来收集每一行缓冲区的长度是固定的，所以只要填满了缓冲区，即使没有换行符，也执行IO操作</li>
-<li>不带缓冲：标准出错流stderr不带缓冲</li>
-</ol>
-<p>一般来说：<br>标准出错流不带缓冲<br>打开至终端设备的流是行缓冲，比如执行./a.out<br>否则为全缓冲，比如将结果输出到文件./a.out &gt; tmp.out</p>
+            <p>缺少Ws2_32.lib，Wldap32.lib这两个库，直接搜索这两个库放到程序目录下即可。</p>
 
           
         
@@ -418,7 +829,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2014/07/24/php在Windows下获取文件夹和大文件大小/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/09/23/Objective-C之property属性分析/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="y">
@@ -437,7 +848,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2014/07/24/php在Windows下获取文件夹和大文件大小/" itemprop="url">php在Windows下获取文件夹和大文件大小</a></h1>
+                <a class="post-title-link" href="/2015/09/23/Objective-C之property属性分析/" itemprop="url">Objective-C之property属性分析</a></h1>
         
 
         <div class="post-meta">
@@ -449,8 +860,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-07-24T10:28:46+08:00">
-                2014-07-24
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-09-23T22:48:51+08:00">
+                2015-09-23
               </time>
             
 
@@ -472,8 +883,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/PHP/" itemprop="url" rel="index">
-                    <span itemprop="name">PHP</span>
+                  <a href="/categories/Objective-C/" itemprop="url" rel="index">
+                    <span itemprop="name">Objective-C</span>
                   </a>
                 </span>
 
@@ -508,8 +919,57 @@
       
         
           
-            <figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 得到文件夹大小，$dir = 'F:/wamp/www/folder';</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">getFolderSize</span><span class="params">($dir)</span></span></div><div class="line">&#123;</div><div class="line">    $obj = <span class="keyword">new</span> COM ( <span class="string">'scripting.filesystemobject'</span> );</div><div class="line">    <span class="keyword">if</span> ( is_object ( $obj ) )</div><div class="line">    &#123;</div><div class="line">        $ref = $obj-&gt;getfolder ( $dir );</div><div class="line">        $size = $ref-&gt;size;</div><div class="line">        $obj = <span class="keyword">null</span>;</div><div class="line">    &#125;</div><div class="line">    <span class="comment">/*</span></div><div class="line">    else</div><div class="line">    &#123;</div><div class="line">        //echo 'can not create object';</div><div class="line">    &#125;</div><div class="line">    */</div><div class="line">    <span class="keyword">return</span> $size;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// 获取大文件大小</span></div><div class="line"><span class="comment">/*</span></div><div class="line">$file = 'C:\\system_backup.zip';</div><div class="line">$size = real_filesize($file);</div><div class="line">echo "The size of the file is: $size";</div><div class="line">*/</div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">real_filesize</span><span class="params">($file_path)</span></span></div><div class="line">&#123;</div><div class="line">    $fs = <span class="keyword">new</span> COM(<span class="string">"Scripting.FileSystemObject"</span>);</div><div class="line">    <span class="keyword">return</span> $fs-&gt;GetFile($file_path)-&gt;Size;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+            <p>@property和@synthesize用来生成属性的set和get方法</p>
+<p>格式：</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">@property</span>(属性列表) 类型 属性名</div><div class="line"><span class="keyword">@synthesize</span> 属性名</div></pre></td></tr></table></figure>
+<p>属性列表包括：strong(retain), copy, weak(assign), atomic, nonatomic, readonly, readwrite, getter=name, setter=name</p>
+<p>strong和weak是引入ARC时加入的关键字</p>
+<p>属性列表与关键字的对应关系</p>
+<table>
+<thead>
+<tr>
+<th>属性值</th>
+<th>关键字</th>
+<th>所有权</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>strong, copy, retain</td>
+<td>__strong</td>
+<td>有</td>
+</tr>
+<tr>
+<td>weak</td>
+<td>__weak</td>
+<td>无</td>
+</tr>
+<tr>
+<td>assign, unsafe_unretained</td>
+<td>__unsafe_unretained</td>
+<td>无</td>
+</tr>
+</tbody>
+</table>
+<p>属性默认为assign（如果属性是NSObject（或者它子类的）的对象时，默认为strong）, readwrite, atomic</p>
+<p>@property int i;等价于@property(assign, readwrite, atomic) int i;<br>@property NSString <em>s;等价于@property(strong, readwrite, atomic) NSString </em>s;</p>
+<p>strong和retain类似，对所指的对象引用计数加1（如果所指对象是可变对象的话）</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSMutableString</span> *str = [[<span class="built_in">NSMutableString</span> alloc] initWithUTF8String:<span class="string">"mutablestring"</span>];</div><div class="line">member.strong = str; <span class="comment">// 头文件定义@property(strong) NSString *strong; strong和str指向同一个内存地址</span></div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%ld"</span>, <span class="built_in">CFGetRetainCount</span>((__bridge <span class="built_in">CFTypeRef</span>)(str))); <span class="comment">// 输出2（NSLog可能对引用计数结果有影响，所以在这之前不要使用类似NSLog(@"%@", member.strong);语句，最好在查看引用计数时先屏蔽掉其他NSLog）</span></div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, member.strong); <span class="comment">// 输出mutablestring</span></div><div class="line">[str deleteCharactersInRange:<span class="built_in">NSMakeRange</span>(<span class="number">0</span>, <span class="number">7</span>)];</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, member.strong); <span class="comment">// 输出string</span></div></pre></td></tr></table></figure>
+<p>我改变的是str的内容，但是strong却被同时改变了，这是因为strong和str指向的是同一块内存（可以在Xcode中调试View Memory of “<em>_strong”和View Memory of “</em>str”可以看到它们的Address是一致的），该内存的引用计数为2，所以改变s的内容实际上就改变了strong的内容</p>
+<p>另外如果用一个strong指针来指向不可变对象str，那么str的引用计数不会加1</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSString</span> *str = <span class="string">@"string"</span>; <span class="comment">// @"string"存放在内存的常量区（不可变），生命周期为整个程序的生命周期，引用计数为一个很大的数，不会被改变</span></div><div class="line"><span class="built_in">NSString</span> *__<span class="keyword">strong</span> s = str; <span class="comment">// 试图使str的引用计数加1</span></div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%ld"</span>, <span class="built_in">CFGetRetainCount</span>((__bridge <span class="built_in">CFTypeRef</span>)(str))); <span class="comment">// 引用计数不变</span></div></pre></td></tr></table></figure>
+<p>那么如果我们不想让strong和str指向一个地方，这时copy就派上用场了，copy和strong类似，但是它不影响所指向的对象的引用计数，如果str指向的对象是可变的，那么copy会创建一个所指向对象的不可变副本（你不能修改copy指向的地址的内容，即使这个copy是NSMultableString，[str copy]同理），它们不指向同一个内存地址</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSMutableString</span> *str = [[<span class="built_in">NSMutableString</span> alloc] initWithUTF8String:<span class="string">"mutablestring"</span>]; <span class="comment">// 堆中分配内存</span></div><div class="line">member.cp = str; <span class="comment">// 头文件定义@property(copy) NSString *cp; cp指向str的副本，cp和str指向不同地址</span></div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, member.cp); <span class="comment">// 输出mutablestring</span></div><div class="line">[str deleteCharactersInRange:<span class="built_in">NSMakeRange</span>(<span class="number">0</span>, <span class="number">7</span>)];</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, member.cp); <span class="comment">// 然并卵，cp没有改变，输出mutablestring</span></div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%p %p"</span>, str, member.cp); <span class="comment">// 地址不同</span></div><div class="line"></div><div class="line">member.mscp = str; <span class="comment">// 头文件定义@property(copy) NSMutableString *mscp</span></div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%p %p"</span>, str, member.mscp); <span class="comment">// 地址不同</span></div><div class="line">[member.mscp deleteCharactersInRange:<span class="built_in">NSMakeRange</span>(<span class="number">0</span>, <span class="number">7</span>)]; <span class="comment">// mscp指向不可变的副本，即使它是NSMutableString，也不能修改其指向的内容。运行时报错Terminating app due to uncaught exception 'NSInvalidArgumentException', reason: 'Attempt to mutate immutable object with deleteCharactersInRange:'</span></div></pre></td></tr></table></figure>
+<p>如果str指向的对象不可变，结果又会不一样</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSString</span> *str = [[<span class="built_in">NSString</span> alloc] initWithFormat:<span class="string">@"string"</span>]; <span class="comment">// str虽然在堆中分配内存，但是@"string"实际上是不能被改变的，这个对象会被添加到自动释放池</span></div><div class="line">member.cp = str;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%ld"</span>, <span class="built_in">CFGetRetainCount</span>((__bridge <span class="built_in">CFTypeRef</span>)(str))); <span class="comment">// 引用计数为一个很大值</span></div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%p %p"</span>, str, member.cp); <span class="comment">// cp并没有分配新的空间，因为str指向的内存地址不可改变（也就是说@"string"这个值无法改变，不能变成@"abc"之类的），所以cp和str指向了同一个地址</span></div></pre></td></tr></table></figure>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSString</span> *str = <span class="string">@"string"</span>; <span class="comment">// @"string"存放在内存的常量区（不可变），生命周期为整个程序的生命周期，引用计数为一个很大的数，不会被改变</span></div><div class="line">member.cp = str;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%ld"</span>, <span class="built_in">CFGetRetainCount</span>((__bridge <span class="built_in">CFTypeRef</span>)(str))); <span class="comment">// 一个非常大的引用计数</span></div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%p %p"</span>, str, member.cp); <span class="comment">// cp并没有分配新的空间，因为str指向的内存地址不可改变（也就是说@"string"这个值无法改变，不能变成@"abc"之类的），所以cp和str指向了同一个地址</span></div></pre></td></tr></table></figure>
+<p>weak和assign不会对所指的对象引用计数加1（还是指向的同一个内存地址），它们的区别就是当weak指向的内存区域被释放时，weak指针会被赋值为nil，而如果用的是assign，不会被赋值为nil，再去使用这个指针时，运行时会报错</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSString</span> *str= [[<span class="built_in">NSString</span> alloc] initWithFormat:<span class="string">@"%s"</span>, <span class="string">"Name:zyu"</span>];</div><div class="line">member.weak = str; <span class="comment">// 头文件定义@property(weak) NSString *weak; weak和str指向同一个内存地址</span></div><div class="line">str= <span class="literal">nil</span>; <span class="comment">// str空间释放时，weak被赋值成nil</span></div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, member.weak); <span class="comment">// 输出(null)</span></div></pre></td></tr></table></figure>
+<p>等价于</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSString</span> *str = [[<span class="built_in">NSString</span> alloc] initWithFormat:<span class="string">@"%s"</span>, <span class="string">"Name:zyu"</span>];</div><div class="line"><span class="built_in">NSString</span> * __<span class="keyword">weak</span> _<span class="keyword">weak</span> = str; <span class="comment">// 还可以用关键字来定义weak属性</span></div><div class="line">str = <span class="literal">nil</span>;</div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, _<span class="keyword">weak</span>); <span class="comment">// 输出(null)</span></div></pre></td></tr></table></figure>
+<p>@当我把”Name:zyu”改成”zyu”时，NSLog输出的结果不是(null)，不知道是不是Xcode的bug。(￣▽￣)</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">NSString</span> *str= [[<span class="built_in">NSString</span> alloc] initWithFormat:<span class="string">@"%s"</span>, <span class="string">"Name:zyu"</span>];</div><div class="line">member.assign= str; <span class="comment">// 头文件定义@property(assign) NSString *assign; assign和str指向同一个内存地址</span></div><div class="line">str= <span class="literal">nil</span>; <span class="comment">// str空间释放时，assign不会被赋值成nil</span></div><div class="line"><span class="built_in">NSLog</span>(<span class="string">@"%@"</span>, member.assign); <span class="comment">// 运行时报错EXC_BAD_ACCESS，有时候又不报错，没有任何输出(╯°□°）╯︵ ┻━┻</span></div></pre></td></tr></table></figure>
+<p><a href="http://www.devtalking.com/articles/you-should-to-know-property/" target="_blank" rel="external">Objective-C中的@property</a><br><a href="https://developer.apple.com/library/ios/releasenotes/ObjectiveC/RN-TransitioningToARC/Introduction/Introduction.html" target="_blank" rel="external">Transitioning to ARC Release Notes</a><br><a href="http://www.cnblogs.com/andyque/archive/2011/08/03/2125728.html" target="_blank" rel="external">Objective-c的@property 详解</a><br><a href="http://www.devm.cn/2015/07/16/the-proper-use-of-property-keywords.html" target="_blank" rel="external">如何正确使用property里面的strong,weak等关健字</a><br><a href="http://blog.csdn.net/jymn_chen/article/details/18887841" target="_blank" rel="external">复制对象（一）copy和mutableCopy方法</a></p>
 
           
         
@@ -553,7 +1013,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2014/07/23/Qt在各平台上的搭建qt-everywhere/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/09/23/error-LNK2019-无法解析的外部符号-imp-iob-func/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="y">
@@ -572,7 +1032,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2014/07/23/Qt在各平台上的搭建qt-everywhere/" itemprop="url">Qt在各平台上的搭建qt-everywhere</a></h1>
+                <a class="post-title-link" href="/2015/09/23/error-LNK2019-无法解析的外部符号-imp-iob-func/" itemprop="url">error LNK2019: 无法解析的外部符号 __imp____iob_func</a></h1>
         
 
         <div class="post-meta">
@@ -584,8 +1044,575 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-07-23T17:06:19+08:00">
-                2014-07-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-09-23T18:06:24+08:00">
+                2015-09-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C-C/" itemprop="url" rel="index">
+                    <span itemprop="name">C/C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>在VS2015中使用静态库时编译出错</p>
+<pre><code>1&gt;libcurl_md.lib(cookie.obj) : error LNK2019: 无法解析的外部符号 __imp____iob_func，该符号在函数 _Curl_cookie_init 中被引用
+1&gt;libcurl_md.lib(url.obj) : error LNK2001: 无法解析的外部符号 __imp____iob_func
+1&gt;libcurl_md.lib(mprintf.obj) : error LNK2001: 无法解析的外部符号 __imp____iob_func
+1&gt;libcurl_md.lib(formdata.obj) : error LNK2001: 无法解析的外部符号 __imp____iob_func
+1&gt;libcurl_md.lib(ftp.obj) : error LNK2001: 无法解析的外部符号 __imp__sscanf
+1&gt;libcurl_md.lib(rtsp.obj) : error LNK2001: 无法解析的外部符号 __imp__sscanf
+1&gt;libcurl_md.lib(socks.obj) : error LNK2001: 无法解析的外部符号 __imp__sscanf
+1&gt;libcurl_md.lib(http_proxy.obj) : error LNK2001: 无法解析的外部符号 __imp__sscanf
+1&gt;libcurl_md.lib(transfer.obj) : error LNK2001: 无法解析的外部符号 __imp__sscanf
+1&gt;libcurl_md.lib(parsedate.obj) : error LNK2001: 无法解析的外部符号 __imp__sscanf
+1&gt;libcurl_md.lib(imap.obj) : error LNK2001: 无法解析的外部符号 __imp__sscanf
+1&gt;libcurl_md.lib(telnet.obj) : error LNK2001: 无法解析的外部符号 __imp__sscanf
+1&gt;libcurl_md.lib(cookie.obj) : error LNK2001: 无法解析的外部符号 __imp__sscanf
+1&gt;libcurl_md.lib(hostip.obj) : error LNK2001: 无法解析的外部符号 __imp__sscanf
+1&gt;libcurl_md.lib(url.obj) : error LNK2001: 无法解析的外部符号 __imp__sscanf
+1&gt;libcurl_md.lib(http.obj) : error LNK2001: 无法解析的外部符号 __imp__sscanf
+1&gt;libcurl_md.lib(mprintf.obj) : error LNK2019: 无法解析的外部符号 __imp__sprintf，该符号在函数 _dprintf_formatf 中被引用
+1&gt;libcurl_md.lib(idn_win32.obj) : error LNK2019: 无法解析的外部符号 __imp__wprintf，该符号在函数 _curl_win32_ascii_to_idn 中被引用
+1&gt;C:\Users\zyu\Documents\Visual Studio 2015\Projects\ConsoleApplication1\Debug\ConsoleApplication1.exe : fatal error LNK1120: 4 个无法解析的外部命令
+</code></pre><p>原因是我这个libcurl_md.lib的库是在VS2013环境下编出来的，直接用到VS2015中出现问题</p>
+<p>解决方案：把lib重新编译成VS2015版本，再使用OK</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/09/21/Objective-C数据类型输出格式及隐式转换详解/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="y">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/sh.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="无名小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2015/09/21/Objective-C数据类型输出格式及隐式转换详解/" itemprop="url">Objective-C数据类型输出格式及隐式转换详解</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-09-21T23:39:50+08:00">
+                2015-09-21
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Objective-C/" itemprop="url" rel="index">
+                    <span itemprop="name">Objective-C</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="简单数据类型和输出格式符"><a href="#简单数据类型和输出格式符" class="headerlink" title="简单数据类型和输出格式符"></a>简单数据类型和输出格式符</h2><table>
+<thead>
+<tr>
+<th>类型说明符</th>
+<th>格式符</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>char</td>
+<td>%c</td>
+</tr>
+<tr>
+<td>short int</td>
+<td>%hd, %hi, %hx, %ho</td>
+</tr>
+<tr>
+<td>unsigned short int</td>
+<td>%hu, %hx, %ho</td>
+</tr>
+<tr>
+<td>int</td>
+<td>%d, %i, %x, %o</td>
+</tr>
+<tr>
+<td>unsigned int</td>
+<td>%u, %x, %o</td>
+</tr>
+<tr>
+<td>long int</td>
+<td>%ld, %li, %lx, %lo</td>
+</tr>
+<tr>
+<td>unsigned long int</td>
+<td>%lu, %lx, %lo</td>
+</tr>
+<tr>
+<td>long long int</td>
+<td>%lld, %lli, %llx, %llo</td>
+</tr>
+<tr>
+<td>unsigned long long int</td>
+<td>%llu, %llx, %llo</td>
+</tr>
+<tr>
+<td>float</td>
+<td>%f, %e, %g, %a</td>
+</tr>
+<tr>
+<td>double</td>
+<td>%f, %e, %g, %a</td>
+</tr>
+<tr>
+<td>long double</td>
+<td>%Lf, %Le, %Lg</td>
+</tr>
+<tr>
+<td>*</td>
+<td>%p</td>
+</tr>
+</tbody>
+</table>
+<h2 id="数据类型的隐式转换"><a href="#数据类型的隐式转换" class="headerlink" title="数据类型的隐式转换"></a>数据类型的隐式转换</h2><p>编译器按下面的顺序进行自动类型转换：</p>
+<ol>
+<li>如果其中一个数是long double类型的，那么另一个操作数被转换为long double类型，计算的结果也是long double类型。</li>
+<li>如果一个数是double类型的，那么另一个操作数被转换为double类型，计算的结果也是double类型。</li>
+<li>如果一个数是float类型的，那么另一个操作数被转换为float类型，计算的结果也是float类型。</li>
+<li>如果一个数是Bool、char、short int、bit field、枚举类型的，则全部转换为int类型，计算的结果也是int类型。</li>
+<li>如果一个数是long long int类型的，那么另一个操作数被转换为long long int类型，计算的结果也是long long int类型。</li>
+<li>如果一个数是long int类型的，那么另一个操作数被转换为long int类型，计算的结果也是long int类型。</li>
+</ol>
+<p>整型数运算遵循一个规则：字节小的往字节大的转，有符号的往无符号的转</p>
+<p>所有比int型小的数据类型（包括char,unsigned char,short,unsigned short）转换为int型再参与运算。如果转换后的数据会超出int型所能表示的范围的话，则转换为unsigned int型。</p>
+<p>一般来说这样提升，从小到大：比int小的 -&gt; int -&gt; unsigned int -&gt; long -&gt; unsigned long</p>
+<p>eg：（测试环境Mac）</p>
+<figure class="highlight objc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">char</span> c = <span class="string">'c'</span>;</div><div class="line"><span class="keyword">unsigned</span> <span class="keyword">short</span> b = <span class="number">1</span>;</div><div class="line">b + c; <span class="comment">// 结果为int类型</span></div><div class="line"></div><div class="line"><span class="keyword">unsigned</span> <span class="keyword">short</span> a;</div><div class="line"><span class="keyword">unsigned</span> <span class="keyword">short</span> b;</div><div class="line">a+b; <span class="comment">// 结果为int类型</span></div><div class="line"></div><div class="line"><span class="keyword">enum</span>会跟据最大值来决定类型，一般来说为<span class="keyword">int</span>型，如果超出<span class="keyword">int</span>型所能表示的范围，则用比<span class="keyword">int</span>型大的最小类型来表示（<span class="keyword">unsigned</span> <span class="keyword">int</span>, <span class="keyword">long</span> 或者<span class="keyword">unsigned</span> <span class="keyword">long</span>）</div><div class="line"><span class="keyword">enum</span> e &#123;MON = <span class="number">12345678987654321</span>&#125;;</div><div class="line"><span class="keyword">enum</span> e eg = MON; <span class="comment">// 此时eg为unsigned long类型</span></div><div class="line"><span class="keyword">int</span> i;</div><div class="line">eg + i; <span class="comment">// 结果为unsigned long类型</span></div></pre></td></tr></table></figure>
+<p>如果表达式中混有unsigned short和int型时，如果int型数据可以表示所有的unsigned short型的话，则将unsigned short类型的数据转换为int型，否则，unsigned short类型及int型都转换为unsigned int类型。unsigned int和long同理。</p>
+<p>几个常用的数据类型转换</p>
+<pre><code>double — float
+|
+long
+|
+unsigned
+|
+int — char,short
+</code></pre><p><a href="http://blog.sina.com.cn/s/blog_590be5290100htvu.html" target="_blank" rel="external">signed和unsigned之间</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/09/17/初识Git/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="y">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/sh.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="无名小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2015/09/17/初识Git/" itemprop="url">初识Git</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-09-17T16:54:09+08:00">
+                2015-09-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Git/" itemprop="url" rel="index">
+                    <span itemprop="name">Git</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>对于任何一个文件，在 Git 内都只有三种状态：已提交（committed），已修改（modified）和已暂存（staged）。已提交表示该文件已经被安全地保存在本地数据库中了；已修改表示修改了某个文件，但还没有提交保存；已暂存表示把已修改的文件放在下次提交时要保存的清单中。</p>
+<p>由此我们看到 Git 管理项目时，文件流转的三个工作区域：Git 的工作目录，暂存区域，以及本地仓库。</p>
+<p>基本的 Git 工作流程如下：</p>
+<ol>
+<li>在工作目录中修改某些文件。</li>
+<li>对修改后的文件进行快照，然后保存到暂存区域。</li>
+<li>提交更新，将保存在暂存区域的文件快照永久转储到 Git 目录中。</li>
+</ol>
+<h2 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h2><p>一般在新的系统上，我们都需要先配置下自己的 Git 工作环境。配置工作只需一次，以后升级时还会沿用现在的配置。当然，如果需要，你随时可以用相同的命令修改已有的配置。</p>
+<p>Git 提供了一个叫做 git config 的工具（译注：实际是 git-config 命令，只不过可以通过 git 加一个名字来呼叫此命令。），专门用来配置或读取相应的工作环境变量。而正是由这些环境变量，决定了 Git 在各个环节的具体工作方式和行为。这些变量可以存放在以下三个不同的地方：</p>
+<ul>
+<li>/etc/gitconfig 文件：系统中对所有用户都普遍适用的配置。若使用 git config 时用 –system 选项，读写的就是这个文件。</li>
+<li>~/.gitconfig 文件：用户目录下的配置文件只适用于该用户。若使用 git config 时用 –global 选项，读写的就是这个文件。</li>
+<li>当前项目的 git 目录中的配置文件（也就是工作目录中的 .git/config 文件）：这里的配置仅仅针对当前项目有效。每一个级别的配置都会覆盖上层的相同配置，所以 .git/config 里的配置会覆盖 /etc/gitconfig 中的同名变量。</li>
+</ul>
+<p>在 Windows 系统上，Git 会找寻用户主目录下的 .gitconfig 文件。主目录即 $HOME 变量指定的目录，一般都是 C:\Documents and Settings\$USER。此外，Git 还会尝试找寻 /etc/gitconfig 文件，只不过看当初 Git 装在什么目录，就以此作为根目录来定位。</p>
+<p>用户信息<br>第一个要配置的是你个人的用户名称和电子邮件地址。这两条配置很重要，每次 Git 提交时都会引用这两条信息，说明是谁提交了更新，所以会随更新内容一起被永久纳入历史记录：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global user.name <span class="string">"Jon Snow"</span></div><div class="line">git config --global user.email game@thrones.com</div></pre></td></tr></table></figure>
+<p>可以通过git help查看帮助</p>
+<h2 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h2><p>要对现有的某个项目开始用 Git 管理，只需到此项目所在的目录，执行：<br><code>git init</code></p>
+<p>初始化后，在当前目录下会出现一个名为 .git 的目录，所有 Git 需要的数据和资源都存放在这个目录中。不过目前，仅仅是按照既有的结构框架初始化好了里边所有的文件和目录，但我们还没有开始跟踪管理项目中的任何一个文件。</p>
+<p>git add 命令告诉 Git 开始对这些文件进行跟踪</p>
+<p>如果要从远程仓库克隆一份，比如从github网站中弄一份代码下来，执行<br><code>git clone https://github.com/forzxy/xxx.git</code></p>
+<p>这会在当前目录下创建一个名为xxx的目录，现在我们手上已经有了一个真实项目的 Git 仓库，并从这个仓库中取出了所有文件的工作拷贝。</p>
+<p>执行<code>git status</code>确定哪些文件当前处于什么状态（未追踪、已修改但是未缓存、已缓存等）。</p>
+<p>现在在当前目录添加一个新文件test.txt，执行<code>git status</code>，显示</p>
+<pre><code>Untracked files:
+(use &quot;git add &lt;file&gt;...&quot; to include in what will be committed)
+test.txt
+</code></pre><p>说明test.txt还没有被加入版本管理</p>
+<p>执行<code>git add test.txt</code>然后再<code>git status</code></p>
+<pre><code>Changes to be committed:
+(use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)
+new file: test.txt
+</code></pre><p>说明test.txt已经加入了版本管理，处于已暂存（staged）状态<br>同理修改文件内容后，也需要执行git add使文件加入暂存区</p>
+<p>现在修改一个文件<br>执行<code>git diff</code>来查看尚未暂存的文件更新了哪些部分，此命令比较的是工作目录中当前文件和暂存区域快照之间的差异，也就是修改之后还没有暂存起来的变化内容。</p>
+<p>若要看已经暂存起来的文件和上次提交时的快照之间的差异，可以用 <code>git diff --cached</code>（<code>git diff --staged</code>）</p>
+<p><code>git checkout -- filename</code> 命令表示取消对文件的修改</p>
+<p>移除文件<br>要从 Git 中移除某个文件，就必须要从已跟踪文件清单中移除（确切地说，是从暂存区域移除），然后提交。可以用 git rm 命令完成此项工作，并连带从工作目录中删除指定的文件，这样以后就不会出现在未跟踪文件清单中了。</p>
+<p>如果删除之前修改过并且已经放到暂存区域的话，则必须要用强制删除选项 -f（译注：即 force 的首字母），以防误删除文件后丢失修改的内容。</p>
+<p>另外一种情况是，我们想把文件从 Git 仓库中删除（亦即从暂存区域移除），但仍然希望保留在当前工作目录中。换句话说，仅是从跟踪清单中删除。比如一些大型日志文件或者一堆 .a 编译文件，</p>
+<p>不小心纳入仓库后，要移除跟踪但不删除文件，以便稍后在 .gitignore 文件中补上，用 –cached 选项即可。</p>
+<p>移动文件<br><code>git mv</code> 就相当于运行了下面三条命令：</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ mv README.txt README</div><div class="line">$ git rm README.txt</div><div class="line">$ git add README</div></pre></td></tr></table></figure>
+<p>提交更改<br>一切就绪以后使用<code>git commit</code>来提交暂存区内容，这种方式会启动文本编辑器以便输入本次提交的说明。</p>
+<p>如果觉得每次修改后还要使用<code>git add</code>来加入暂存区很繁琐的话，可以使用<code>git commit -a</code>，Git 就会自动把所有已经跟踪过的文件暂存起来一并提交，从而跳过 <code>git add</code> 步骤。</p>
+<p>修改最后一次提交<br>有时候我们提交完了才发现漏掉了几个文件没有加（忘记加入暂存区），或者提交信息写错了。可以执行<code>git commit --amend</code>来修改上一次提交</p>
+<p>此命令将使用当前的暂存区域快照提交。如果上一次提交完没有作任何改动，直接运行此命令的话，相当于重新编辑提交说明。</p>
+<p>查看历史<br><code>git log</code>查看提交历史</p>
+<p>-p 选项展开显示每次提交的内容差异，用 -2 则仅显示最近的两次更新</p>
+<p>远程仓库<br><code>git remote</code>列出每个远程库的简短名字，在克隆完某个项目后，至少可以看到一个名为 origin 的远程库，Git 默认使用这个名字来标识你所克隆的原始仓库。</p>
+<pre><code>git remote -v显示对应的克隆地址
+git remote show [remote-name] 查看某个远程仓库的详细信息
+git remote add [shortname] [url]：添加远程仓库
+git remote rename 修改某个远程仓库在本地的简称
+git remote rm 移除对应的远端仓库
+</code></pre><p>从远程仓库抓取数据<br><code>git fetch origin</code>：抓取远程仓库有的，本地没有的信息，fetch 命令只是将远端的数据拉到本地仓库，并不自动合并到当前工作分支，只有当你确实准备好了，才能手工合并。</p>
+<p><code>git pull</code>：抓取数据并自动合并。</p>
+<p>推送到远程仓库<br><code>git push [remote-name] [branch-name]</code>将本地仓库中branch-name分支的数据推送到远程仓库remote-name</p>
+<p><a href="http://git.oschina.net/progit/index.html" target="_blank" rel="external">Pro Git（中文版）</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/09/17/Qt动态库的生成和使用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="y">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/sh.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="无名小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2015/09/17/Qt动态库的生成和使用/" itemprop="url">Qt动态库的生成和使用</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-09-17T00:18:47+08:00">
+                2015-09-17
               </time>
             
 
@@ -643,59 +1670,21 @@
       
         
           
-            <p><a href="http://download.qt.io/" target="_blank" rel="external">下载地址</a></p>
-<p>当进入解压好的源码包后，使用./configure –help命令，可以获得相应帮助，前面是*号的表示默认参数. +号表示该功能要求被评估，评估成功后才能被接受</p>
-<h2 id="Qt-for-windows7-64bit"><a href="#Qt-for-windows7-64bit" class="headerlink" title="Qt for windows7-64bit"></a>Qt for windows7-64bit</h2><p>在电脑上安装mingw（搜索mingw for windows），将C:\MinGW\bin添加进环境变量，打开命令行输入gcc –version和g++ –version和mingw32-make –version验证安装成功</p>
-<p>解压qt-everywhere-opensource-src-4.8.1.tar.gz并进入目录</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">configure -debug-and-release -opensource -platform win32-g++ -webkit  （如果需要重新configure，运行mingw32-make confclean，然后重新configure）</div><div class="line">如果想使用VS的编译器，就指定-platform win32-msvc2013（VS2013版本）</div><div class="line">mingw32-make（如果是VS就是nmake，需要在VS2013开发人员命令提示中使用）</div><div class="line">如果指定了prefix路径输入：mingw32-make install</div></pre></td></tr></table></figure>
-<p>把qt-everywhere-opensource-src-4.8.1/bin加入PATH</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">qmake –version</div><div class="line">mingw32-make docs 生成doc-build文件夹文档</div></pre></td></tr></table></figure>
-<p>Qt已安装完毕，cmd命令行下使用如下命令生成可执行文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">qmake -project</div><div class="line">qmake</div><div class="line">mingw32-make // debug目录下生成可执行文件</div><div class="line">debug\文件名.exe</div></pre></td></tr></table></figure>
-<p>如果是VS的编译器则使用qmake -r -spec win32-msvc2013然后执行nmake，需要在VS2013 开发人员命令提示中使用，或者qmake -r -spec win32-msvc2013 -tp vc生成vcxproj工程文件，双击打开，使用VS编译</p>
-<p><a href="http://blog.csdn.net/sniper_bing/article/details/38067887" target="_blank" rel="external">Qt5.3.1 静态编译的configure</a></p>
-<h2 id="Ubuntu-12-04-32bit-Linux-X11平台"><a href="#Ubuntu-12-04-32bit-Linux-X11平台" class="headerlink" title="Ubuntu 12.04-32bit Linux X11平台"></a>Ubuntu 12.04-32bit Linux X11平台</h2><p>用于X Window System（如Solaris、AIX、HP-UX、Linux、BSD）</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">tar zxvf qt-everywhere-opensource-src-4.8.1.tar.gz</div></pre></td></tr></table></figure>
-<p>在./configure前主动装好下面3个包</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt-get install libX11-dev libXext-dev libXtst-dev</div></pre></td></tr></table></figure>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">./configure -debug -developer-build -opensource -shared -fast -no-multimedia -xmlpatterns -no-audio-backend -no-phonon -svg -no-webkit -javascript-jit -script -scripttools -declarative -declarative-debug -qt-zlib -qt-libtiff  -qt-libpng  -qt-libmng -no-openssl -verbose -optimized-qmake -no-xinerama -no-xvideo -no-xshape -no-xsync</div><div class="line">make</div><div class="line">make install</div></pre></td></tr></table></figure>
-<p>Qt已安装完毕，使用如下命令生成可执行文件</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">/usr/<span class="built_in">local</span>/Trolltech/Qt-4.8.1/bin/qmake -project   // qmake默认安装路径</div><div class="line">/usr/<span class="built_in">local</span>/Trolltech/Qt-4.8.1/bin/qmake</div><div class="line">make</div><div class="line">./生成的可执行文件</div></pre></td></tr></table></figure>
-<p><a href="http://www.cnblogs.com/emouse/archive/2013/01/28/2880142.html" target="_blank" rel="external">Linux下编译、安装、配置 QT</a></p>
-<h2 id="嵌入式X86平台"><a href="#嵌入式X86平台" class="headerlink" title="嵌入式X86平台"></a>嵌入式X86平台</h2><p>可以通过编译移除不常使用的组件与功能。通过自己的视窗系统QWS，不需依赖X Window System，直接写入Linux帧缓冲。可以减少存储器消耗。并提供虚拟帧缓冲QVFB，方便在桌面系统上进行嵌入式测试。</p>
-<p>解压qt-everywhere-opensource-src-4.8.1.tar.gz并进入</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">apt-get install qt4-dev-tools</div><div class="line">./configure -embedded x86 -qvfb -no-webkit</div><div class="line">make</div><div class="line">make install</div></pre></td></tr></table></figure>
-<p>qt embedded x86被安装在/usr/local/Trolltech/QtEmbedded-4.8.1，里面的qmake, moc,uic等都是for embedded x86,用来编译embedded程序的</p>
-<p>Qt已安装完毕，测试</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">/usr/<span class="built_in">local</span>/Trolltech/QtEmbedded-4.8.1/bin/qmake -project</div><div class="line">/usr/<span class="built_in">local</span>/Trolltech/QtEmbedded-4.8.1/bin/qmake</div><div class="line">make</div><div class="line">qvfb -width 800 -height 600 &amp;     // 打开qvfb用来显示程序</div><div class="line">./可执行文件名 -qws                 // 程序显示在qvfb上</div></pre></td></tr></table></figure>
-<p>QT是基于C/S模型的，也就是客户端/服务器模型，QT如果需要运行图形界面程序就需要server端的支持。这个服务器端就是QWS Server。默认情况下，嵌入式端的系统是不会启动QWS Server的，所以如果只有一个图形界面程序，就必须给它加上-qws参数，让它以服务器的形式运行，这样才能启动QWS Server。</p>
-<h2 id="嵌入式ARM平台"><a href="#嵌入式ARM平台" class="headerlink" title="嵌入式ARM平台"></a>嵌入式ARM平台</h2><p>先根据手册在linux上搭建mtk开发环境，安装好交叉编译工具（linux上有armv6z-mediatek451_001_vfp-linux-gnueabi-gcc这条命令）</p>
-<p>解压qt-everywhere-opensource-src-4.8.1.tar.gz并进入</p>
-<p>在qt-everywhere-opensource-src-4.8.1/mkspecs/qws/下创建armv6z-mediatek451_001_vfp-linux-gnueabi/文件夹，复制linux-arm-g++目录下的qplatformdefs.h和qmake.conf到armv6z-mediatek451_001_vfp-linux-gnueabi下，修改qmake.conf，在qmake.conf中加入如下两行</p>
-<p>QT_CFLAGS_DIRECTFB = -I/opt/share/release/BDP_Linux/oss/library/DirectFB/usr    /include/directfb -D_REENTRANT</p>
-<p>QT_LIBS_DIRECTFB = -L/opt/share/release/BDP_Linux/oss/library/DirectFB/lib -    ldirectfb -lfusion -ldirect -lpthread</p>
-<p>（解压release/BDP_Linux/oss/library/DirectFB）</p>
-<p>以下为qmake.conf文件内容</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"># qmake configuration for building with armv6z-mediatek-linux-gnueabi-g++</div><div class="line">include(../../common/linux.conf)</div><div class="line">include(../../common/gcc-base-unix.conf)</div><div class="line">include(../../common/g++-unix.conf)</div><div class="line">include(../../common/qws.conf)</div><div class="line"># modifications to g++.conf</div><div class="line">QMAKE_CC                = armv6z-mediatek451_001_vfp-linux-gnueabi-gcc</div><div class="line">QMAKE_CXX               = armv6z-mediatek451_001_vfp-linux-gnueabi-g++</div><div class="line">QMAKE_LINK              = armv6z-mediatek451_001_vfp-linux-gnueabi-g++</div><div class="line">QMAKE_LINK_SHLIB        = armv6z-mediatek451_001_vfp-linux-gnueabi-g++</div><div class="line"># modifications to linux.conf</div><div class="line">QMAKE_AR                = armv6z-mediatek451_001_vfp-linux-gnueabi-ar cqs</div><div class="line">QMAKE_OBJCOPY           = armv6z-mediatek451_001_vfp-linux-gnueabi-objcopy</div><div class="line">QMAKE_STRIP             = armv6z-mediatek451_001_vfp-linux-gnueabi-strip</div><div class="line">QT_CFLAGS_DIRECTFB = -I/opt/share/release/BDP_Linux/oss/library/DirectFB/usr    /include/directfb -D_REENTRANT</div><div class="line">QT_LIBS_DIRECTFB = -L/opt/share/release/BDP_Linux/oss/library/DirectFB/lib -    ldirectfb -lfusion -ldirect -lpthread</div><div class="line"></div><div class="line">load(qt_config)</div></pre></td></tr></table></figure>
-<p>修改qt-everywhere-opensource-src-4.8.1/src/corelib/io/io.pri</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">linux-*|armv6z-*:&#123;     // linux-*后面加上|armv6z-*</div></pre></td></tr></table></figure>
-<p>然后安装</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">./configure -release -embedded arm -fast -xplatform qws/armv6z-mediatek451_001_vfp-linux-gnueabi -v -developer-build -opensource -xmlpatterns -svg -no-webkit -javascript-jit -script -scripttools -declarative -optimized-qmake -reduce-relocations -exceptions -depths all -lrt -qt-zlib -qt-libtiff -qt-libpng -qt-libmng -qt-libjpeg -qt-freetype -no-dbus -nomake examples -nomake demos -nomake docs -nomake translations -no-largefile -no-phonon -no-phonon-backend -no-opengl -no-multimedia -no-audio-backend -no-declarative-debug -plugin-gfx-directfb -no-gfx-transformed -no-gfx-qvfb -no-gfx-vnc -no-gfx-multiscreen -no-gfx-qnx -no-gfx-integrityfb -little-endian -host-little-endian -qt-sql-sqlite -openssl-linked -I/home/release/BDP_Linux/oss/library/openssl/usr/include -L/home/release/BDP_Linux/oss/library/openssl/usr/lib -lssl -lcrypto -prefix /opt/share/qt-4.8.1-arm</div><div class="line">（记得解压release/BDP_Linux/oss/library/openssl，-I和-L路径可能有所不同（I=include ， L=library）</div></pre></td></tr></table></figure>
-<p>-xplatform参数<br>QT使用qmake产生Makefile，为了让QT在不同平台下编译，QT预先定义一些平台Makefile变量。这一些变量根据编译平台不同，采用不同的值。如QMAKE_CC在ARM-LINUX下等于arm-linux-gcc，这一些变量都存在名为qmake.conf文件里。当qmake生成Makefile时，将采用这个文件的值。QT已经针对所有测试过的平台都写相应的qmake.conf，它全部放在QT目录下的mkspecs目录，其中针对QT窗口系统(QWS)的平台放在 mkspecs/qws下面。</p>
-<p>-xplatform就是告诉configure，生成qt 4.8.1库的Makefile采用哪一个qmake.conf。</p>
-<p>configure -xplatform qws/linux-arm-g++即表示采用 qws/linux-arm-g++的qmake.conf，而且这个格式很简单，所以如果有一个新的嵌入式平台，你完全可以在qws建个类似qmake.conf，只要用xplatform通知configure即可。但是目录名必须是 linux-XXXX-g++（所以上面的红字修改是因为我们的qmake.conf文件夹不是以linux开头）</p>
-<p>-prefix 参数<br>Qt安装的路径</p>
-<p>configure完成后根据提示</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">gmake</div><div class="line">gmake install</div></pre></td></tr></table></figure>
-<p>安装成功，测试</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">/qt-4.8.1-armv6z/bin/qmake -project</div><div class="line">/qt-4.8.1-armv6z/bin/qmake</div><div class="line">make</div></pre></td></tr></table></figure>
-<p>交叉编译成功</p>
-<p><a href="http://lanxinyuchs.iteye.com/blog/934967" target="_blank" rel="external">QT编译出错解决</a></p>
-<p>搭建好nfs<br>将程序挂载到开发板上，命令为：mount -o nolock 192.168.100.182:/opt/nfs  /mnt/ubi_boot/nfs<br>nfs mount默认选项包括文件锁，依赖于portmap提供的动态端口分配功能，简单的解决方法：kill文件锁（lockd）或者mount -o nolock<br>-o options主要用来描述设备或档案的挂载方式，由于很多嵌入式设备的根文件系统中不带portmap，所以一般都使用-o nolock参数，即不使用NFS文件锁，这样就可以避免使用portmap。<br>挂载成功后将程序拷贝到/mnt/ubi_boot/main目录下，由于程序运行需要一些Qt库，需要显示到电视机（directfb），添加环境变量（可写成脚本执行，然后用source qtenv.sh命令使环境变量生效，echo $查看变量是否设置成功）</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> QTDIR=/</div><div class="line"><span class="built_in">export</span> QT_PLUGIN_PATH=<span class="variable">$QTDIR</span>/plugins/</div><div class="line"><span class="built_in">export</span> LD_LIBRARY_PATH=<span class="variable">$QTDIR</span>/lib:/usr/lib:/usr/<span class="built_in">local</span>/lib:/mnt/ubi_boot/main</div><div class="line">然后执行程序 ./可执行文件名-qws -display directfb</div></pre></td></tr></table></figure>
-<p><a href="http://blog.csdn.net/songjinshi/article/details/6554346" target="_blank" rel="external">QTE4.6移植以及相关参数介绍</a><br><a href="ttp://hi.baidu.com/deep_pro/item/fe01ecbd3fddc3d684dd7943" target="_blank" rel="external">qt embedded-linux 4.5.2＋arm移植开发环境搭建全攻略</a></p>
-<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><p><a href="http://blog.csdn.net/mociml/article/details/5317592" target="_blank" rel="external">Qt configure参数说明（中文）</a><br><a href="http://processors.wiki.ti.com/index.php/Building_Qt" target="_blank" rel="external">Building Qt</a><br><a href="http://blog.sina.com.cn/s/blog_8738908f0100u84l.html" target="_blank" rel="external">Qt4.7.4下单独编译QtWebkit</a><br><a href="http://blog.csdn.net/mybelief321/article/details/10137993" target="_blank" rel="external">Ubuntu12.04下配置安装Qt4.6.3及移植到mini2440开发板及其使用全过程</a></p>
-
+            <h2 id="编译成动态库"><a href="#编译成动态库" class="headerlink" title="编译成动态库"></a>编译成动态库</h2><p>打开工程文件.pro</p>
+<pre><code>TEMPLATE = lib
+TARGET = configwifi
+SOURCES删除main.cpp
+</code></pre><figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">make clean</div><div class="line">make</div></pre></td></tr></table></figure>
+<p>生成.so文件</p>
+<p><code>armv6z-mediatek451_001_vfp-linux-gnueabi-strip libconfigwifi.so*</code><br>缩小文件大小</p>
+<h2 id="调用这个动态库"><a href="#调用这个动态库" class="headerlink" title="调用这个动态库"></a>调用这个动态库</h2><p>新建工程，用上面不用的main.cpp</p>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">qmake -project</div><div class="line">qmake</div></pre></td></tr></table></figure>
+<p>修改.pro</p>
+<pre><code>TEMPLATE = app
+LIBS += -L/home/zhang/normal -lconfigwifi
+HEADERS += widget.h(main.cpp里用到的)
+SOURCES += main.cpp
+</code></pre>
           
         
       
@@ -738,7 +1727,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2014/07/23/代码的编译连接与执行过程/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/09/16/Linux开机显示命令行/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="y">
@@ -757,7 +1746,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2014/07/23/代码的编译连接与执行过程/" itemprop="url">代码的编译连接与执行过程</a></h1>
+                <a class="post-title-link" href="/2015/09/16/Linux开机显示命令行/" itemprop="url">Linux开机显示命令行</a></h1>
         
 
         <div class="post-meta">
@@ -769,8 +1758,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-07-23T10:40:35+08:00">
-                2014-07-23
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-09-16T23:58:41+08:00">
+                2015-09-16
               </time>
             
 
@@ -792,8 +1781,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/基础/" itemprop="url" rel="index">
-                    <span itemprop="name">基础</span>
+                  <a href="/categories/Linux/" itemprop="url" rel="index">
+                    <span itemprop="name">Linux</span>
                   </a>
                 </span>
 
@@ -828,473 +1817,19 @@
       
         
           
-            <h2 id="编译"><a href="#编译" class="headerlink" title="编译"></a>编译</h2><p>一个源文件，经过编译系统的处理，生成目标文件的过程叫编译。a.cpp经过编译后在linux下会生成a.o这个目标文件。</p>
-<p>目标文件主要用来描述程序在运行过程中需要放在内存中的内容，这些内容包括两大类——代码和数据。相应的目标文件也分成代码段和数据段。</p>
-<p>代码段(.text)中的内容就是源文件中定义的一个个函数编译后得到的目标代码，a.o的代码段中应当包含main函数的代码。</p>
-<p>数据段分为初始化的数据段(.data)和未初始化的数据段(.bss)。其中初始化的数据段中包括了那些在定义的同时设置了初值的静态生存期对象。其他静态生存期对象都放在未初始化的数据段中。</p>
-<h2 id="连接"><a href="#连接" class="headerlink" title="连接"></a>连接</h2><p>连接期间，需要将各个编译单元的目标文件和运行库当中被调用过的单元加以合并。运行库实际上就是一个个目标代码文件的集合，运行库的各个组成部分a.o…这样的目标代码具有相同的结构。经过合并后，不同编译单元的代码段和两类数据段就分别合并到一起了，程序在运行时代码和静态数据需要占据的内存空间就全部已知了，因此所有代码和数据都可以被分配确定的地址了。</p>
-<p>连接的对象出了用户源程序生成的目标文件外，还有系统的运行库。例如，执行输入输出功能，调用sin，fabs这类标准函数，此外，系统运行库中还包括程序的引导代码。在执行main函数之前，程序需要执行一些初始化工作，在main函数返回后，需要通知操作系统程序执行完毕，这些都由运行库中的代码完成。</p>
-<p>连接后生成的可执行文件主体，和目标文件一样，也是各个段的信息，只是可执行文件的代码段中所有指令的地址，都是有效地址了。</p>
-<h2 id="执行"><a href="#执行" class="headerlink" title="执行"></a>执行</h2><p>程序的执行以进程为单位，程序的一次动态执行过程称为一个进程。</p>
-<p>程序是存储在磁盘上的，执行前，操作系统需要首先将它载入到内存中，并为它分配足够大的内存空间来容纳代码段和数据段，然后把文件中存放的代码段和初始化的数据段的内容载入其中。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2014/07/22/indent-C语言代码格式化工具/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="y">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/sh.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="无名小站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2014/07/22/indent-C语言代码格式化工具/" itemprop="url">indent-C语言代码格式化工具</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-07-22T09:22:15+08:00">
-                2014-07-22
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/C-C/" itemprop="url" rel="index">
-                    <span itemprop="name">C/C++</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>indent可以让C代码格式化，更方便阅读</p>
-<h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>indent for Windows <a href="http://gnuwin32.sourceforge.net/packages/indent.htm" target="_blank" rel="external">下载地址</a><br>找到Download下载Complete package，然后安装<br>indent for Linux <a href="http://www.gnu.org/prep/ftp.html" target="_blank" rel="external">下载地址</a><br>在亚洲区中国有几个镜像，点进去找到indent然后下载最新版本.tar.gz</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">tar zxvf indent.tar.gz</div><div class="line"><span class="built_in">cd</span> indent</div><div class="line">./configure</div><div class="line">make（如果有错误output.c:26:26: error: static declaration of ‘output’ follows non-static declaration进入src目录找到output.c第26行删除static改成FILE * output = NULL;）</div><div class="line">make install</div></pre></td></tr></table></figure>
-<h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><p>该工具通过终端运行，终端下输入</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">indent –kr –i8 test.c 代码使用K&amp;R风格，8个字节缩进</div></pre></td></tr></table></figure>
-<p>（Windows用户打开cmd进入indent的bin目录，如果不想麻烦可以把;D:\indent\bin路径加入系统环境变量，以后就不需要每次进入工具目录了，win7右键计算机属性-高级系统设置-高级-环境变量，在系统变量下找到Path把路径添加进去即可）<br>格式化后的代码自动保存在test.c中，另外生成test.c~来保存原来的代码</p>
-<p>格式化前：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;<span class="built_in">printf</span>(<span class="string">"hello\n"</span>);<span class="keyword">return</span> <span class="number">0</span>;&#125;</div></pre></td></tr></table></figure>
-<p>格式化后：</p>
-<figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"hello\n"</span>);</div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="附录"><a href="#附录" class="headerlink" title="附录"></a>附录</h2><p>不同版本某些参数可能不同，详见文档<br>-bad或–blank-lines-after-declarations 　在声明区段或加上空白行。<br>-bap或–blank-lines-after-procedures 　在程序或加上空白行。<br>-bbb或–blank-lines-after-block-comments 　在注释区段后加上空白行。<br>-bc或–blank-lines-after-commas 　在声明区段中，若出现逗号即换行。<br>-bl或–braces-after-if-line 　if(或是else,for等等)与后面执行区段的”{“不同行，且”}”自成一行。<br>-bli&lt;缩排格数&gt;或–brace-indent&lt;缩排格数&gt; 　设置{ }缩排的格数。<br>-br或–braces-on-if-line 　if(或是else,for等等)与后面执行跛段的”{“不同行，且”}”自成一行。<br>-bs或–blank-before-sizeof 　在sizeof之后空一格。<br>-c&lt;栏数&gt;或–comment-indentation&lt;栏数&gt; 　将注释置于程序码右侧指定的栏位。<br>-cd&lt;栏数&gt;或–declaration-comment-column&lt;栏数&gt; 　将注释置于声明右侧指定的栏位。<br>-cdb或–comment-delimiters-on-blank-lines 　注释符号自成一行。<br>-ce或–cuddle-else 　将else置于”}”(if执行区段的结尾)之后。<br>-ci&lt;缩排格数&gt;或–continuation-indentation&lt;缩排格数&gt; 　叙述过长而换行时，指定换行后缩排的格数。<br>-cli&lt;缩排格数&gt;或–case-indentation-&lt;缩排格数&gt; 　使用case时，switch缩排的格数。<br>-cp&lt;栏数&gt;或-else-endif-column&lt;栏数&gt; 　将注释置于else与elseif叙述右侧定的栏位。<br>-cs或–space-after-cast 　在cast之后空一格。<br>-d&lt;缩排格数&gt;或-line-comments-indentation&lt;缩排格数&gt; 　针对不是放在程序码右侧的注释，设置其缩排格数。<br>-di&lt;栏数&gt;或–declaration-indentation&lt;栏数&gt; 　将声明区段的变量置于指定的栏位。<br>-fc1或–format-first-column-comments 　针对放在每行最前端的注释，设置其格式。<br>-fca或–format-all-comments 　设置所有注释的格式。<br>-gnu或–gnu-style 　指定使用GNU的格式，此为预设值。<br>-i&lt;格数&gt;或–indent-level&lt;格数&gt; 　设置缩排的格数。<br>-ip&lt;格数&gt;或–parameter-indentation&lt;格数&gt; 　设置参数的缩排格数。<br>-kr或–k-and-r-style 　指定使用Kernighan&amp;Ritchie的格式。<br>-lp或–continue-at-parentheses 　叙述过长而换行，且叙述中包含了括弧时，将括弧中的每行起始栏位内容垂直对其排列。<br>-nbad或–no-blank-lines-after-declarations 　在声明区段后不要加上空白行。<br>-nbap或–no-blank-lines-after-procedures 　在程序后不要加上空白行。<br>-nbbb或–no-blank-lines-after-block-comments 　在注释区段后不要加上空白行。<br>-nbc或–no-blank-lines-after-commas 　在声明区段中，即使出现逗号，仍旧不要换行。<br>-ncdb或–no-comment-delimiters-on-blank-lines 　注释符号不要自成一行。<br>-nce或–dont-cuddle-else 　不要将else置于”}”之后。<br>-ncs或–no-space-after-casts 　不要在cast之后空一格。<br>-nfc1或–dont-format-first-column-comments 　不要格式化放在每行最前端的注释。<br>-nfca或–dont-format-comments 　不要格式化任何的注释。<br>-nip或–no-parameter-indentation 　参数不要缩排。<br>-nlp或–dont-line-up-parentheses 　叙述过长而换行，且叙述中包含了括弧时，不用将括弧中的每行起始栏位垂直对其排列。<br>-npcs或–no-space-after-function-call-names 　在调用的函数名称之后，不要加上空格。<br>-npro或–ignore-profile 　不要读取indent的配置文件<br>-npsl或–dont-break-procedure-type 　程序类型与程序名称放在同一行。<br>-nsc或–dont-star-comments 　注解左侧不要加上星号(<em>)。<br>-nsob或–leave-optional-semicolon 　不用处理多余的空白行。<br>-nss或–dont-space-special-semicolon 　若for或while区段仅有一行时，在分号前不加上空格。<br>-nv或–no-verbosity 　不显示详细的信息。<br>-orig或–original 　使用Berkeley的格式。<br>-pcs或–space-after-procedure-calls 　在调用的函数名称与”{“之间加上空格。<br>-psl或–procnames-start-lines 　程序类型置于程序名称的前一行。<br>-sc或–start-left-side-of-comments 　在每行注释左侧加上星号(</em>)。<br>-sob或–swallow-optional-blank-lines 　删除多余的空白行。<br>-ss或–space-special-semicolon 　若for或swile区段今有一行时，在分号前加上空格。<br>-st或–standard-output 　将结果显示在标准输出设备。<br>-T 　数据类型名称缩排。<br>-ts&lt;格数&gt;或–tab-size&lt;格数&gt; 　设置tab的长度。<br>-v或–verbose 　执行时显示详细的信息。<br>-version 　显示版本信息。</p>
-<p><a href="http://baike.baidu.com/link?url=pCO6WHfk5vggaX1-_opIyz1tkTmmbGpoVhWppfPAN_fCHtrp4Gm1YjX6ShXf7dRczASJqXRWD96XjHw0eXGxK_" target="_blank" rel="external">indent百度百科</a></p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2014/07/16/原码反码补码/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="y">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/sh.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="无名小站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2014/07/16/原码反码补码/" itemprop="url">原码反码补码</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-07-16T14:10:46+08:00">
-                2014-07-16
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/基础/" itemprop="url" rel="index">
-                    <span itemprop="name">基础</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="机器数和真值"><a href="#机器数和真值" class="headerlink" title="机器数和真值"></a>机器数和真值</h2><ol>
-<li><p>机器数</p>
-<p> 一个数在计算机中的二进制表示形式,  叫做这个数的机器数。机器数是带符号的，在计算机用一个数的最高位存放符号, 正数为0, 负数为1。比如，十进制中的数 +3 ，计算机字长为8位，转换成二进制就是00000011。如果是 -3 ，就是 10000011。那么，这里的 00000011 和 10000011 就是机器数。</p>
-</li>
-<li><p>真值</p>
-<p> 因为第一位是符号位，所以机器数的形式值就不等于真正的数值。例如上面的有符号数 10000011，其最高位1代表负，其真正数值是 -3 而不是形式值131（10000011转换成十进制等于131）。所以，为区别起见，将带符号位的机器数对应的真正数值称为机器数的真值。<br> 例：0000 0001的真值 = +000 0001 = +1，1000 0001的真值 = –000 0001 = –1</p>
-</li>
-</ol>
-<h2 id="原码-反码-补码的基础概念和计算方法"><a href="#原码-反码-补码的基础概念和计算方法" class="headerlink" title="原码, 反码, 补码的基础概念和计算方法"></a>原码, 反码, 补码的基础概念和计算方法</h2><p>在探求为何机器要使用补码之前, 让我们先了解原码, 反码和补码的概念。对于一个数, 计算机要使用一定的编码方式进行存储。 原码, 反码, 补码是机器存储一个具体数字的编码方式。</p>
-<ol>
-<li><p>原码</p>
-<p> 原码就是符号位加上真值的绝对值, 即用第一位表示符号, 其余位表示值。 比如如果是8位二进制:<br> [+1]原 = 0000 0001<br> [-1]原 = 1000 0001<br> 第一位是符号位。 因为第一位是符号位, 所以8位二进制原码的取值范围就是:<br> [1111 1111 , 0111 1111]<br> 即[-127 , 127]<br> 数0的原码有两种形式：[+0]原=00000000B  [-0]原=10000000B<br> 原码是人脑最容易理解和计算的表示方式。</p>
-</li>
-<li><p>反码</p>
-<p> 反码的表示方法是:<br> 正数的反码是其本身<br> 负数的反码是在其原码的基础上, 符号位不变，其余各个位取反。<br> [+1] = [00000001]原 = [00000001]反<br> [-1] = [10000001]原 = [11111110]反<br> 数0的反码也有两种形式，即[+0]反=00000000B [- 0]反=11111111B<br> 可见如果一个反码表示的是负数, 人脑无法直观的看出来它的数值。 通常要将其转换成原码再计算。<br> 8位二进制反码的表示范围：-127～+127</p>
-</li>
-<li><p>补码</p>
-<p> 补码的表示方法是:<br> 正数的补码就是其本身<br> 负数的补码是在其原码的基础上, 符号位为“1”，并且，这个“1”既是符号位，也是数值位, 其余各位取反, 最后+1。 (即在反码的基础上+1包括符号位)<br> 0用[0000 0000]表示, 而以前出现问题的-0则不存在了。而且可以用[1000 0000]表示-128，在用补码运算的结果中, [1000 0000]补 就是-128。 但是注意因为实际上是使用以前的-0的补码来表示-128, 所以-128并没有原码和反码表示。(对-128的补码表示[1000 0000]补算出来的原码是[0000 0000]原, 这是不正确的)<br> [+1] = [00000001]原 = [00000001]反 = [00000001]补<br> [-1] = [10000001]原 = [11111110]反 = [11111111]补<br> 对于负数, 补码表示方式也是人脑无法直观看出其数值的。 通常也需要转换成原码在计算其数值。<br> 使用补码, 不仅仅修复了0的符号以及存在两个编码的问题, 而且还能够多表示一个最低数。 这就是为什么8位二进制, 使用原码或反码表示的范围为[-127, +127], 而使用补码表示的范围为[-128, 127]。</p>
-</li>
-</ol>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2014/07/15/计算机基础/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="y">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/uploads/sh.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="无名小站">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2014/07/15/计算机基础/" itemprop="url">计算机基础</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2014-07-15T14:31:17+08:00">
-                2014-07-15
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/基础/" itemprop="url" rel="index">
-                    <span itemprop="name">基础</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h2 id="x86架构"><a href="#x86架构" class="headerlink" title="x86架构"></a>x86架构</h2><p>最早的Intel发展出来的CPU代号称为8086，后来依此架构又开发出了80286、80386等，因此这种架构的CPU被称为x86架构，64位的CPU又被统称为x86_64架构。两大主流x86开发商（Intel，AMD）的CPU架构并不兼容，设计理念也有所区别，所以CPU所需要的主板芯片组与设计也就不太相同。</p>
-<h2 id="芯片组"><a href="#芯片组" class="headerlink" title="芯片组"></a>芯片组</h2><p>主板上面最重要的就是芯片组，芯片组通常分为两个桥接器来控制各组件的通信<br>北桥负责连接速度较快的CPU、内存与显卡等组件<br>南桥负责连接速度较慢的周边接口，包括硬盘、USB、网卡等</p>
-<h2 id="微指令集"><a href="#微指令集" class="headerlink" title="微指令集"></a>微指令集</h2><p>CPU内部包含有一些微指令集，我们所使用的软件都要经过CPU内部的微指令集来完成。这些微指令集的设计主要被分为两种设计理念，这就是目前世界上常见到的两种主要CPU种类，分别是精简指令集与复杂指令集。</p>
-<p>精简指令集（ReducedInstruction Set Computing，RISC）<br>微指令集较为精简，每个指令的执行时间都很短，完成的操作也很单纯，指令的执行性能较佳；但是要做复杂的事，就要由多个指令来完成。常见的RISC微指令集的CPU主要有Sun公司的SPARC系列、IBM的PowerArchitecture（包括PowerPC）系列与ARM系列等。</p>
-<p>复杂指令集（ComplexInstruction Set Computing，CISC）<br>CISC中，每条指令可以执行一些较低阶的硬件操作，指令书目多而且复杂，每条指令的长度并不相同，每条指令花费的时间较长，但每个指令可以处理的工作较为丰富。常见的CISC微指令集CPU主要有AMD、Intel、VIA等x86架构的CPU。</p>
-<h2 id="CPU的性能"><a href="#CPU的性能" class="headerlink" title="CPU的性能"></a>CPU的性能</h2><p>不同的微指令集会导致CPU工作效率的优劣。</p>
-<p>频率是指CPU每秒钟可以进行的工作次数（3.0GHz表示CPU在一秒内可以进行3.0*10^9次工作，每次工作都可以进行少数的指令运行，不同的CPU之间不能单纯以频率来判断运算性能，因为CPU的微指令集不相同，架构也不一样，每次频率能够进行的工作指令数也不同，所以频率目前仅能用来比较同款CPU速度）。</p>
-<p>外频与倍频，所谓外频指的是CPU与外部组件进行数据传输/运算时的处理速度，倍频则是CPU内部用来加速工作性能的一个倍数，两者相乘才是CPU的频率（3.0GHz，外频是333MHz，因此倍频就是9倍3.0G=333M*9，其中1G=1000M）。</p>
-<p>超频是指将CPU的倍频或是外频通过主板的设定功能更改成较高频率的一种方式，但倍频通常在出厂时已经被锁定而无法更改，因此较常被超频的为外频，超频并非正常速度，故可能死机。</p>
-<p>CPU与内存通信速度靠的是外频，每次工作传送的数据量大小靠的是总线功能，一般芯片组分为北桥与南桥，北桥的总线称为系统总线，因为是内存传输的主要信道，所以速度较快；南桥就是所谓的输入输出（I/O）总线，主要用于联系硬盘、USB、网卡等接口设备。</p>
-<p>字组大小是CPU每次能处理的数据量，字组大小依据CPU的设计有32位和64位，我们现在所称的计算机是32位或64位主要是依据CPU解析度字组大小而来，早期的32位CPU中，因为CPU每次能够解析的数据量有限，因此由内存传来的数据量就有所限制了，这也导致32位CPU最多支持最大到4GB的内存。</p>
-<h2 id="内存"><a href="#内存" class="headerlink" title="内存"></a>内存</h2><p>内存主要组件为动态随机访问内存（DynamicRandom Access Memory，DRAM），只有在通电时才能记录与使用，断电后数据就消失了。<br>DRAM根据技术更新分好几代，使用广泛的有SDRAM与DDR SDRAM，DDR（DoubleData Rate）是双倍数据传送速度，它可以在一次工作周期中进行两次数据传送，类似CPU的倍率，DDR SDRAM依据技术的发展，有DDR,DDRII,DDR III等。</p>
-<h2 id="操作系统"><a href="#操作系统" class="headerlink" title="操作系统"></a>操作系统</h2><p>操作系统是一组程序，这组程序的重点是管理计算机的所有活动以及驱动系统中的所有硬件。</p>
-<h2 id="内核"><a href="#内核" class="headerlink" title="内核"></a>内核</h2><p>内核的作用在于让计算机所有硬件都可以运转，计算机能不能做到某些事情，都与内核有关。如果内核不支持TCP/IP协议，那么无论用什么网卡，内核都无法提供网络功能。内核程序所放置到内存中的区块是受保护的，并且开机后就一直常驻内存中。</p>
-<p>既然硬件是由内核管理，那么如果想要开发软件的话，自然要去参考内核的相关功能。如此一来就是从原本的参考硬件函数变成参考内核功能。操作系统会提供一组开发接口给工程师来开发软件。操作系统就是内核与其提供的接口工具。</p>
-<p>操作系统的内核层直接参考硬件规格写成，所以同一个操作系统不能够在不一样的硬件架构下运行。</p>
-<p>操作系统只是在管理整个硬件资源。应用程序的开发都是参考操作系统提供的开发接口，所以该应用程序只能在该操作系统上运行。</p>
-<h2 id="内核功能"><a href="#内核功能" class="headerlink" title="内核功能"></a>内核功能</h2><p>系统调用接口：方便开发者通过与内核的通信来利用硬件资源<br>程序管理：有效分配CPU资源<br>内存管理：通常内核会提供虚拟内存功能，当内存不足时可以提供内存交换功能<br>文件系统管理：数据输入输出等工作，文件格式的支持，Windows98不识别NTFS格式的磁盘<br>设备驱动：驱动程序</p>
-<h2 id="分区"><a href="#分区" class="headerlink" title="分区"></a>分区</h2><p>数据的写入时在磁盘的盘片上面，盘片上又可细分出扇区(sector)与柱面(cylinder)两种单位（柱面是分区的最小单位），其中扇区每个为512bytes那么大。整块磁盘的第一个扇区特别重要，主要记录了两个重要信息：<br>主引导分区(MasterBoot Record, MBR):可以安装引导加载程序的地方，有446bytes<br>分区表(Partitiontable):记录整块磁盘分区的状态，有64bytes</p>
-<p>在分区表所在的64bytes容量中，总共分为四组记录区，每组记录区记录了该区段的起始与结束的柱面号码。如果磁盘设备名为/dev/hda时，那么这四个分区文件名为/dev/hda[1-4]，数字与分区所在的位置有关，分区就是对64bytes的分区表进行设置，磁盘默认分区表仅能写入四组分区信息，这四组分区信息称为主(Priamry)或者扩展(Extended)分区。<br>通过扩展分区将硬盘分区成四个以上，既然第一个扇区所在的分区表只能记录四条数据，那我们可以利用额外的扇区来记录更多的分区信息。由扩展分区继续切割出来的分区被称为逻辑分区(logicalpartition)，逻辑分区的设备名称从5号开始(/dev/had5)。</p>
-<p>主分区与扩展分区最多有四个（磁盘的限制）<br>扩展分区最多有一个（操作系统限制）<br>逻辑分区由扩展分区切割出来<br>主分区与逻辑分区可以被格式化，扩展分区无法被格式化<br>逻辑分区的数量依操作系统而不同，linux中，IDE硬盘最多有59个逻辑分区（5-63号），SATA硬盘则有11个（5-15号）</p>
-<h2 id="BIOS和CMOS"><a href="#BIOS和CMOS" class="headerlink" title="BIOS和CMOS"></a>BIOS和CMOS</h2><p>BIOS是一套程序，这套程序是写死到主板上面的一个内存芯片中，这个内存芯片在没有通电时也能将数据记录下来，那就是只读存储器ROM。</p>
-<p>CMOS是记录各项硬件参数且嵌入在主板上面的存储器，BIOS则是一个写入到主板上的一个韧体（韧体就是写入到硬件上的一个软件程序），BOIS就是在开机的时候计算机会主动执行的第一个程序了。接下来BOIS会分析计算机里面有哪些存储设备，以硬盘为例，BOIS会依据用户设置去取得能够开机的硬盘，并且到该硬盘里面去读取第一个扇区的主引导分区(MBR)位置，MBR这个仅有446bytes的硬盘容量里面会放置最基本的引导加载程序(Bootloader)，此时BOIS功成圆满，接下来就是MBR内的引导加载程序的工作了。这个引导加载程序的目的是在加载内核文件，由于引导加载程序是操作系统在安装的时候提供的，所以它会识别硬盘内的文件系统格式，因此就能够读取内核文件，接下来就是内核文件的工作，引导加载程序也功成圆满。</p>
-<h2 id="Boot-loader"><a href="#Boot-loader" class="headerlink" title="Boot loader"></a>Boot loader</h2><p>BOIS和MBR都是硬件本身会支持的功能，至于Bootloader则是操作系统安装在MBR上面的一套软件了，由于MBR仅有446bytes，因此这个Bootloader是非常小而完美的。</p>
-<p>Boot loader的主要任务：<br>提供菜单：用户可以选择不同的开机选项，这也是多重引导的重要功能。<br>载入内核文件：直接指向可开机的程序区段来开始操作系统。<br>转交其他loader：将引导加载功能转交给其他loader负责。（表示计算机系统里面可能具有两个以上的引导加载程序，硬盘只有一个MBR，但是引导加载程序出了可以安装在MBR之外，还可以安装在每个分区的引导扇区(bootsector)，这个特色造就了多重引导功能。例如MBR内安装的是可同时识别Windows和Linux操作系统的引导加载程序，那么它将提供两个菜单，菜单一可直接加载Windows的内核文件开机，菜单二则是将引导加载工作交给第二个分区的启动扇区，也就是交给了第二个分区的引导加载程序，第二个分区的引导加载程序启动后，该引导加载程序内仅有一个开机菜单，因此就能够使用Linux的内核文件开机）</p>
-<p>每个分区都拥有自己的启动扇区(bootsector)；实际可开机的内核文件时放置到各分区内的；loader只会认识自己的系统分区内的可开机内核文件，以及其他loader；loader可直接指向或者是间接将管理权转交给另一个管理程序。</p>
-<p>最好先安装Windows再安装Linux<br>Linux在安装的时候，可以选择将引导加载程序安装在MBR或个别分区的启动扇区，而且Linux的loader可以手动设置菜单，所以可以在Linux的bootloader里面添加Windows的开机选项。<br>Windows在安装的时候，它的安装程序会主动覆盖掉MBR以及自己所在分区的启动扇区，你没有选择的机会，而且它没有让我们自己选择菜单的功能。<br>如果先装Linux再安装Windows的话，那MBR的引导加载程序就会只有Windows的选项，原本在MBR内的Linux的引导加载程序就会被覆盖掉，但是不需要重新装Linux，只要用尽方法来处理MBR的内容即可（例如使用spfdisk软件，或者Linux的救援模式来挽救MBR）。</p>
+            <p>Linux登录模式中，主要分为两种，一种是仅有纯文本界面（运行等级run level 3）的登录环境，另一种则是图形界面（运行等级run level 5）</p>
+<p>以Ubuntu 12.04为例<br><code>sudo gedit /etc/default/grub</code></p>
+<p>找到这一行</p>
+<blockquote>
+<p>GRUB_CMDLINE_LINUX_DEFAULT=”quiet splash”</p>
+</blockquote>
+<p>改成</p>
+<blockquote>
+<p>GRUB_CMDLINE_LINUX_DEFAULT=”quiet splash text”</p>
+</blockquote>
+<p>再输入命令：<br><code>sudo update-grub</code></p>
+<p>开机后就自动进入tty1了。</p>
+<p>进入图形界面sudo start lightdm 或者输入 startx</p>
 
           
         
@@ -1332,6 +1867,10 @@
   </section>
 
   
+  <nav class="pagination">
+    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
+  </nav>
+
 
 
           </div>
@@ -1374,7 +1913,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-count">64</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -1385,7 +1924,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1396,7 +1935,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-count">53</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>

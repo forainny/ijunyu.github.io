@@ -1,0 +1,845 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Linux,系统调用,锁," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/uploads/favicon.ico?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="Linux 中的文件锁Linux 支持的文件锁技术主要包括劝告锁（advisory lock）和强制锁（mandatory lock）这两种。此外，Linux 中还引入了两种强制锁的变种形式：共享模式强制锁（share-mode mandatory lock）和租借锁（lease）。 在 Linux 中，不论进程是在使用劝告锁还是强制锁，它都可以同时使用共享锁和排他锁（又称为读锁和写锁）。多个共享">
+<meta name="keywords" content="Linux,系统调用,锁">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux文件锁和fcntl系统调用">
+<meta property="og:url" content="http://yoursite.com/2015/09/10/Linux文件锁和fcntl系统调用/index.html">
+<meta property="og:site_name" content="无名小站">
+<meta property="og:description" content="Linux 中的文件锁Linux 支持的文件锁技术主要包括劝告锁（advisory lock）和强制锁（mandatory lock）这两种。此外，Linux 中还引入了两种强制锁的变种形式：共享模式强制锁（share-mode mandatory lock）和租借锁（lease）。 在 Linux 中，不论进程是在使用劝告锁还是强制锁，它都可以同时使用共享锁和排他锁（又称为读锁和写锁）。多个共享">
+<meta property="og:updated_time" content="2017-06-04T10:14:48.156Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux文件锁和fcntl系统调用">
+<meta name="twitter:description" content="Linux 中的文件锁Linux 支持的文件锁技术主要包括劝告锁（advisory lock）和强制锁（mandatory lock）这两种。此外，Linux 中还引入了两种强制锁的变种形式：共享模式强制锁（share-mode mandatory lock）和租借锁（lease）。 在 Linux 中，不论进程是在使用劝告锁还是强制锁，它都可以同时使用共享锁和排他锁（又称为读锁和写锁）。多个共享">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2015/09/10/Linux文件锁和fcntl系统调用/"/>
+
+
+
+
+
+  <title>Linux文件锁和fcntl系统调用 | 无名小站</title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">无名小站</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">一个兴趣使然的无名小站</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2015/09/10/Linux文件锁和fcntl系统调用/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="y">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/uploads/sh.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="无名小站">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Linux文件锁和fcntl系统调用</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2015-09-10T18:27:07+08:00">
+                2015-09-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/C-C/" itemprop="url" rel="index">
+                    <span itemprop="name">C/C++</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="Linux-中的文件锁"><a href="#Linux-中的文件锁" class="headerlink" title="Linux 中的文件锁"></a>Linux 中的文件锁</h2><p>Linux 支持的文件锁技术主要包括劝告锁（advisory lock）和强制锁（mandatory lock）这两种。此外，Linux 中还引入了两种强制锁的变种形式：共享模式强制锁（share-mode mandatory lock）和租借锁（lease）。</p>
+<p>在 Linux 中，不论进程是在使用劝告锁还是强制锁，它都可以同时使用共享锁和排他锁（又称为读锁和写锁）。多个共享锁之间不会相互干扰，多个进程在同一时刻可以对同一个文件加共享锁。但是，如果一个进程对该文件加了排他锁，那么其他进程则无权再对该文件加共享锁或者排他锁，直到该排他锁被释放。所以，对于同一个文件来说，它可以同时拥有很多读者，但是在某一特定时刻，它只能拥有一个写者，它们之间的兼容关系如表所示。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th><strong>是否满足请求</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>当前加上的锁</strong></td>
+<td>共享锁</td>
+<td>排他锁</td>
+</tr>
+<tr>
+<td>无</td>
+<td>是</td>
+<td>是</td>
+</tr>
+<tr>
+<td>共享锁</td>
+<td>是</td>
+<td>否</td>
+</tr>
+<tr>
+<td>排他锁</td>
+<td>否</td>
+<td>否</td>
+</tr>
+</tbody>
+</table>
+<p>共享锁=读锁，排它锁=写锁</p>
+<p>也就是说当前文件没有加锁时，此时共享锁和排他锁都能够加到此文件上<br>当前文件有共享锁时，此时只能在文件上加共享锁（同一个文件可以拥有很多读者），不能加排他锁<br>当前文件有排他锁时，不能在文件上继续加锁</p>
+<p>进行对已加强制锁的文件进行操作时的行为</p>
+<table>
+<thead>
+<tr>
+<th>当前锁类型</th>
+<th>阻塞读</th>
+<th>阻塞写</th>
+<th>非阻塞读</th>
+<th>非阻塞写</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>读锁</td>
+<td>正常读取数据</td>
+<td>阻塞</td>
+<td>正常读取数据</td>
+<td>EAGAIN</td>
+</tr>
+<tr>
+<td>写锁</td>
+<td>阻塞</td>
+<td>阻塞</td>
+<td>EAGAIN</td>
+<td>EAGAIN</td>
+</tr>
+</tbody>
+</table>
+<p>当前文件已经有一个读锁时，再加一个读锁（阻塞读，例如：fcntl(fd, F_SETLKW, &amp;flock)；非阻塞读：fcntl(fd, F_SETLK, &amp;flock))是可以加上去的；如果再加一个写锁（阻塞写：导致阻塞；非阻塞写：返回errorno）</p>
+<p>当文件有一个写锁时，同理。</p>
+<p>文件中的每个字节在任一时刻只能拥有一种类型的锁：共享锁（读锁）、独占锁（写锁）或解锁。</p>
+<h2 id="实现文件锁"><a href="#实现文件锁" class="headerlink" title="实现文件锁"></a>实现文件锁</h2><p>Linux可以通过这几种方式来实现文件锁功能：使用fcnt1系统调用和使用lockf调用以及flock。</p>
+<p>我们将主要介绍fcnt1接口，因为它是最常使用的接口。lockf和fcnt1非常相似，在Linux中，它一般作为fcnt1的备选接口。但是，fcnt1和lockf的锁定机制不能同时工作：它们使用不同的底层实现，因此决不要混合使用这两种类型的调用，而应坚持使用其中的一种。</p>
+<p>fcntl不仅能锁整个文件，还能选择锁定这个文件的某一部分字节。</p>
+<p>fcntl函数原型<br><code>int fcntl(int fildes, int command, ...);</code></p>
+<p>fildes表示打开的文件描述符，command表示3个设置文件锁的选项</p>
+<pre><code>F_GETLK
+F_SETLK
+F_SETLKW
+</code></pre><p>当使用这三个command的时候，第三个参数必须是一个指向flock结构的指针，所以实际的函数原型应为<br><code>int fcntl(int fildes, int command, struct flock *flock_structure);</code></p>
+<p>struct flock（文件锁）结构依赖具体的实现，但它至少包含下述成员：</p>
+<pre><code>short l_type：取值定义在头文件fcnt1.h中：F_RDLCK（读锁）、F_UNLCK（解锁）、F_WRLCK（写锁）
+short l_whence：取值必须是SEEK_SET、SEEK_CUR、SEEK_END（在头文件unistd.h中定义）中的一个。它们分别对应于文件头、当前位置和文件尾。
+off_t l_start：相对于l_whence偏移的字节
+off_t l_len：从l_start开始的字节数，为0表示文件末尾
+pid_t l_pid：持有当前锁的进程pid
+</code></pre><p>当把command设置为F_GETLK时，可以用flock_structure所描述的锁来测试fildes所代表的文件，看flock_structure锁描述的锁是否可以加到fildes所代表的文件上去。不可以加锁：把当前文件已经存在的锁写入flock_structure中，覆盖你开始设置的flock_structure；可以加锁：flock_structure的l_type变为F_UNLCK，并保持flock_structure中其他信息不变返回。(不会真正加锁，仅仅用来判断某个锁是否可以加上去，不能判断文件是否已经上锁）</p>
+<p>例如：<br><code>fcntl(fildes, F_GETLK, &amp;flock_structure);</code></p>
+<p>函数返回非-1表示调用成功（并不是说锁可以加上去），必须检查flock_structure结构的内容来判断其是否被修改过。因为l_pid的值被设置成持有锁的进程（如果有的话）的标识符，所以通过检查这个字段就可以很方便地判断出flock_structure结构是否被修改过（调用fcntl前，先把flock_structure的l_pid设置为-1（进程编号不会小于0），如果调用之后这个值改变了，说明是不能加锁的；也可以判断l_type，如果调用完后变成了F_UNLCK，那就说明可以加锁）。</p>
+<p>command=F_SETLK时，对fildes指向的文件的某个区域加锁或解锁。加锁类型由l_type决定，区域由l_whence，l_start，l_len共同决定，这个函数立即返回成功（非-1值）或失败（-1）</p>
+<p>command=F_SETLKW时，与上面的F_SETLK基本相同，只是在无法为文件添加锁时，函数将阻塞，直到可以添加锁或者获取到某个信号。</p>
+<p>程序对某个文件拥有的所有锁都将在相应的文件描述符被关闭时自动清除。在程序结束时也会自动清除各种锁。</p>
+<h2 id="死锁"><a href="#死锁" class="headerlink" title="死锁"></a>死锁</h2><p>在讨论锁定时如果未提到死锁的危险，那么这个讨论就不能算是完整的。假设两个程序想要更新同一个文件。它们需要同时更新文件中的字节1和字节2。程序A选择首先更新字节2，然后再更新字节1。程序B则是先更新字节1，然后才是字节2。 两个程序同时启动。程序A锁定字节2，而程序B锁定字节1。然后程序A尝试锁定字节1，但因为这个字节已经被程序B锁定，所以程序A将在那里等待。接着程序B尝试锁定字节2，但因为这个字节已经被程序A锁定，所以程序B也将在那里等待。 这种两个程序都无法继续执行下去的情况，就被称为死锁（deadlock或deadly embrace）。这个问题在数据库应用程序中很常见，当许多用户频繁访问同一个数据时就很容易发生死锁。大多数的商业关系型数据库都能够检测到死锁并自动解开，但Linux内核不行。这时就需要采取一些外部干涉手段，例如强制终止其中一个程序来解决这个问题。 程序员必须对这种情况提高警惕。当有多个程序都在等待获得锁时，你就需要非常小心地考虑是否会发生死锁。在本例中，死锁是非常容易避免的：两个程序只需要使用相同的顺序来锁定它们需要的字节或锁定一个更大的区域即可。</p>
+<p><a href="http://www.ibm.com/developerworks/cn/linux/l-cn-filelock/" target="_blank" rel="external">Linux 2.6 中的文件锁</a><br><a href="http://qcyhzwq001.lofter.com/tag/%E5%87%BD%E6%95%B0" target="_blank" rel="external">fcntl函数</a><br><a href="http://docs.oracle.com/cd/E19253-01/819-7052/fileio-ex-1/index.html" target="_blank" rel="external">获取锁定信息</a><br><a href="http://www.cnblogs.com/siguoya/p/3512051.html" target="_blank" rel="external">记录上锁</a></p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Linux/" rel="tag"># Linux</a>
+          
+            <a href="/tags/系统调用/" rel="tag"># 系统调用</a>
+          
+            <a href="/tags/锁/" rel="tag"># 锁</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2015/09/10/系统调用read与write和标准库fread与fwrite的区别/" rel="next" title="系统调用read与write和标准库fread与fwrite的区别">
+                <i class="fa fa-chevron-left"></i> 系统调用read与write和标准库fread与fwrite的区别
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2015/09/16/exec函数族/" rel="prev" title="exec函数族">
+                exec函数族 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/uploads/sh.png"
+               alt="y" />
+          <p class="site-author-name" itemprop="name">y</p>
+           
+              <p class="site-description motion-element" itemprop="description">很鱼</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">64</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">53</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/forzxy" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://weibo.com/ywine" target="_blank" title="Weibo">
+                  
+                    <i class="fa fa-fw fa-weibo"></i>
+                  
+                  Weibo
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Linux-中的文件锁"><span class="nav-number">1.</span> <span class="nav-text">Linux 中的文件锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现文件锁"><span class="nav-number">2.</span> <span class="nav-text">实现文件锁</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#死锁"><span class="nav-number">3.</span> <span class="nav-text">死锁</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">y</span>
+</div>
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
