@@ -77,7 +77,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="问题,Unity," />
+  <meta name="keywords" content="Unity,问题," />
 
 
 
@@ -94,7 +94,7 @@
 
 
 <meta name="description" content="解压unitypackage的时候出错，原因是路径中包含中文字符，更改成英文路径即可。 参考Error while importing package: Couldn’t decompress package">
-<meta name="keywords" content="问题,Unity">
+<meta name="keywords" content="Unity,问题">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Failed to import package with error: Couldn&#39;t decompress package">
 <meta property="og:url" content="http://yoursite.com/2015/06/11/Failed-to-import-package-with-error-Couldn-t-decompress-package/index.html">
@@ -112,7 +112,7 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    sidebar: {"position":"left","display":"post","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":false},
     fancybox: true,
     motion: true,
     duoshuo: {
@@ -379,6 +379,22 @@
     <div>
       
         
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>坚持原创技术分享，您的支持将鼓励我继续创作！</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/uploads/wechatpay.jpg" alt="y WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+    </div>
+  </div>
+
 
       
     </div>
@@ -394,9 +410,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/问题/" rel="tag"># 问题</a>
-          
             <a href="/tags/Unity/" rel="tag"># Unity</a>
+          
+            <a href="/tags/问题/" rel="tag"># 问题</a>
           
         </div>
       
@@ -485,7 +501,7 @@
                alt="y" />
           <p class="site-author-name" itemprop="name">y</p>
            
-              <p class="site-description motion-element" itemprop="description">很鱼</p>
+              <p class="site-description motion-element" itemprop="description">Make life easier</p>
           
         </div>
         <nav class="site-state motion-element">
