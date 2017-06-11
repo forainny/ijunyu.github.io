@@ -1,0 +1,1380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+
+    
+  <url>
+    <loc>http://ysir.me/2017/06/08/%E5%A6%82%E4%BD%95%E5%9C%A8Windows10%E4%B8%AD%E4%BD%BF%E7%94%A8Emoji%E8%A1%A8%E6%83%85/</loc>
+    <lastmod>2017-06-08T13:56:05.333Z</lastmod>
+    <data>
+        <display>
+        <title>如何在Windows10中使用Emoji表情</title>
+        <pubTime>2017-06-08T13:09:56.000Z</pubTime>
+        
+        <tag>翻译</tag>
+         
+        <tag>Emoji</tag>
+         
+        <tag>Win10</tag>
+         
+         
+           
+             
+              <breadCrumb title="翻译" url="http://ysir.me/categories/%E7%BF%BB%E8%AF%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/09/16/Linux%E8%BF%9B%E7%A8%8B%E7%9B%B8%E5%85%B3/</loc>
+    <lastmod>2017-06-05T17:18:53.847Z</lastmod>
+    <data>
+        <display>
+        <title>Linux进程相关</title>
+        <pubTime>2015-09-16T06:45:04.000Z</pubTime>
+        
+        <tag>进程</tag>
+         
+         
+           
+             
+              <breadCrumb title="C/C++" url="http://ysir.me/categories/C-C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2016/02/18/Xcode-No-matching-provisioning-profiles-found/</loc>
+    <lastmod>2017-06-04T11:13:51.711Z</lastmod>
+    <data>
+        <display>
+        <title>Xcode: No matching provisioning profiles found</title>
+        <pubTime>2016-02-18T07:38:24.000Z</pubTime>
+        
+        <tag>问题</tag>
+         
+         
+           
+             
+              <breadCrumb title="Mac" url="http://ysir.me/categories/Mac/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2016/02/18/Missing-iOS-Distribution-signing-identity-for/</loc>
+    <lastmod>2017-06-04T11:11:04.156Z</lastmod>
+    <data>
+        <display>
+        <title>Missing iOS Distribution signing identity for</title>
+        <pubTime>2016-02-18T06:36:41.000Z</pubTime>
+        
+        <tag>问题</tag>
+         
+         
+           
+             
+              <breadCrumb title="iOS" url="http://ysir.me/categories/iOS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2016/04/15/Cannot-find-autoconf/</loc>
+    <lastmod>2017-06-04T11:08:14.940Z</lastmod>
+    <data>
+        <display>
+        <title>Cannot find autoconf</title>
+        <pubTime>2016-04-15T05:52:35.000Z</pubTime>
+        
+        <tag>问题</tag>
+         
+        <tag>编译</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://ysir.me/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/11/18/Windows%E4%B8%8Berror-LNK2019-%E6%97%A0%E6%B3%95%E8%A7%A3%E6%9E%90%E7%9A%84%E5%A4%96%E9%83%A8%E7%AC%A6%E5%8F%B7-imp-select-20/</loc>
+    <lastmod>2017-06-04T11:05:52.671Z</lastmod>
+    <data>
+        <display>
+        <title>Windows下error LNK2019: 无法解析的外部符号 __imp__select@20</title>
+        <pubTime>2015-11-18T05:16:18.000Z</pubTime>
+        
+        <tag>问题</tag>
+         
+         
+           
+             
+              <breadCrumb title="C/C++" url="http://ysir.me/categories/C-C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/09/23/Objective-C%E4%B9%8Bproperty%E5%B1%9E%E6%80%A7%E5%88%86%E6%9E%90/</loc>
+    <lastmod>2017-06-04T11:04:25.857Z</lastmod>
+    <data>
+        <display>
+        <title>Objective-C之property属性分析</title>
+        <pubTime>2015-09-23T14:48:51.000Z</pubTime>
+        
+        <tag>Objective-C</tag>
+         
+         
+           
+             
+              <breadCrumb title="Objective-C" url="http://ysir.me/categories/Objective-C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/09/23/error-LNK2019-%E6%97%A0%E6%B3%95%E8%A7%A3%E6%9E%90%E7%9A%84%E5%A4%96%E9%83%A8%E7%AC%A6%E5%8F%B7-imp-iob-func/</loc>
+    <lastmod>2017-06-04T10:56:31.090Z</lastmod>
+    <data>
+        <display>
+        <title>error LNK2019: 无法解析的外部符号 __imp____iob_func</title>
+        <pubTime>2015-09-23T10:06:24.000Z</pubTime>
+        
+        <tag>问题</tag>
+         
+        <tag>编译</tag>
+         
+        <tag>库</tag>
+         
+         
+           
+             
+              <breadCrumb title="C/C++" url="http://ysir.me/categories/C-C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/09/21/Objective-C%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E8%BE%93%E5%87%BA%E6%A0%BC%E5%BC%8F%E5%8F%8A%E9%9A%90%E5%BC%8F%E8%BD%AC%E6%8D%A2%E8%AF%A6%E8%A7%A3/</loc>
+    <lastmod>2017-06-04T10:55:02.898Z</lastmod>
+    <data>
+        <display>
+        <title>Objective-C数据类型输出格式及隐式转换详解</title>
+        <pubTime>2015-09-21T15:39:50.000Z</pubTime>
+        
+        <tag>Objective-C</tag>
+         
+         
+           
+             
+              <breadCrumb title="Objective-C" url="http://ysir.me/categories/Objective-C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/09/17/%E5%88%9D%E8%AF%86Git/</loc>
+    <lastmod>2017-06-04T10:50:29.170Z</lastmod>
+    <data>
+        <display>
+        <title>初识Git</title>
+        <pubTime>2015-09-17T08:54:09.000Z</pubTime>
+        
+        <tag>Git</tag>
+         
+         
+           
+             
+              <breadCrumb title="Git" url="http://ysir.me/categories/Git/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/09/17/Qt%E5%8A%A8%E6%80%81%E5%BA%93%E7%9A%84%E7%94%9F%E6%88%90%E5%92%8C%E4%BD%BF%E7%94%A8/</loc>
+    <lastmod>2017-06-04T10:42:35.810Z</lastmod>
+    <data>
+        <display>
+        <title>Qt动态库的生成和使用</title>
+        <pubTime>2015-09-16T16:18:47.000Z</pubTime>
+        
+        <tag>Qt</tag>
+         
+        <tag>动态库</tag>
+         
+         
+           
+             
+              <breadCrumb title="Qt" url="http://ysir.me/categories/Qt/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/09/16/Linux%E5%BC%80%E6%9C%BA%E6%98%BE%E7%A4%BA%E5%91%BD%E4%BB%A4%E8%A1%8C/</loc>
+    <lastmod>2017-06-04T10:38:09.611Z</lastmod>
+    <data>
+        <display>
+        <title>Linux开机显示命令行</title>
+        <pubTime>2015-09-16T15:58:41.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://ysir.me/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/09/16/Linux%E5%88%A0%E9%99%A4%E4%B9%B1%E7%A0%81%E6%96%87%E4%BB%B6%E5%90%8D/</loc>
+    <lastmod>2017-06-04T10:36:23.678Z</lastmod>
+    <data>
+        <display>
+        <title>Linux删除乱码文件名</title>
+        <pubTime>2015-09-16T15:49:04.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>文件</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://ysir.me/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/09/16/%E7%BB%88%E7%AB%AF%E7%A8%8B%E5%BA%8F%E5%88%87%E6%8D%A2%E5%89%8D%E5%90%8E%E5%8F%B0%E5%91%BD%E4%BB%A4/</loc>
+    <lastmod>2017-06-04T10:34:46.173Z</lastmod>
+    <data>
+        <display>
+        <title>终端程序切换前后台命令</title>
+        <pubTime>2015-09-16T15:40:26.000Z</pubTime>
+        
+        <tag>命令</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://ysir.me/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/09/16/man%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3/</loc>
+    <lastmod>2017-06-04T10:32:24.579Z</lastmod>
+    <data>
+        <display>
+        <title>man命令详解</title>
+        <pubTime>2015-09-16T15:27:53.000Z</pubTime>
+        
+        <tag>命令</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://ysir.me/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/09/16/ls-al%E6%AF%8F%E4%B8%80%E5%88%97%E7%9A%84%E6%84%8F%E6%80%9D/</loc>
+    <lastmod>2017-06-04T10:27:38.610Z</lastmod>
+    <data>
+        <display>
+        <title>ls -al每一列的意思</title>
+        <pubTime>2015-09-16T15:22:07.000Z</pubTime>
+        
+        <tag>命令</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://ysir.me/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/09/16/%E9%85%8D%E7%BD%AEvim/</loc>
+    <lastmod>2017-06-04T10:25:51.816Z</lastmod>
+    <data>
+        <display>
+        <title>配置vim</title>
+        <pubTime>2015-09-16T15:16:52.000Z</pubTime>
+        
+        <tag>VIM</tag>
+         
+         
+           
+             
+              <breadCrumb title="工具" url="http://ysir.me/categories/%E5%B7%A5%E5%85%B7/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/09/16/exec%E5%87%BD%E6%95%B0%E6%97%8F/</loc>
+    <lastmod>2017-06-04T10:19:07.332Z</lastmod>
+    <data>
+        <display>
+        <title>exec函数族</title>
+        <pubTime>2015-09-16T02:54:16.000Z</pubTime>
+        
+        <tag>exec</tag>
+         
+         
+           
+             
+              <breadCrumb title="C/C++" url="http://ysir.me/categories/C-C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/09/10/Linux%E6%96%87%E4%BB%B6%E9%94%81%E5%92%8Cfcntl%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8/</loc>
+    <lastmod>2017-06-04T10:14:48.156Z</lastmod>
+    <data>
+        <display>
+        <title>Linux文件锁和fcntl系统调用</title>
+        <pubTime>2015-09-10T10:27:07.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>系统调用</tag>
+         
+        <tag>锁</tag>
+         
+         
+           
+             
+              <breadCrumb title="C/C++" url="http://ysir.me/categories/C-C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/09/10/%E7%B3%BB%E7%BB%9F%E8%B0%83%E7%94%A8read%E4%B8%8Ewrite%E5%92%8C%E6%A0%87%E5%87%86%E5%BA%93fread%E4%B8%8Efwrite%E7%9A%84%E5%8C%BA%E5%88%AB/</loc>
+    <lastmod>2017-06-04T10:02:52.469Z</lastmod>
+    <data>
+        <display>
+        <title>系统调用read与write和标准库fread与fwrite的区别</title>
+        <pubTime>2015-09-10T03:14:47.000Z</pubTime>
+        
+        <tag>系统调用</tag>
+         
+         
+           
+             
+              <breadCrumb title="C/C++" url="http://ysir.me/categories/C-C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/09/09/Linux%E5%BA%94%E7%94%A8%E7%A8%8B%E5%BA%8F%E5%BA%94%E8%AF%A5%E5%AD%98%E6%94%BE%E5%9C%A8%E4%BB%80%E4%B9%88%E4%BD%8D%E7%BD%AE/</loc>
+    <lastmod>2017-06-04T10:00:50.381Z</lastmod>
+    <data>
+        <display>
+        <title>Linux应用程序应该存放在什么位置</title>
+        <pubTime>2015-09-09T03:19:55.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://ysir.me/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/09/01/Windows%E5%AE%89%E8%A3%85Apache%E5%90%8E%E7%9A%84%E4%B8%80%E4%BA%9B%E8%AE%BE%E7%BD%AE/</loc>
+    <lastmod>2017-06-04T09:59:40.214Z</lastmod>
+    <data>
+        <display>
+        <title>Windows安装Apache后的一些设置</title>
+        <pubTime>2015-09-01T10:10:44.000Z</pubTime>
+        
+        <tag>Apache</tag>
+         
+        <tag>Windows</tag>
+         
+         
+           
+             
+              <breadCrumb title="Apache" url="http://ysir.me/categories/Apache/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/09/01/wamp%E4%B8%8BApache2-4-x%E5%B1%80%E5%9F%9F%E7%BD%91%E8%AE%BF%E9%97%AE403%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</loc>
+    <lastmod>2017-06-04T09:58:29.052Z</lastmod>
+    <data>
+        <display>
+        <title>wamp下Apache2.4.x局域网访问403的解决办法</title>
+        <pubTime>2015-09-01T09:47:36.000Z</pubTime>
+        
+        <tag>Apache</tag>
+         
+        <tag>WAMP</tag>
+         
+         
+           
+             
+              <breadCrumb title="Apache" url="http://ysir.me/categories/Apache/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/08/26/Windows%E4%B8%8B%E7%BC%96%E8%AF%91%E5%B9%B6%E4%BD%BF%E7%94%A8libcurl-lib%E9%9D%99%E6%80%81%E5%BA%93/</loc>
+    <lastmod>2017-06-04T09:57:18.694Z</lastmod>
+    <data>
+        <display>
+        <title>Windows下编译并使用libcurl.lib静态库</title>
+        <pubTime>2015-08-26T02:09:11.000Z</pubTime>
+        
+        <tag>编译</tag>
+         
+        <tag>libcurl</tag>
+         
+         
+           
+             
+              <breadCrumb title="C/C++" url="http://ysir.me/categories/C-C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/08/20/Qt%EF%BC%9AInvalid-parameter-passed-to-C-runtime-function/</loc>
+    <lastmod>2017-06-04T09:46:57.018Z</lastmod>
+    <data>
+        <display>
+        <title>Qt：Invalid parameter passed to C runtime function.</title>
+        <pubTime>2015-08-20T10:36:26.000Z</pubTime>
+        
+        <tag>Qt</tag>
+         
+        <tag>问题</tag>
+         
+         
+           
+             
+              <breadCrumb title="Qt" url="http://ysir.me/categories/Qt/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/08/17/Ubuntu%E4%B8%AA%E4%BA%BA%E7%9B%AE%E5%BD%95%E4%B8%AD%E6%96%87%E6%94%B9%E6%88%90%E8%8B%B1%E6%96%87/</loc>
+    <lastmod>2017-06-04T09:46:05.911Z</lastmod>
+    <data>
+        <display>
+        <title>Ubuntu个人目录中文改成英文</title>
+        <pubTime>2015-08-17T07:49:30.000Z</pubTime>
+        
+        <tag>Ubuntu</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://ysir.me/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/08/05/libcurl%E5%AE%9E%E7%8E%B0%E6%96%AD%E7%82%B9%E7%BB%AD%E4%BC%A0/</loc>
+    <lastmod>2017-06-04T09:45:14.949Z</lastmod>
+    <data>
+        <display>
+        <title>libcurl实现断点续传</title>
+        <pubTime>2015-08-05T10:41:13.000Z</pubTime>
+        
+        <tag>libcurl</tag>
+         
+         
+           
+             
+              <breadCrumb title="C/C++" url="http://ysir.me/categories/C-C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/08/05/libcurl%E8%8E%B7%E5%8F%96%E4%B8%8B%E8%BD%BD%E8%BF%9B%E5%BA%A6%E7%99%BE%E5%88%86%E6%AF%94%E4%B8%8B%E8%BD%BD%E9%80%9F%E5%BA%A6%E5%89%A9%E4%BD%99%E6%97%B6%E9%97%B4/</loc>
+    <lastmod>2017-06-04T09:42:46.321Z</lastmod>
+    <data>
+        <display>
+        <title>libcurl获取下载进度百分比下载速度剩余时间</title>
+        <pubTime>2015-08-05T10:32:22.000Z</pubTime>
+        
+        <tag>libcurl</tag>
+         
+         
+           
+             
+              <breadCrumb title="C/C++" url="http://ysir.me/categories/C-C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/08/05/libcurl%E4%BD%BF%E7%94%A8HTTP%E7%9A%84get%E8%AF%B7%E6%B1%82%E6%9D%A5%E4%B8%8B%E8%BD%BD%E6%96%87%E4%BB%B6/</loc>
+    <lastmod>2017-06-04T09:38:52.964Z</lastmod>
+    <data>
+        <display>
+        <title>libcurl使用HTTP的get请求来下载文件</title>
+        <pubTime>2015-08-05T10:14:44.000Z</pubTime>
+        
+        <tag>libcurl</tag>
+         
+         
+           
+             
+              <breadCrumb title="C/C++" url="http://ysir.me/categories/C-C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/08/05/libcurl%E7%9A%84C%E8%AF%AD%E8%A8%80%E6%8E%A5%E5%8F%A3%E4%BD%BF%E7%94%A8%E8%BF%87%E7%A8%8B/</loc>
+    <lastmod>2017-06-04T09:35:29.546Z</lastmod>
+    <data>
+        <display>
+        <title>libcurl的C语言接口使用过程</title>
+        <pubTime>2015-08-05T09:57:02.000Z</pubTime>
+        
+        <tag>libcurl</tag>
+         
+         
+           
+             
+              <breadCrumb title="C/C++" url="http://ysir.me/categories/C-C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/08/05/C-C-%E6%98%AF%E6%80%8E%E4%B9%88%E9%80%9A%E8%BF%87%E5%AE%8F%E5%AE%9A%E4%B9%89%E6%9D%A5%E5%88%A4%E6%96%AD%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E7%9A%84/</loc>
+    <lastmod>2017-06-04T09:28:42.049Z</lastmod>
+    <data>
+        <display>
+        <title>C/C++是怎么通过宏定义来判断操作系统的</title>
+        <pubTime>2015-08-05T03:11:17.000Z</pubTime>
+        
+        <tag>Qt</tag>
+         
+        <tag>宏</tag>
+         
+         
+           
+             
+              <breadCrumb title="C/C++" url="http://ysir.me/categories/C-C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/08/05/Xcode%E5%B0%8F%E6%8A%80%E5%B7%A7/</loc>
+    <lastmod>2017-06-04T09:26:59.093Z</lastmod>
+    <data>
+        <display>
+        <title>Xcode小技巧</title>
+        <pubTime>2015-08-04T16:46:02.000Z</pubTime>
+        
+        <tag>Mac</tag>
+         
+        <tag>Xcode</tag>
+         
+         
+           
+             
+              <breadCrumb title="Mac" url="http://ysir.me/categories/Mac/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/07/30/Mac-OS-X%E8%AE%BE%E7%BD%AEPATH%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/</loc>
+    <lastmod>2017-06-04T09:22:10.983Z</lastmod>
+    <data>
+        <display>
+        <title>Mac OS X设置PATH环境变量</title>
+        <pubTime>2015-07-30T03:21:21.000Z</pubTime>
+        
+        <tag>Mac</tag>
+         
+        <tag>PATH</tag>
+         
+        <tag>环境变量</tag>
+         
+         
+           
+             
+              <breadCrumb title="Mac" url="http://ysir.me/categories/Mac/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/07/13/Unity3d%E5%8F%98%E6%8D%A2%E7%BB%84%E4%BB%B6-Transform/</loc>
+    <lastmod>2017-06-04T09:18:23.672Z</lastmod>
+    <data>
+        <display>
+        <title>Unity3d变换组件(Transform)</title>
+        <pubTime>2015-07-13T03:20:14.000Z</pubTime>
+        
+        <tag>Unity</tag>
+         
+         
+           
+             
+              <breadCrumb title="游戏" url="http://ysir.me/categories/%E6%B8%B8%E6%88%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/07/13/Unity%E8%B5%84%E6%BA%90%E4%B9%8B%E9%97%B4%E7%9A%84%E5%85%B3%E7%B3%BB/</loc>
+    <lastmod>2017-06-04T09:07:13.043Z</lastmod>
+    <data>
+        <display>
+        <title>Unity资源之间的关系</title>
+        <pubTime>2015-07-13T02:43:21.000Z</pubTime>
+        
+        <tag>Unity</tag>
+         
+        <tag>资源</tag>
+         
+         
+           
+             
+              <breadCrumb title="游戏" url="http://ysir.me/categories/%E6%B8%B8%E6%88%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/07/13/Unity3D%E4%B8%ADC-%E8%8E%B7%E5%8F%96%E6%B8%B8%E6%88%8F%E6%97%B6%E9%97%B4%E5%B9%B6%E6%98%BE%E7%A4%BA%E6%88%90%E7%A7%92%E8%A1%A8%E6%A0%BC%E5%BC%8F/</loc>
+    <lastmod>2017-06-04T09:05:59.202Z</lastmod>
+    <data>
+        <display>
+        <title>Unity3D中C#获取游戏时间并显示成秒表格式</title>
+        <pubTime>2015-07-13T01:41:06.000Z</pubTime>
+        
+        <tag>Unity</tag>
+         
+         
+           
+             
+              <breadCrumb title="游戏" url="http://ysir.me/categories/%E6%B8%B8%E6%88%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2014/09/02/C-%E8%B0%83%E7%94%A8C-%E5%8A%A8%E6%80%81%E5%BA%93/</loc>
+    <lastmod>2017-06-04T09:05:41.686Z</lastmod>
+    <data>
+        <display>
+        <title>C#调用C++动态库</title>
+        <pubTime>2014-09-02T09:30:07.000Z</pubTime>
+        
+        <tag>动态库</tag>
+         
+         
+           
+             
+              <breadCrumb title="C#" url="http://ysir.me/categories/C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/07/04/Linux%E7%BA%BF%E7%A8%8B%E5%90%8C%E6%AD%A5/</loc>
+    <lastmod>2017-06-04T09:03:17.730Z</lastmod>
+    <data>
+        <display>
+        <title>Linux线程同步</title>
+        <pubTime>2015-07-04T12:24:01.000Z</pubTime>
+        
+        <tag>Linux</tag>
+         
+        <tag>线程</tag>
+         
+         
+           
+             
+              <breadCrumb title="C/C++" url="http://ysir.me/categories/C-C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/06/11/Failed-to-import-package-with-error-Couldn-t-decompress-package/</loc>
+    <lastmod>2017-06-04T08:48:41.296Z</lastmod>
+    <data>
+        <display>
+        <title>Failed to import package with error: Couldn't decompress package</title>
+        <pubTime>2015-06-11T03:14:39.000Z</pubTime>
+        
+        <tag>问题</tag>
+         
+        <tag>Unity</tag>
+         
+         
+           
+             
+              <breadCrumb title="游戏" url="http://ysir.me/categories/%E6%B8%B8%E6%88%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/03/26/Qt%E8%A7%A3%E5%86%B3QUrl%E5%90%AB%E6%9C%89%E4%B8%AD%E6%96%87%E6%88%96%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6%E6%97%A0%E6%B3%95%E4%B8%8B%E8%BD%BD%E7%9A%84%E9%97%AE%E9%A2%98/</loc>
+    <lastmod>2017-06-04T08:45:52.253Z</lastmod>
+    <data>
+        <display>
+        <title>Qt解决QUrl含有中文或特殊字符无法下载的问题</title>
+        <pubTime>2015-03-26T10:04:38.000Z</pubTime>
+        
+        <tag>Qt</tag>
+         
+        <tag>字符</tag>
+         
+         
+           
+             
+              <breadCrumb title="Qt" url="http://ysir.me/categories/Qt/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/02/14/cocos2d-fullPathForFilename-No-file-found-at-cc-2x2-white-image-Possible-missing-file/</loc>
+    <lastmod>2017-06-04T08:44:14.534Z</lastmod>
+    <data>
+        <display>
+        <title>cocos2d: fullPathForFilename: No file found at /cc_2x2_white_image. Possible missing file.</title>
+        <pubTime>2015-02-13T16:05:28.000Z</pubTime>
+        
+        <tag>问题</tag>
+         
+        <tag>cocos</tag>
+         
+         
+           
+             
+              <breadCrumb title="游戏" url="http://ysir.me/categories/%E6%B8%B8%E6%88%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/02/13/cocos2d-x-3-x%E4%B9%8B%E8%A7%A6%E6%91%B8%E4%BA%8B%E4%BB%B6/</loc>
+    <lastmod>2017-06-04T08:41:55.636Z</lastmod>
+    <data>
+        <display>
+        <title>cocos2d-x 3.x之触摸事件</title>
+        <pubTime>2015-02-13T14:38:17.000Z</pubTime>
+        
+        <tag>cocos</tag>
+         
+        <tag>事件</tag>
+         
+         
+           
+             
+              <breadCrumb title="游戏" url="http://ysir.me/categories/%E6%B8%B8%E6%88%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/02/12/cocos2d-x-3-x%E4%B9%8B%E5%8D%B7%E8%BD%B4%E5%9C%B0%E5%9B%BE-%E8%AE%A9%E8%83%8C%E6%99%AF%E6%BB%9A%E5%8A%A8%E8%B5%B7%E6%9D%A5/</loc>
+    <lastmod>2017-06-04T08:36:56.743Z</lastmod>
+    <data>
+        <display>
+        <title>cocos2d-x 3.x之卷轴地图-让背景滚动起来</title>
+        <pubTime>2015-02-12T07:32:44.000Z</pubTime>
+        
+        <tag>cocos</tag>
+         
+        <tag>卷轴地图</tag>
+         
+         
+           
+             
+              <breadCrumb title="游戏" url="http://ysir.me/categories/%E6%B8%B8%E6%88%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2015/01/04/cocos2d-x-3-x%E4%B9%8B%E5%8A%A8%E7%94%BB/</loc>
+    <lastmod>2017-06-04T08:33:23.177Z</lastmod>
+    <data>
+        <display>
+        <title>cocos2d-x 3.x之动画</title>
+        <pubTime>2015-01-04T13:54:27.000Z</pubTime>
+        
+        <tag>cocos</tag>
+         
+        <tag>动画</tag>
+         
+         
+           
+             
+              <breadCrumb title="游戏" url="http://ysir.me/categories/%E6%B8%B8%E6%88%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2014/12/10/cocos2d-x-3-x%E4%B9%8B%E5%8A%A8%E4%BD%9C/</loc>
+    <lastmod>2017-06-04T08:32:57.170Z</lastmod>
+    <data>
+        <display>
+        <title>cocos2d-x 3.x之动作</title>
+        <pubTime>2014-12-10T15:58:11.000Z</pubTime>
+        
+        <tag>cocos</tag>
+         
+        <tag>动作</tag>
+         
+         
+           
+             
+              <breadCrumb title="游戏" url="http://ysir.me/categories/%E6%B8%B8%E6%88%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2014/12/03/cocos2d-x-3-x%E4%B9%8B%E5%AE%9A%E6%97%B6%E5%99%A8/</loc>
+    <lastmod>2017-06-04T08:20:51.334Z</lastmod>
+    <data>
+        <display>
+        <title>cocos2d-x 3.x之定时器</title>
+        <pubTime>2014-12-03T15:04:37.000Z</pubTime>
+        
+        <tag>cocos</tag>
+         
+         
+           
+             
+              <breadCrumb title="游戏" url="http://ysir.me/categories/%E6%B8%B8%E6%88%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2014/11/21/Windows%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%9F%A5%E7%9C%8B%E7%AB%AF%E5%8F%A3%E8%A2%AB%E5%93%AA%E4%B8%AA%E7%A8%8B%E5%BA%8F%E5%8D%A0%E7%94%A8/</loc>
+    <lastmod>2017-06-04T08:17:22.917Z</lastmod>
+    <data>
+        <display>
+        <title>Windows命令行查看端口被哪个程序占用</title>
+        <pubTime>2014-11-21T07:15:11.000Z</pubTime>
+        
+        <tag>命令</tag>
+         
+         
+           
+             
+              <breadCrumb title="Windows" url="http://ysir.me/categories/Windows/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2014/11/19/cocos2d-x-3-x-HelloWorld%E5%85%A5%E9%97%A8/</loc>
+    <lastmod>2017-06-04T08:15:03.178Z</lastmod>
+    <data>
+        <display>
+        <title>cocos2d-x 3.x HelloWorld入门</title>
+        <pubTime>2014-11-19T12:25:53.000Z</pubTime>
+        
+        <tag>cocos</tag>
+         
+         
+           
+             
+              <breadCrumb title="游戏" url="http://ysir.me/categories/%E6%B8%B8%E6%88%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2014/11/12/C-11%E4%B9%8Bstd-bind/</loc>
+    <lastmod>2017-06-04T08:11:35.733Z</lastmod>
+    <data>
+        <display>
+        <title>C++11之std::bind</title>
+        <pubTime>2014-11-11T17:07:44.000Z</pubTime>
+        
+        <tag>C++11</tag>
+         
+        <tag>bind</tag>
+         
+        <tag>std</tag>
+         
+         
+           
+             
+              <breadCrumb title="C/C++" url="http://ysir.me/categories/C-C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2014/10/25/%E8%B0%83%E8%AF%95%E6%8A%80%E5%B7%A7-%E8%AE%A9printf%E5%9C%A8%E7%BB%88%E7%AB%AF%E8%BE%93%E5%87%BA%E5%B8%A6%E9%A2%9C%E8%89%B2%E7%9A%84%E6%96%87%E6%9C%AC/</loc>
+    <lastmod>2017-06-04T08:04:25.790Z</lastmod>
+    <data>
+        <display>
+        <title>调试技巧:让printf在终端输出带颜色的文本</title>
+        <pubTime>2014-10-25T01:58:28.000Z</pubTime>
+        
+        <tag>调试</tag>
+         
+        <tag>printf</tag>
+         
+         
+           
+             
+              <breadCrumb title="C/C++" url="http://ysir.me/categories/C-C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2014/10/24/gcc%E7%BC%96%E8%AF%91%E9%80%89%E9%A1%B9/</loc>
+    <lastmod>2017-06-04T08:03:01.997Z</lastmod>
+    <data>
+        <display>
+        <title>gcc编译选项</title>
+        <pubTime>2014-10-24T03:32:22.000Z</pubTime>
+        
+        <tag>编译</tag>
+         
+        <tag>gcc</tag>
+         
+         
+           
+             
+              <breadCrumb title="C/C++" url="http://ysir.me/categories/C-C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2014/08/21/QPainter%E7%BB%98%E5%9B%BE/</loc>
+    <lastmod>2017-06-04T07:51:30.271Z</lastmod>
+    <data>
+        <display>
+        <title>QPainter绘图</title>
+        <pubTime>2014-08-21T01:33:16.000Z</pubTime>
+        
+        <tag>绘图</tag>
+         
+         
+           
+             
+              <breadCrumb title="Qt" url="http://ysir.me/categories/Qt/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2014/08/20/Qt%E7%BC%96%E8%AF%91%E5%87%BA%E7%8E%B0undefined-reference-to-vtable-for%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/</loc>
+    <lastmod>2017-06-04T07:48:39.167Z</lastmod>
+    <data>
+        <display>
+        <title>Qt编译出现undefined reference to vtable for的解决方案</title>
+        <pubTime>2014-08-20T09:26:49.000Z</pubTime>
+        
+        <tag>编译</tag>
+         
+         
+           
+             
+              <breadCrumb title="Qt" url="http://ysir.me/categories/Qt/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2014/08/11/Qt%E4%BF%AE%E6%94%B9%E9%94%AE%E7%9B%98%E4%BA%8B%E4%BB%B6/</loc>
+    <lastmod>2017-06-04T07:46:28.096Z</lastmod>
+    <data>
+        <display>
+        <title>Qt修改键盘事件</title>
+        <pubTime>2014-08-11T06:54:29.000Z</pubTime>
+        
+        <tag>Qt</tag>
+         
+         
+           
+             
+              <breadCrumb title="Qt" url="http://ysir.me/categories/Qt/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2014/08/07/Linux%E5%91%BD%E4%BB%A4%E6%9F%A5%E6%89%BE%E7%BB%93%E6%9E%84%E4%BD%93%E6%9F%A5%E6%89%BE%E6%96%87%E4%BB%B6/</loc>
+    <lastmod>2017-06-04T07:43:57.180Z</lastmod>
+    <data>
+        <display>
+        <title>Linux命令查找结构体查找文件</title>
+        <pubTime>2014-08-07T05:47:08.000Z</pubTime>
+        
+        <tag>命令</tag>
+         
+         
+           
+             
+              <breadCrumb title="Linux" url="http://ysir.me/categories/Linux/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2014/08/05/cocos2d-x-3-1-1%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BA/</loc>
+    <lastmod>2017-06-04T07:40:50.181Z</lastmod>
+    <data>
+        <display>
+        <title>cocos2d-x 3.1.1环境搭建</title>
+        <pubTime>2014-08-05T12:17:13.000Z</pubTime>
+        
+        <tag>cocos</tag>
+         
+         
+           
+             
+              <breadCrumb title="游戏" url="http://ysir.me/categories/%E6%B8%B8%E6%88%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2014/07/24/%E4%BD%BF%E7%94%A8%E7%BB%88%E7%AB%AF%E6%B5%8B%E8%AF%95%E7%BD%91%E9%80%9F/</loc>
+    <lastmod>2017-06-04T07:36:13.345Z</lastmod>
+    <data>
+        <display>
+        <title>使用终端测试网速</title>
+        <pubTime>2014-07-24T07:34:57.000Z</pubTime>
+        
+        <tag>网速</tag>
+         
+         
+           
+             
+              <breadCrumb title="其他" url="http://ysir.me/categories/%E5%85%B6%E4%BB%96/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2014/07/24/log4cpp-c-%E6%97%A5%E5%BF%97%E5%BA%93/</loc>
+    <lastmod>2017-06-04T07:33:21.989Z</lastmod>
+    <data>
+        <display>
+        <title>log4cpp-c++日志库</title>
+        <pubTime>2014-07-24T07:34:46.000Z</pubTime>
+        
+        <tag>日志</tag>
+         
+         
+           
+             
+              <breadCrumb title="C/C++" url="http://ysir.me/categories/C-C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
+    <loc>http://ysir.me/2014/07/23/Qt%E5%9C%A8%E5%90%84%E5%B9%B3%E5%8F%B0%E4%B8%8A%E7%9A%84%E6%90%AD%E5%BB%BAqt-everywhere/</loc>
+    <lastmod>2017-06-03T14:39:14.787Z</lastmod>
+    <data>
+        <display>
+        <title>Qt在各平台上的搭建qt-everywhere</title>
+        <pubTime>2014-07-23T09:06:19.000Z</pubTime>
+        
+        <tag>Qt</tag>
+         
+        <tag>编译</tag>
+         
+        <tag>安装</tag>
+         
+         
+           
+             
+              <breadCrumb title="Qt" url="http://ysir.me/categories/Qt/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+  <url>
+    <loc>http://ysir.me/2014/07/24/php%E5%9C%A8Windows%E4%B8%8B%E8%8E%B7%E5%8F%96%E6%96%87%E4%BB%B6%E5%A4%B9%E5%92%8C%E5%A4%A7%E6%96%87%E4%BB%B6%E5%A4%A7%E5%B0%8F/</loc>
+    <lastmod>2017-06-03T14:26:11.581Z</lastmod>
+    <data>
+        <display>
+        <title>php在Windows下获取文件夹和大文件大小</title>
+        <pubTime>2014-07-24T02:28:46.000Z</pubTime>
+        
+        <tag>文件操作</tag>
+         
+         
+           
+             
+              <breadCrumb title="PHP" url="http://ysir.me/categories/PHP/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2014/07/22/indent-C%E8%AF%AD%E8%A8%80%E4%BB%A3%E7%A0%81%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2017-06-03T14:25:52.252Z</lastmod>
+    <data>
+        <display>
+        <title>indent-C语言代码格式化工具</title>
+        <pubTime>2014-07-22T01:22:15.000Z</pubTime>
+        
+        <tag>indent</tag>
+         
+        <tag>格式化</tag>
+         
+         
+           
+             
+              <breadCrumb title="C/C++" url="http://ysir.me/categories/C-C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2014/07/16/%E5%8E%9F%E7%A0%81%E5%8F%8D%E7%A0%81%E8%A1%A5%E7%A0%81/</loc>
+    <lastmod>2017-06-03T14:24:54.758Z</lastmod>
+    <data>
+        <display>
+        <title>原码反码补码</title>
+        <pubTime>2014-07-16T06:10:46.000Z</pubTime>
+        
+        <tag>原码</tag>
+         
+        <tag>反码</tag>
+         
+        <tag>补码</tag>
+         
+         
+           
+             
+              <breadCrumb title="基础" url="http://ysir.me/categories/%E5%9F%BA%E7%A1%80/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2014/07/15/%E8%AE%A1%E7%AE%97%E6%9C%BA%E5%9F%BA%E7%A1%80/</loc>
+    <lastmod>2017-06-03T14:24:04.716Z</lastmod>
+    <data>
+        <display>
+        <title>计算机基础</title>
+        <pubTime>2014-07-15T06:31:17.000Z</pubTime>
+        
+        <tag>计算机</tag>
+         
+         
+           
+             
+              <breadCrumb title="基础" url="http://ysir.me/categories/%E5%9F%BA%E7%A1%80/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2014/07/23/%E4%BB%A3%E7%A0%81%E7%9A%84%E7%BC%96%E8%AF%91%E8%BF%9E%E6%8E%A5%E4%B8%8E%E6%89%A7%E8%A1%8C%E8%BF%87%E7%A8%8B/</loc>
+    <lastmod>2017-06-03T14:23:17.556Z</lastmod>
+    <data>
+        <display>
+        <title>代码的编译连接与执行过程</title>
+        <pubTime>2014-07-23T02:40:35.000Z</pubTime>
+        
+        <tag>编译</tag>
+         
+        <tag>C/C++</tag>
+         
+         
+           
+             
+              <breadCrumb title="基础" url="http://ysir.me/categories/%E5%9F%BA%E7%A1%80/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2014/07/24/%E6%A0%87%E5%87%86IO%E5%BA%93%E7%BC%93%E5%86%B2%E5%8C%BAbuffer/</loc>
+    <lastmod>2017-06-03T14:21:15.990Z</lastmod>
+    <data>
+        <display>
+        <title>标准IO库缓冲区buffer</title>
+        <pubTime>2014-07-24T07:33:31.000Z</pubTime>
+        
+        <tag>缓冲</tag>
+         
+         
+           
+             
+              <breadCrumb title="C/C++" url="http://ysir.me/categories/C-C/"/>
+          
+        </display>
+    </data>
+    </url>
+
+</urlset>
