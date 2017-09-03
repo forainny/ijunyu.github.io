@@ -4,6 +4,60 @@
 
     
   <url>
+    <loc>http://ysir.me/2017/09/03/15%E6%AC%BE%E5%85%8D%E8%B4%B9%E5%A5%BD%E7%94%A8%E7%9A%84Mac-Apps/</loc>
+    <lastmod>2017-09-03T15:45:36.787Z</lastmod>
+    <data>
+        <display>
+        <title>15款免费好用的Mac Apps</title>
+        <pubTime>2017-09-03T14:31:16.000Z</pubTime>
+        
+        <tag>翻译</tag>
+         
+        <tag>maketecheasier</tag>
+         
+        <tag>Mac</tag>
+         
+        <tag>App</tag>
+         
+        <tag>免费</tag>
+         
+         
+           
+             
+              <breadCrumb title="翻译" url="http://ysir.me/categories/%E7%BF%BB%E8%AF%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://ysir.me/2017/09/03/%E5%A6%82%E4%BD%95%E5%9C%A8Windows10%E4%B8%AD%E5%85%B3%E9%97%ADIE%E6%B5%8F%E8%A7%88%E5%99%A8/</loc>
+    <lastmod>2017-09-03T14:16:59.539Z</lastmod>
+    <data>
+        <display>
+        <title>如何在Windows10中关闭IE浏览器</title>
+        <pubTime>2017-09-03T13:52:54.000Z</pubTime>
+        
+        <tag>翻译</tag>
+         
+        <tag>maketecheasier</tag>
+         
+        <tag>Win10</tag>
+         
+        <tag>IE</tag>
+         
+         
+           
+             
+              <breadCrumb title="翻译" url="http://ysir.me/categories/%E7%BF%BB%E8%AF%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ysir.me/2017/06/08/%E5%A6%82%E4%BD%95%E5%9C%A8Windows10%E4%B8%AD%E4%BD%BF%E7%94%A8Emoji%E8%A1%A8%E6%83%85/</loc>
     <lastmod>2017-06-25T06:22:42.178Z</lastmod>
     <data>
@@ -517,9 +571,9 @@
         <title>Qt：Invalid parameter passed to C runtime function.</title>
         <pubTime>2015-08-20T10:36:26.000Z</pubTime>
         
-        <tag>Qt</tag>
-         
         <tag>问题</tag>
+         
+        <tag>Qt</tag>
          
          
            
@@ -1234,9 +1288,9 @@
         <title>Qt在各平台上的搭建qt-everywhere</title>
         <pubTime>2014-07-23T09:06:19.000Z</pubTime>
         
-        <tag>Qt</tag>
-         
         <tag>编译</tag>
+         
+        <tag>Qt</tag>
          
         <tag>安装</tag>
          
