@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://ysir.me/2017/12/20/The-use-of-Swift-3-objc-inference-in-Swift-4-mode-is-deprecated/</loc>
+    <lastmod>2017-12-20T14:48:27.804Z</lastmod>
+    <data>
+        <display>
+        <title>The use of Swift 3 @objc inference in Swift 4 mode is deprecated?</title>
+        <pubTime>2017-12-20T14:38:27.000Z</pubTime>
+        
+        <tag>Swift</tag>
+         
+        <tag>iOS</tag>
+         
+         
+           
+             
+              <breadCrumb title="Swift" url="http://ysir.me/categories/Swift/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ysir.me/2017/09/03/15%E6%AC%BE%E5%85%8D%E8%B4%B9%E5%A5%BD%E7%94%A8%E7%9A%84Mac-Apps/</loc>
     <lastmod>2017-09-07T14:13:05.239Z</lastmod>
     <data>
@@ -277,9 +299,9 @@
         <title>Qt动态库的生成和使用</title>
         <pubTime>2015-09-16T16:18:47.000Z</pubTime>
         
-        <tag>动态库</tag>
-         
         <tag>Qt</tag>
+         
+        <tag>动态库</tag>
          
          
            

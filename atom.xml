@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ysir.me/"/>
-  <updated>2017-09-07T14:13:05.239Z</updated>
+  <updated>2017-12-20T14:48:27.804Z</updated>
   <id>http://ysir.me/</id>
   
   <author>
@@ -15,6 +15,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>The use of Swift 3 @objc inference in Swift 4 mode is deprecated?</title>
+    <link href="http://ysir.me/2017/12/20/The-use-of-Swift-3-objc-inference-in-Swift-4-mode-is-deprecated/"/>
+    <id>http://ysir.me/2017/12/20/The-use-of-Swift-3-objc-inference-in-Swift-4-mode-is-deprecated/</id>
+    <published>2017-12-20T14:38:27.000Z</published>
+    <updated>2017-12-20T14:48:27.804Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="问题"><a href="#问题" class="headerlink" title="问题"></a>问题</h2><p>升级 Xcode 后产生了警告：The use of Swift 3 @objc inference in Swift 4 mode is deprecated?</p><h2 id="解决"><a href="#解决" class="headerlink" title="解决"></a>解决</h2><p>修改项目 Targets 的 Build Settings，将 Swift 3 @obj Interface 设置为 Default。</p><p><img src="https://i.loli.net/2017/12/20/5a3a762798978.png" alt=""></p><p>参考</p><p><a href="https://stackoverflow.com/questions/44379348/the-use-of-swift-3-objc-inference-in-swift-4-mode-is-deprecated" target="_blank" rel="external">The use of Swift 3 @objc inference in Swift 4 mode is deprecated?</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;问题&quot;&gt;&lt;a href=&quot;#问题&quot; class=&quot;headerlink&quot; title=&quot;问题&quot;&gt;&lt;/a&gt;问题&lt;/h2&gt;&lt;p&gt;升级 Xcode 后产生了警告：The use of Swift 3 @objc inference in Swift 4 mode is 
+      
+    
+    </summary>
+    
+      <category term="Swift" scheme="http://ysir.me/categories/Swift/"/>
+    
+    
+      <category term="Swift" scheme="http://ysir.me/tags/Swift/"/>
+    
+      <category term="iOS" scheme="http://ysir.me/tags/iOS/"/>
+    
+  </entry>
   
   <entry>
     <title>15款免费好用的Mac Apps</title>
@@ -355,9 +382,9 @@ TARGET = conf
       <category term="Qt" scheme="http://ysir.me/categories/Qt/"/>
     
     
-      <category term="动态库" scheme="http://ysir.me/tags/%E5%8A%A8%E6%80%81%E5%BA%93/"/>
-    
       <category term="Qt" scheme="http://ysir.me/tags/Qt/"/>
+    
+      <category term="动态库" scheme="http://ysir.me/tags/%E5%8A%A8%E6%80%81%E5%BA%93/"/>
     
   </entry>
   
@@ -552,31 +579,6 @@ set numbe
     
     
       <category term="进程" scheme="http://ysir.me/tags/%E8%BF%9B%E7%A8%8B/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>exec函数族</title>
-    <link href="http://ysir.me/2015/09/16/exec%E5%87%BD%E6%95%B0%E6%97%8F/"/>
-    <id>http://ysir.me/2015/09/16/exec函数族/</id>
-    <published>2015-09-16T02:54:16.000Z</published>
-    <updated>2017-06-04T10:19:07.332Z</updated>
-    
-    <content type="html"><![CDATA[<p>exec函数族提供了一个在进程中启动另一个程序执行的方法。它可以根据指定的文件名或目录名找到可执行文件，并用它来取代原调用进程的数据段、代码段和堆栈段，在执行完之后，原调用进程的内容除了进程号外，其他全部被新的进程替换了。另外，这里的可执行文件既可以是二进制文件，也可以是Linux下任何可执行的脚本文件。</p><p>在Linux中使用exec函数族主要有两种情况：</p><ul><li>当进程认为自己不能再为系统和用户做出任何贡献时，就可以调用exec函数族中的任意一个函数让自己重生。</li><li>如果一个进程想执行另一个程序，那么它就可以调用fork()函数新建一个进程，然后调用exec函数族中的任意一个函数，这样看起来就像通过执行应用程序而产生了一个新进程，这种情况非常普遍，以至于Linux专门为其作了优化，我们已经知道，fork会将调用进程的所有内容原封不动的拷贝到新产生的子进程中去，这些拷贝的动作很消耗时间，而如果fork完之后我们马上就调用exec，这些辛辛苦苦拷贝来的东西又会被立刻抹掉，这看起来非常不划算，于是人们设计了一种”写时拷贝（copy-on-write）”技术，使得fork结束后并不立刻复制父进程的内容，而是到了真正实用的时候才复制，这样如果下一条语句是exec，它就不会白白作无用功了，也就提高了效率。</li></ul><p>exec函数族的6个成员函数</p><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></div><div class="line"><span class="keyword">extern</span> <span class="keyword">char</span> **environ;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">execl</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *path, <span class="keyword">const</span> <span class="keyword">char</span> *arg, ...)</span></span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">execv</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *path, <span class="keyword">char</span> *<span class="keyword">const</span> argv[])</span></span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">execle</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *path, <span class="keyword">const</span> <span class="keyword">char</span> *arg, ..., <span class="keyword">char</span> *<span class="keyword">const</span> envp[])</span></span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">execlp</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *file, <span class="keyword">const</span> <span class="keyword">char</span> *arg, ...)</span></span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">execvp</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *file, <span class="keyword">char</span> *<span class="keyword">const</span> argv[])</span></span>;</div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">execve</span><span class="params">(<span class="keyword">const</span> <span class="keyword">char</span> *path, <span class="keyword">char</span> *<span class="keyword">const</span> argv[], <span class="keyword">char</span> *<span class="keyword">const</span> envp[])</span></span>;</div></pre></td></tr></table></figure><p>其中只有execve 是真正意义上的系统调用，其它都是在此基础上经过包装的库函数。</p><p>名字中的’l’, ‘p’, ‘e’, ‘v’的含义。</p><p>‘l’表示传递的参数是以列表形式出现即分开的，需要一个一个的传递，比如：<br><code>execl(&quot;/bin/ps&quot;, &quot;ps&quot;, &quot;ajx&quot;, NULL)</code><br>其中第一个参数代表传递的一个要执行的程序的路径，第二个参数必须和第一个参数的文件保持一致，后边的 ajx,NULL都是参数，而且最后一个参数必须是NULL。</p><p>‘v’表示函数传递的参数是以组合形式的传递而不用一个一个的传递，比如：  </p><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">char</span> *buf[] = &#123;<span class="string">"ps"</span>, <span class="string">"ajx"</span>, <span class="literal">NULL</span>&#125;;</div><div class="line">execv(<span class="string">"/bin/ps"</span>, buf)</div></pre></td></tr></table></figure><p>其中buf这个指针数组包含了需要传递参数并且最有一个参数是NULL。</p><p>‘p’表示exec函数要传递可执行文件的名字，不需要传递文件路径，系统就会自动按照环境变量$PATH所指定的路径进行查找，比如：<br><code>execp(&quot;ps&quot;, &quot;ps&quot;, &quot;ajx&quot;, NULL);</code></p><p>‘e’表示传递给新进程的环境变量，比如：</p><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">char</span> *buf[] = &#123;<span class="string">"PATH=/usr/bin"</span>, <span class="literal">NULL</span>&#125;;</div><div class="line">execle(<span class="string">"./test"</span>, <span class="literal">NULL</span>, buf);</div></pre></td></tr></table></figure><p>那么在新的进程中环境变量PATH就变成/usr/bin下的内容了。</p><p>对于由exec函数启动的进程来说，它的参数表和环境加在一起的总长度是有限制的。上限由ARG_MAX给出，在Linux系统上它是128K字节。其他系统可能会设置一个非常有限的长度，这有可能会导致出现问题。POSIX规范要求ARG_MAX至少要有4096个字节。</p><p>一般情况下，exec函数是不会返回的，除非发生了错误，它们才会返回-1，并且会设置错误变量errno，然后从原程序的调用点接着往下执行。</p><p>其中最常见的原因有：</p><ul><li>找不到文件或路径，此时errno被设置为ENOENT。</li><li>数组argv和envp忘记用NULL结束，此时errno被设置为EFAUL。 </li><li>没有对应可执行文件的运行权限，此时errno被设置为EACCES。</li></ul><p>由exec启动的新进程继承了原进程的许多特性。特别地，在原进程中已打开的文件描述符在新进程中仍将保持打开，除非它们的“执行时关闭标志”（close on exec flag）被置位（详细说明对fcnt1系统调用的介绍）。任何在原进程中已打开的目录流都将在新进程中被关闭。</p><p><a href="http://www.farsight.com.cn/news/emb188.htm" target="_blank" rel="external">Linux下多进程编程之exec函数语法及使用实例</a><br><a href="http://blog.csdn.net/wubin1124/article/details/5002556" target="_blank" rel="external">exec函数族</a><br><a href="http://www.cplusplus.me/1079.html" target="_blank" rel="external">exec函数族的使用</a><br><a href="http://bbs.chinaunix.net/thread-4168834-1-1.html" target="_blank" rel="external">[结贴]我感觉execl的第一个参数和第二个参数有重叠，帮我看一下吧</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;exec函数族提供了一个在进程中启动另一个程序执行的方法。它可以根据指定的文件名或目录名找到可执行文件，并用它来取代原调用进程的数据段、代码段和堆栈段，在执行完之后，原调用进程的内容除了进程号外，其他全部被新的进程替换了。另外，这里的可执行文件既可以是二进制文件，也可以是L
-      
-    
-    </summary>
-    
-      <category term="C/C++" scheme="http://ysir.me/categories/C-C/"/>
-    
-    
-      <category term="exec" scheme="http://ysir.me/tags/exec/"/>
     
   </entry>
   
