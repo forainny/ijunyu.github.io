@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ysir.me/"/>
-  <updated>2017-12-20T14:48:27.804Z</updated>
+  <updated>2018-01-10T15:16:32.499Z</updated>
   <id>http://ysir.me/</id>
   
   <author>
@@ -15,6 +15,37 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>每一个Linux用户必须使用的11款便携应用</title>
+    <link href="http://ysir.me/2018/01/10/%E6%AF%8F%E4%B8%80%E4%B8%AALinux%E7%94%A8%E6%88%B7%E5%BF%85%E9%A1%BB%E4%BD%BF%E7%94%A8%E7%9A%8411%E6%AC%BE%E4%BE%BF%E6%90%BA%E5%BA%94%E7%94%A8/"/>
+    <id>http://ysir.me/2018/01/10/每一个Linux用户必须使用的11款便携应用/</id>
+    <published>2018-01-10T13:59:01.000Z</published>
+    <updated>2018-01-10T15:16:32.499Z</updated>
+    
+    <content type="html"><![CDATA[<p>原文链接：<br><a href="https://www.maketecheasier.com/portable-apps-for-linux/" target="_blank" rel="external">11 Portable Apps Every Linux User Should Use</a></p><h2 id="1-Mozilla-Firefox"><a href="#1-Mozilla-Firefox" class="headerlink" title="1. Mozilla Firefox"></a>1. <a href="https://portableapps.com/apps/internet/firefox_portable" target="_blank" rel="external">Mozilla Firefox</a></h2><p>虽然 Firefox 在近几年被 Chrome 抢占了许多份额，但它仍然是目前最快的浏览器之一，并且它还支持无数的扩展和插件。</p><p><img src="https://i.loli.net/2018/01/10/5a561d622db4c.png" alt=""></p><p>即便是在 Firefox 便携版中，你依然可以登录你的账号来同步你的书签和扩展等。</p><h2 id="2-Telegram"><a href="#2-Telegram" class="headerlink" title="2. Telegram"></a>2. <a href="https://desktop.telegram.org/" target="_blank" rel="external">Telegram</a></h2><p>Telegram 是一款著名的消息应用，支持手机端和桌面端。它以用安全加密的方式保存用户信息、图片、视频、音频而闻名。另外它还支持双重认证、机器人、贴纸等功能。</p><p><img src="https://i.loli.net/2018/01/10/5a561f796b756.jpg" alt=""></p><p>除此之外，Telegram 以其一流的桌面客户端在 Linux 社区广受好评。最好的地方是，当用户从 <a href="https://telegram.org/" target="_blank" rel="external">Telegram.org</a> 下载客户端的时候，下载的并不是 Deb 或者 RPM 这种需要安装的文件，而是下载了两个二进制文件：客户端和更新工具。</p><p>这些二进制文件可以完全独立于系统运行，无论何时何地。这使得 Telegram 非常适合存储在便携式闪存驱动中。</p><h2 id="3-Wire"><a href="#3-Wire" class="headerlink" title="3. Wire"></a>3. <a href="https://wire.com/en/download/" target="_blank" rel="external">Wire</a></h2><p>跟 Telegram 一样，Wire 也是一个端对端的加密通讯工具。与 Telegram 不同的是，它支持语音聊天，可以作为 Skype 的替代品。更好的是，它完全开源，并且通过 AppImage 发布应用。</p><p><img src="https://i.loli.net/2018/01/10/5a56234b2ae1e.jpg" alt=""></p><p>AppImage 是一个可以让程序在任何地方运行的技术，类似于 Windows 的 EXE 程序。这非常适合加密聊天的工具。将 Wire 安装在闪存中，不管你使用哪一个 Linux 发行版都能安全的发送消息。</p><h2 id="4-TOR-Browser-Bundle"><a href="#4-TOR-Browser-Bundle" class="headerlink" title="4. TOR Browser Bundle"></a>4. <a href="https://www.torproject.org/index.html.en" target="_blank" rel="external">TOR Browser Bundle</a></h2><p>对 Linux 用户来说，隐私是一件大事。很多人来到这个平台是为了避免像微软、谷歌和苹果这样的大公司窥探他们在操作系统上做些什么。有了 TOR，你将获得一个额外的安全层。这是因为 TOR 浏览器遍历结点并混淆了流量。</p><p><img src="https://i.loli.net/2018/01/10/5a5625602c438.jpg" alt=""></p><p>好消息是 TOR 浏览器套件是完全便携的，而且可以从 USB 设备上使用。</p><h2 id="5-Calibre"><a href="#5-Calibre" class="headerlink" title="5. Calibre"></a>5. <a href="https://bintray.com/probono/AppImages/Calibre" target="_blank" rel="external">Calibre</a></h2><p><img src="https://i.loli.net/2018/01/10/5a5625d29fabb.jpg" alt=""></p><p>Calibre 是一款运行于 Linux 和其他平台的电子书应用。有了它，用户可以轻松阅读各种格式的电子书。它有一款使用 AppImage 技术的便携版本，你可以下载它放到闪存设备中。</p><h2 id="6-Gimp"><a href="#6-Gimp" class="headerlink" title="6. Gimp"></a>6. <a href="https://bintray.com/probono/AppImages/GIMP" target="_blank" rel="external">Gimp</a></h2><p>说到在 Linux 上编辑图片，真的只有一个选择：Gimp。它也有一个使用 AppImage 技术的便携版本。</p><p><img src="https://i.loli.net/2018/01/10/5a5628202f3ba.jpg" alt=""></p><h2 id="7-Geany"><a href="#7-Geany" class="headerlink" title="7. Geany"></a>7. <a href="https://bintray.com/probono/AppImages/Geany" target="_blank" rel="external">Geany</a></h2><p>Linux 平台上有许多集成开发环境，如传统的文本型编辑器 Gedit、Kate、Mousepad，更先进的 Vim 和 Emacs，这些都非常不错，但是不确定它们是否能装在闪存上。</p><p>Geany 是一款轻量级，功能齐全的开发环境。功能包括自动完成、折叠线、运行对话框等。它不依赖于任何桌面环境。</p><p><img src="https://i.loli.net/2018/01/10/5a56297363bbe.jpg" alt=""></p><h2 id="8-Mumble"><a href="#8-Mumble" class="headerlink" title="8. Mumble"></a>8. <a href="https://bintray.com/probono/AppImages/Mumble" target="_blank" rel="external">Mumble</a></h2><p>Mumble 是一款跨 Linux、Mac 和 Windows 平台的团队语音工具。它主要用于游戏，因为它可以很简单地跟朋友一起创建房间聊天。</p><p><img src="https://i.loli.net/2018/01/10/5a562b7d490b4.jpg" alt=""></p><h2 id="9-Slack"><a href="#9-Slack" class="headerlink" title="9. Slack"></a>9. <a href="https://bintray.com/probono/AppImages/Slack" target="_blank" rel="external">Slack</a></h2><p>2016 是企业通讯工具爆发的一年。有 RocketChat，MatterMost，HipChat 等。最流行的是 Slack。</p><p><img src="https://i.loli.net/2018/01/10/5a562c9e0d20b.jpg" alt=""></p><h2 id="10-VLC"><a href="#10-VLC" class="headerlink" title="10. VLC"></a>10. <a href="https://bintray.com/probono/AppImages/VLC" target="_blank" rel="external">VLC</a></h2><p><img src="https://i.loli.net/2018/01/10/5a562d12c4805.jpg" alt=""></p><p>著名的视频播放器便携版。</p><h2 id="11-Etcher"><a href="#11-Etcher" class="headerlink" title="11. Etcher"></a>11. <a href="https://etcher.io/" target="_blank" rel="external">Etcher</a></h2><p>当您需要快速制作可启动的 U 盘时，无需安装软件即可获得可启动的 USB / SD卡，非常方便。</p><p><img src="https://i.loli.net/2018/01/10/5a562ddd49357.png" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;原文链接：&lt;br&gt;&lt;a href=&quot;https://www.maketecheasier.com/portable-apps-for-linux/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;11 Portable Apps Every Linux Us
+      
+    
+    </summary>
+    
+      <category term="翻译" scheme="http://ysir.me/categories/%E7%BF%BB%E8%AF%91/"/>
+    
+    
+      <category term="翻译" scheme="http://ysir.me/tags/%E7%BF%BB%E8%AF%91/"/>
+    
+      <category term="maketecheasier" scheme="http://ysir.me/tags/maketecheasier/"/>
+    
+      <category term="App" scheme="http://ysir.me/tags/App/"/>
+    
+      <category term="Linux" scheme="http://ysir.me/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>The use of Swift 3 @objc inference in Swift 4 mode is deprecated?</title>
@@ -101,9 +132,9 @@
     
       <category term="maketecheasier" scheme="http://ysir.me/tags/maketecheasier/"/>
     
-      <category term="Win10" scheme="http://ysir.me/tags/Win10/"/>
-    
       <category term="IE" scheme="http://ysir.me/tags/IE/"/>
+    
+      <category term="Win10" scheme="http://ysir.me/tags/Win10/"/>
     
   </entry>
   
@@ -133,9 +164,9 @@
     
       <category term="maketecheasier" scheme="http://ysir.me/tags/maketecheasier/"/>
     
-      <category term="Emoji" scheme="http://ysir.me/tags/Emoji/"/>
-    
       <category term="Win10" scheme="http://ysir.me/tags/Win10/"/>
+    
+      <category term="Emoji" scheme="http://ysir.me/tags/Emoji/"/>
     
   </entry>
   
@@ -554,31 +585,6 @@ set numbe
     
     
       <category term="VIM" scheme="http://ysir.me/tags/VIM/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Linux进程相关</title>
-    <link href="http://ysir.me/2015/09/16/Linux%E8%BF%9B%E7%A8%8B%E7%9B%B8%E5%85%B3/"/>
-    <id>http://ysir.me/2015/09/16/Linux进程相关/</id>
-    <published>2015-09-16T06:45:04.000Z</published>
-    <updated>2017-06-05T17:18:53.847Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="fork"><a href="#fork" class="headerlink" title="fork"></a>fork</h2><p>我们可以通过调用fork创建一个新进程。这个系统调用复制当前进程，在进程表中创建一个新的表项，新表项中的许多属性与当前进程是相同的。新进程几乎与原进程一模一样，执行的代码也完全相同，但新进程有自己的数据空间、环境和文件描述符。fork和exec函数结合在一起使用就是创建新进程所需要的一切了。</p><p>fork之后，子进程是父进程的副本。子进程将获得父进程的数据空间、堆和栈的副本。父子进程不共享这些存储空间部分。父子进程共享正文段。</p><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></div><div class="line"><span class="keyword">pid_t</span> fork(<span class="keyword">void</span>);</div></pre></td></tr></table></figure><p>在父进程中的fork调用返回的是新的子进程的进程号PID（这个PID并不是父进程的PID，而是新建的子进程的PID）。新进程将继续执行，就像原进程一样，不同之处在于，子进程中的fork调用返回的是0。父子进程可以通过这一点来判断究竟谁是父进程，谁是子进程。如果fork失败，它将返回-1。失败通常是因为父进程所拥有的子进程数目超过了规定的限制（CHILD_MAX），此时errno将被设为EAGAIN。如果是因为进程表里没有足够的空间用于创建新的表单或虚拟内存不足，errno变量将被设为ENOMEM。</p><p>也就是说如果fork返回-1，表示进程创建失败；返回0，表示当前进程为子进程；返回其他值表示当前进程为父进程，并且这个值是子进程的PID。</p><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    write(STDOUT_FILENO, <span class="string">"write\n"</span>, <span class="number">6</span>);</div><div class="line">    <span class="built_in">printf</span>(<span class="string">"before fork\n"</span>);</div><div class="line"></div><div class="line">    <span class="keyword">pid_t</span> pid = fork();</div><div class="line">    <span class="keyword">if</span> (pid == <span class="number">-1</span>)</div><div class="line">    &#123;</div><div class="line">        perror(<span class="string">"fork error"</span>);</div><div class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (pid == <span class="number">0</span>)</div><div class="line">    &#123;</div><div class="line">        <span class="comment">//printf("This is child process, pid is %d\n", getpid());</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span></div><div class="line">    &#123;</div><div class="line">        <span class="comment">//printf("This is parent process, pid is %d, child pid is %d\n", getpid(), pid);</span></div><div class="line">        wait(<span class="literal">NULL</span>);</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="built_in">printf</span>(<span class="string">"atfer fork\n"</span>);</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure><p>./a.out输出</p><pre><code>writebefore forkatfer forkatfer fork</code></pre><p>./a.out &gt; tmp.out;cat tmp.out输出</p><pre><code>writebefore forkatfer forkbefore fork（多了一句）atfer fork</code></pre><p>因为write系统调用是不带缓冲的，而标准IO库是带缓冲的。</p><p>如果标准输出连接到终端设备，则它是行缓冲，否则就是全缓冲。</p><p>首先调用write，数据直接写到标准输出。</p><p>./a.out的方式，此时标准输出为终端，那么就是行缓冲，遇到换行符输出并冲洗缓冲区，然后fork，此时缓冲区已经没数据了，所以输出一次before fork。</p><p>./a.out &gt;tmp.out，此时标准输出为文件，是全缓冲，当缓冲区满了才会冲洗缓冲区，fork的时候缓冲区是有内容的，当进程终止时，会冲洗缓冲区。</p><h2 id="wait"><a href="#wait" class="headerlink" title="wait"></a>wait</h2><p>当用fork启动一个子进程时，子进程就有了它自己的生命周期并将独立运行。我们可以通过在父进程中调用wait函数让父进程等待子进程的结束。</p><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/types.h&gt; </span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/wait.h&gt;</span></span></div><div class="line"><span class="keyword">pid_t</span> wait(<span class="keyword">int</span> *status)</div></pre></td></tr></table></figure><p>wait系统调用将暂停父进程直到它的子进程结束为止。调用成功返回wait子进程的PID，它通常是已经结束运行的子进程的PID。状态信息允许父进程了解子进程的退出状态，即子进程的main函数返回的值或子进程中exit函数的退出码。如果status不是空指针，状态信息将被写入它所指向的位置。</p><p>如果调用进程没有子进程，调用就会失败，此时wait返回-1，同时errno被置为ECHILD。</p><p>如果参数status的值不是NULL，wait就会把子进程退出时的状态取出并存入其中，这是一个整数值（int），指出了子进程是正常退出还是被非正常结束的（一个进程也可以被其他进程用信号结束，我们将在以后的文章中介绍），以及正常结束时的返回值，或被哪一个信号结束的等信息。由于这些信息被存放在一个整数的不同二进制位中，所以用常规的方法读取会非常麻烦，人们就设计了一套专门的宏（macro）来完成这项工作。</p><p>WIFEXITED(status) 这个宏用来指出子进程是否为正常退出的，如果是，它会返回一个非零值。</p><p>WEXITSTATUS(status) 当WIFEXITED返回非零值时，我们可以用这个宏来提取子进程的返回值，如果子进程调用exit(5)（或者return 5或者_exit(5)）退出，WEXITSTATUS(status) 就会返回5；如果子进程调用exit(7)，WEXITSTATUS(status)就会返回7。请注意，如果进程不是正常退出的，也就是说， WIFEXITED返回0，这个值就毫无意义。</p><p>WIFSIGNALED(status) 如果子进程是因为一个未捕获的信号而终止，则此宏值为非零值。</p><p>WTERMSIG(status) 如果WIFSIGNALED非零，返回子进程因信号而中止的信号代码。</p><p>WIFSTOPPED(status) 如果子进程意外终止，它就取一个非零值。</p><p>WSTOPSIG(status) 如果WIFSTOPPED非零，返回一个信号代码。</p><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdio.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;unistd.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;sys/wait.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;stdlib.h&gt;</span></span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">    <span class="keyword">pid_t</span> pid = fork();</div><div class="line"></div><div class="line">    <span class="keyword">if</span> (pid == <span class="number">-1</span>)</div><div class="line">    &#123;</div><div class="line">        perror(<span class="string">"fork error"</span>);</div><div class="line">        <span class="built_in">exit</span>(<span class="number">1</span>);</div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (pid == <span class="number">0</span>)</div><div class="line">    &#123;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"This is child process, pid is %d\n"</span>, getpid());</div><div class="line">        sleep(<span class="number">3</span>);</div><div class="line"></div><div class="line">    <span class="built_in">exit</span>(<span class="number">5</span>); <span class="comment">// or return 5 or _exit(5);</span></div><div class="line">    &#125;</div><div class="line">    <span class="keyword">else</span></div><div class="line">    &#123;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"This is parent process, pid is %d, child pid is %d\n"</span>, getpid(), pid);</div><div class="line"></div><div class="line">        <span class="keyword">int</span> status;</div><div class="line">        <span class="built_in">printf</span>(<span class="string">"wait child pid:%d\n"</span>, wait(&amp;status));</div><div class="line"></div><div class="line">        <span class="keyword">if</span> (WIFEXITED(status))</div><div class="line">        &#123;</div><div class="line">            <span class="built_in">printf</span>(<span class="string">"successful, exit code is %d\n"</span>, WEXITSTATUS(status));</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line"></div><div class="line">    <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure><pre><code>This is parent process, pid is 733, child pid is 734This is child process, pid is 734// sleep了3秒wait child pid:734successful, exit code is 5</code></pre><p>僵尸进程</p><p>用fork来创建进程确实很有用，但你必须清楚子进程的运行情况。子进程终止时，它与父进程之间的关联还会保持，直到父进程也正常终止或父进程调用wait才告结束。因此，进程表中代表子进程的表项不会立刻释放。虽然子进程已经不再运行，但它仍然存在于系统中，因为它的退出码还需要保存起来，以备父进程今后的wait调用使用。这时它将成为一个死（defunct）进程或僵尸（zombie）进程。（子进程早于父进程结束，并且父进程没有调用wait来回收子进程就会造成僵尸进程）</p><h2 id="waitpid"><a href="#waitpid" class="headerlink" title="waitpid"></a>waitpid</h2><p>waitpid函数可以用来等待某个特定进程的结束。</p><figure class="highlight c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;sys/types.h&gt;</span></span></div><div class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;sys/wait.h&gt;</span></span></div><div class="line"><span class="keyword">pid_t</span> waitpid(<span class="keyword">pid_t</span> pid,<span class="keyword">int</span> * status,<span class="keyword">int</span> options);</div></pre></td></tr></table></figure><p>pid参数指定需要等待的子进程的PID。如果它的值为-1,waitpid将返回任一子进程的信息。与wait一样，如果status不是空指针，waitpid将把状态信息写到它所指向的位置。option参数可用来改变waitpid的行为，其中最有用的一个选项是WNOHANG，它的作用是防止waitpid调用将调用者的执行挂起。你可以用这个选项来查找是否有子进程已经结束，如果没有，程序将继续执行。其他的选项和wait调用的选项相同。 因此，如果想让父进程周期性地检查某个特定的子进程是否已终止，就可以使用如下的调用方式：</p><p><code>waitpid(child_pid, (int *)0, WNOHANG);</code></p><p>如果子进程没有结束或意外终止，它就返回0，否则返回child_pid。如果waitpid失败，它将返回-1并设置errno。失败的情况包括：没有子进程（errno设置为ECHILD）、调用被某个信号中断（EINTR）或选项参数无效（EINVAL）</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;fork&quot;&gt;&lt;a href=&quot;#fork&quot; class=&quot;headerlink&quot; title=&quot;fork&quot;&gt;&lt;/a&gt;fork&lt;/h2&gt;&lt;p&gt;我们可以通过调用fork创建一个新进程。这个系统调用复制当前进程，在进程表中创建一个新的表项，新表项中的许多属性与当前进程是
-      
-    
-    </summary>
-    
-      <category term="C/C++" scheme="http://ysir.me/categories/C-C/"/>
-    
-    
-      <category term="进程" scheme="http://ysir.me/tags/%E8%BF%9B%E7%A8%8B/"/>
     
   </entry>
   
