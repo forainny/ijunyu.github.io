@@ -4,6 +4,34 @@
 
     
   <url>
+    <loc>http://ysir.me/2018/01/21/%E4%BD%BF%E7%94%A8NMap%E6%A3%80%E6%9F%A5Linux%E7%9A%84%E5%BC%80%E6%94%BE%E7%AB%AF%E5%8F%A3/</loc>
+    <lastmod>2018-01-21T11:30:22.127Z</lastmod>
+    <data>
+        <display>
+        <title>使用NMap检查Linux的开放端口</title>
+        <pubTime>2018-01-21T11:28:26.000Z</pubTime>
+        
+        <tag>翻译</tag>
+         
+        <tag>maketecheasier</tag>
+         
+        <tag>Linux</tag>
+         
+        <tag>NMap</tag>
+         
+        <tag>端口</tag>
+         
+         
+           
+             
+              <breadCrumb title="翻译" url="http://ysir.me/categories/%E7%BF%BB%E8%AF%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ysir.me/2018/01/10/%E6%AF%8F%E4%B8%80%E4%B8%AALinux%E7%94%A8%E6%88%B7%E5%BF%85%E9%A1%BB%E4%BD%BF%E7%94%A8%E7%9A%8411%E6%AC%BE%E4%BE%BF%E6%90%BA%E5%BA%94%E7%94%A8/</loc>
     <lastmod>2018-01-10T15:16:32.499Z</lastmod>
     <data>
@@ -619,9 +647,9 @@
         <title>Qt：Invalid parameter passed to C runtime function.</title>
         <pubTime>2015-08-20T10:36:26.000Z</pubTime>
         
-        <tag>Qt</tag>
-         
         <tag>问题</tag>
+         
+        <tag>Qt</tag>
          
          
            
@@ -1336,9 +1364,9 @@
         <title>Qt在各平台上的搭建qt-everywhere</title>
         <pubTime>2014-07-23T09:06:19.000Z</pubTime>
         
-        <tag>Qt</tag>
-         
         <tag>编译</tag>
+         
+        <tag>Qt</tag>
          
         <tag>安装</tag>
          

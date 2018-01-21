@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ysir.me/"/>
-  <updated>2018-01-10T15:16:32.499Z</updated>
+  <updated>2018-01-21T11:30:22.127Z</updated>
   <id>http://ysir.me/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>使用NMap检查Linux的开放端口</title>
+    <link href="http://ysir.me/2018/01/21/%E4%BD%BF%E7%94%A8NMap%E6%A3%80%E6%9F%A5Linux%E7%9A%84%E5%BC%80%E6%94%BE%E7%AB%AF%E5%8F%A3/"/>
+    <id>http://ysir.me/2018/01/21/使用NMap检查Linux的开放端口/</id>
+    <published>2018-01-21T11:28:26.000Z</published>
+    <updated>2018-01-21T11:30:22.127Z</updated>
+    
+    <content type="html"><![CDATA[<p>原文链接：<br><a href="https://www.maketecheasier.com/use-nmap-check-linux-open-ports/" target="_blank" rel="external">How to Use NMap to Check Your Linux Computer for Open Ports</a></p><p>保护 Linux 系统的一个主要方式是封锁未使用的端口以阻止它们被外界访问，并最终被攻击者劫持。</p><p>通过使用 NMAP 工具，你可以确定 Linux 上哪些端口是开放的，然后关闭你不需要和未使用的服务。</p><h2 id="安装-NMAP"><a href="#安装-NMAP" class="headerlink" title="安装 NMAP"></a>安装 NMAP</h2><p>sudo apt install nmap</p><h2 id="执行扫描"><a href="#执行扫描" class="headerlink" title="执行扫描"></a>执行扫描</h2><p>尽管 NMAP 是一个比较简单的命令行工具，但是它有很多选项可以在各种情况下执行不同情况的扫描。</p><p>为了扫描你的电脑，你将需要它的 IP 地址。如果你不知道，请在终端中运行 ifconfig 以查看。</p><p>一旦你有了 IP 之后，你就可以用 NMAP 来扫描了：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo nmap -sS -O 192.168.1.100</div></pre></td></tr></table></figure><p>NMAP 需要一段时间来扫描你的计算机，它会告诉你哪些服务在哪些端口上运行，以及这些端口是否打开（它们全部都是开放的）。</p><p>如果你想从 NMAP 获取更多关于你的计算机的信息，可以使用 -A 选项进行扫描。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo nmap -A 192.169.1.100</div></pre></td></tr></table></figure><p>最后，你也可以扫描你计算机上所有的端口，这将需要很长时间，因为有成千上万个端口需要扫描。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo nmap -sS -O -p- 192.168.1.100</div></pre></td></tr></table></figure><h2 id="端口"><a href="#端口" class="headerlink" title="端口"></a>端口</h2><p>首先，Ubuntu 和其它基于 Debian 的发行版以奇怪的方式来处理服务。每个程序安装后立即作为服务自动启动，虽然这样看起来很方便，但确实不合理。因为你永远不会想要在服务器上运行一个未配置的服务，所以你必须马上把这个服务关掉以便配置它来正常服务。</p><p>下面是 Linux 系统上使用的一些最常见的端口：</p><ul><li>21 - FTP</li><li>22 - SSH</li><li>25 - SMTP（发邮件）</li><li>53 - DNS（域名服务）</li><li>80 - HTTP（网络服务器）</li><li>110 - POP3（邮件收件箱）</li><li>123 - NTP（网络时间协议）</li><li>143 - IMAP（邮件收件箱）</li><li>443 - HTTPS（安全网络服务器）</li><li>465 - SMTPS（发送安全邮件）</li><li>631 - CUPS（打印服务）</li><li>993 - IMAPS（安全邮件收件箱）</li><li>995 - POP3（安全邮件收件箱）</li></ul><h2 id="关闭服务"><a href="#关闭服务" class="headerlink" title="关闭服务"></a>关闭服务</h2><p>如果你发现了在你的电脑上有一些不需要的服务，你可以使用 Systemd 将其关闭并禁用它们，这样在下次启动计算机的时候这些服务不会自动运行了。</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo systemctl stop apache2</div></pre></td></tr></table></figure><p>上面的命令关闭了 apache2 服务，如果你想在启动时禁用它，运行下面的命令：</p><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo systemctl disable apache2</div></pre></td></tr></table></figure><p>如果你不知道服务的确切名称，你可以列出服务目录中的内容：</p><p><img src="https://i.loli.net/2018/01/19/5a61c5d119915.jpg" alt=""></p><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo ls -lah /etc/init.d</div></pre></td></tr></table></figure><p><img src="https://i.loli.net/2018/01/19/5a61c5d11d2b0.jpg" alt=""></p><h2 id="使用-Iptables-屏蔽端口"><a href="#使用-Iptables-屏蔽端口" class="headerlink" title="使用 Iptables 屏蔽端口"></a>使用 Iptables 屏蔽端口</h2><p>如果你想进一步锁定未使用的端口，则可以在 iptables 防火墙中设置规则以仅允许你使用的端口，屏蔽其他所有端口。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;原文链接：&lt;br&gt;&lt;a href=&quot;https://www.maketecheasier.com/use-nmap-check-linux-open-ports/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;How to Use NMap to Chec
+      
+    
+    </summary>
+    
+      <category term="翻译" scheme="http://ysir.me/categories/%E7%BF%BB%E8%AF%91/"/>
+    
+    
+      <category term="翻译" scheme="http://ysir.me/tags/%E7%BF%BB%E8%AF%91/"/>
+    
+      <category term="maketecheasier" scheme="http://ysir.me/tags/maketecheasier/"/>
+    
+      <category term="Linux" scheme="http://ysir.me/tags/Linux/"/>
+    
+      <category term="NMap" scheme="http://ysir.me/tags/NMap/"/>
+    
+      <category term="端口" scheme="http://ysir.me/tags/%E7%AB%AF%E5%8F%A3/"/>
+    
+  </entry>
   
   <entry>
     <title>每一个Linux用户必须使用的11款便携应用</title>
@@ -555,36 +588,6 @@ TARGET = conf
     
     
       <category term="命令" scheme="http://ysir.me/tags/%E5%91%BD%E4%BB%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>配置vim</title>
-    <link href="http://ysir.me/2015/09/16/%E9%85%8D%E7%BD%AEvim/"/>
-    <id>http://ysir.me/2015/09/16/配置vim/</id>
-    <published>2015-09-16T15:16:52.000Z</published>
-    <updated>2017-06-04T10:25:51.816Z</updated>
-    
-    <content type="html"><![CDATA[<p>vim /etc/vim/vimrc 打开vimrc</p><p>结尾加上</p><pre><code>set ts=4 ts = tabstop，缩进所使用的长度set expandtab tab转换成空格set autoindent 自动缩进set number 显示行号</code></pre><p>打开文件时跳到上一次退出的位置<br>找到Uncomment the following to have Vim jump to the last position when reopening a file取消注释掉下面的if…endif</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;vim /etc/vim/vimrc 打开vimrc&lt;/p&gt;
-&lt;p&gt;结尾加上&lt;/p&gt;
-&lt;pre&gt;&lt;code&gt;set ts=4 ts = tabstop，缩进所使用的长度
-set expandtab tab转换成空格
-set autoindent 自动缩进
-set numbe
-      
-    
-    </summary>
-    
-      <category term="工具" scheme="http://ysir.me/categories/%E5%B7%A5%E5%85%B7/"/>
-    
-    
-      <category term="VIM" scheme="http://ysir.me/tags/VIM/"/>
     
   </entry>
   
