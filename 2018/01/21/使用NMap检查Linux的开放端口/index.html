@@ -106,20 +106,20 @@
 
 
 
-<meta name="description" content="原文链接：How to Use NMap to Check Your Linux Computer for Open Ports 保护 Linux 系统的一个主要方式是封锁未使用的端口以阻止它们被外界访问，并最终被攻击者劫持。 通过使用 NMAP 工具，你可以确定 Linux 上哪些端口是开放的，然后关闭你不需要和未使用的服务。 安装 NMAPsudo apt install nmap 执行扫描尽">
+<meta name="description" content="原文链接：How to Use NMap to Check Your Linux Computer for Open Ports 保护 Linux 系统的一个主要方式是封锁未使用的端口以阻止它们被外界访问，并最终被攻击者劫持。通过使用 NMAP 工具，你可以确定 Linux 上哪些端口是开放的，然后关闭你不需要和未使用的服务。 安装 NMAP1sudo apt install nmap 执行扫描尽">
 <meta name="keywords" content="翻译,maketecheasier,Linux,NMap,端口">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用NMap检查Linux的开放端口">
 <meta property="og:url" content="http://ysir.me/2018/01/21/使用NMap检查Linux的开放端口/index.html">
 <meta property="og:site_name" content="y的小站">
-<meta property="og:description" content="原文链接：How to Use NMap to Check Your Linux Computer for Open Ports 保护 Linux 系统的一个主要方式是封锁未使用的端口以阻止它们被外界访问，并最终被攻击者劫持。 通过使用 NMAP 工具，你可以确定 Linux 上哪些端口是开放的，然后关闭你不需要和未使用的服务。 安装 NMAPsudo apt install nmap 执行扫描尽">
+<meta property="og:description" content="原文链接：How to Use NMap to Check Your Linux Computer for Open Ports 保护 Linux 系统的一个主要方式是封锁未使用的端口以阻止它们被外界访问，并最终被攻击者劫持。通过使用 NMAP 工具，你可以确定 Linux 上哪些端口是开放的，然后关闭你不需要和未使用的服务。 安装 NMAP1sudo apt install nmap 执行扫描尽">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://i.loli.net/2018/01/19/5a61c5d119915.jpg">
 <meta property="og:image" content="https://i.loli.net/2018/01/19/5a61c5d11d2b0.jpg">
-<meta property="og:updated_time" content="2018-01-21T11:30:22.127Z">
+<meta property="og:updated_time" content="2018-01-21T11:35:57.558Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用NMap检查Linux的开放端口">
-<meta name="twitter:description" content="原文链接：How to Use NMap to Check Your Linux Computer for Open Ports 保护 Linux 系统的一个主要方式是封锁未使用的端口以阻止它们被外界访问，并最终被攻击者劫持。 通过使用 NMAP 工具，你可以确定 Linux 上哪些端口是开放的，然后关闭你不需要和未使用的服务。 安装 NMAPsudo apt install nmap 执行扫描尽">
+<meta name="twitter:description" content="原文链接：How to Use NMap to Check Your Linux Computer for Open Ports 保护 Linux 系统的一个主要方式是封锁未使用的端口以阻止它们被外界访问，并最终被攻击者劫持。通过使用 NMAP 工具，你可以确定 Linux 上哪些端口是开放的，然后关闭你不需要和未使用的服务。 安装 NMAP1sudo apt install nmap 执行扫描尽">
 <meta name="twitter:image" content="https://i.loli.net/2018/01/19/5a61c5d119915.jpg">
 
 
@@ -348,7 +348,7 @@
               
                 <span class="post-meta-item-text">更新于&#58;</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-01-21T19:30:22+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-01-21T19:35:57+08:00">
                 2018-01-21
               </time>
             
@@ -403,7 +403,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  745
+                  746
                 </span>
               
 
@@ -441,12 +441,9 @@
 
       
         <p>原文链接：<br><a href="https://www.maketecheasier.com/use-nmap-check-linux-open-ports/" target="_blank" rel="external">How to Use NMap to Check Your Linux Computer for Open Ports</a></p>
-<p>保护 Linux 系统的一个主要方式是封锁未使用的端口以阻止它们被外界访问，并最终被攻击者劫持。</p>
-<p>通过使用 NMAP 工具，你可以确定 Linux 上哪些端口是开放的，然后关闭你不需要和未使用的服务。</p>
-<h2 id="安装-NMAP"><a href="#安装-NMAP" class="headerlink" title="安装 NMAP"></a>安装 NMAP</h2><p>sudo apt install nmap</p>
-<h2 id="执行扫描"><a href="#执行扫描" class="headerlink" title="执行扫描"></a>执行扫描</h2><p>尽管 NMAP 是一个比较简单的命令行工具，但是它有很多选项可以在各种情况下执行不同情况的扫描。</p>
-<p>为了扫描你的电脑，你将需要它的 IP 地址。如果你不知道，请在终端中运行 ifconfig 以查看。</p>
-<p>一旦你有了 IP 之后，你就可以用 NMAP 来扫描了：</p>
+<p>保护 Linux 系统的一个主要方式是封锁未使用的端口以阻止它们被外界访问，并最终被攻击者劫持。<br>通过使用 NMAP 工具，你可以确定 Linux 上哪些端口是开放的，然后关闭你不需要和未使用的服务。</p>
+<h2 id="安装-NMAP"><a href="#安装-NMAP" class="headerlink" title="安装 NMAP"></a>安装 NMAP</h2><figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo apt install nmap</div></pre></td></tr></table></figure>
+<h2 id="执行扫描"><a href="#执行扫描" class="headerlink" title="执行扫描"></a>执行扫描</h2><p>尽管 NMAP 是一个比较简单的命令行工具，但是它有很多选项可以在各种情况下执行不同情况的扫描。<br>为了扫描你的电脑，你将需要它的 IP 地址。如果你不知道，请在终端中运行 ifconfig 以查看。<br>一旦你有了 IP 之后，你就可以用 NMAP 来扫描了：</p>
 <figure class="highlight shell"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sudo nmap -sS -O 192.168.1.100</div></pre></td></tr></table></figure>
 <p>NMAP 需要一段时间来扫描你的计算机，它会告诉你哪些服务在哪些端口上运行，以及这些端口是否打开（它们全部都是开放的）。</p>
 <p>如果你想从 NMAP 获取更多关于你的计算机的信息，可以使用 -A 选项进行扫描。</p>
