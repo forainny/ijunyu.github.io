@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://ysir.me/"/>
-  <updated>2018-01-22T14:33:50.227Z</updated>
+  <updated>2018-01-25T13:57:18.523Z</updated>
   <id>http://ysir.me/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何使用画图3D</title>
+    <link href="http://ysir.me/2018/01/25/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E7%94%BB%E5%9B%BE3D/"/>
+    <id>http://ysir.me/2018/01/25/如何使用画图3D/</id>
+    <published>2018-01-25T13:56:41.000Z</published>
+    <updated>2018-01-25T13:57:18.523Z</updated>
+    
+    <content type="html"><![CDATA[<p>原文链接：<br><a href="https://www.maketecheasier.com/what-is-paint-3d/" target="_blank" rel="external">What Is “Paint 3D,” and How Is It Used?</a></p><p>如果你使用的是 Windows 10，你可能在计算机上看到了一个名为“画图 3D”的奇怪应用程序。听起来类似于之前系统自带的的画图程序。但是最后的“3D”究竟是什么呢？</p><h2 id="什么是画图-3D"><a href="#什么是画图-3D" class="headerlink" title="什么是画图 3D"></a>什么是画图 3D</h2><p>画图 3D 通过 Win10 创意者更新（Creator’s Update）发布，该更新是微软为 Windows 10 发布的一组免费功能。</p><p>它不像其他 3D 工具，比如 Blender，就如在复杂性方面不如 Photoshop 一样。如果你是 3D 领域的专家，你可以继续使用原先的 3D 建模工具。如果你只是想尝试 3D 形状并获得一些乐趣，那么画图 3D 将很适合你。</p><h2 id="是否应该替代画图工具"><a href="#是否应该替代画图工具" class="headerlink" title="是否应该替代画图工具"></a>是否应该替代画图工具</h2><p>人们经常使用 Windows 上自带的画图工具进行各种基本的图像处理任务，例如裁剪。因此，人们可能想知道画图 3D 是否为画图的“升级版”，以及是否应该使用画图 3D 进行基本的图像处理作业。</p><p>画图 3D 绝对比画图工具更先进，但它更专注于渲染 3D 对象。因此，如果你想裁剪照片或更改照片的大小，最好使用画图而不是画图 3D。如果你想要更高级的裁剪和编辑照片的软件，那么使用 GIMP 或 Paint.NET 等免费图像工具可能会更好。</p><h2 id="画图-3D-能做什么"><a href="#画图-3D-能做什么" class="headerlink" title="画图 3D 能做什么"></a>画图 3D 能做什么</h2><h3 id="开始使用"><a href="#开始使用" class="headerlink" title="开始使用"></a>开始使用</h3><p>当你使用画图 3D 时，会看到一个白色的画布，就像在画图工具中看到的一样。不要被骗了！虽然画布是常规画图工具中的主要特性，但是画图 3D 的主要场景是 3D 模型本身。因此，你可能会发现画图 3D 的画布主要用来绘制一个简单的背景或参考。</p><p>下面的例子中，我们将使用这个水下场景作为一个有趣的背景。</p><p><img src="https://i.loli.net/2018/01/24/5a6853ae9c599.jpg" alt=""></p><h3 id="添加-3D-形状"><a href="#添加-3D-形状" class="headerlink" title="添加 3D 形状"></a>添加 3D 形状</h3><p>如果你想在场景中添加 3D 形状，只需点击窗口顶部的“对象”按钮。</p><p><img src="https://i.loli.net/2018/01/24/5a68543291be6.jpg" alt=""></p><p>在右边你会看到你可以使用的形状列表。对于我们的例子，我们将点击鱼。</p><p><img src="https://i.loli.net/2018/01/24/5a68547af2df4.jpg" alt=""></p><p>现在我们将点击场景来放置我们的鱼。在 3D 空间中，我们可以缩放或者旋转形状。同时你可以像普通的画图工具一样向上，向下，向左和向右移动形状，同样也支持物体前后移动。</p><p><img src="https://i.loli.net/2018/01/24/5a6855f300143.jpg" alt=""></p><h3 id="使用贴纸"><a href="#使用贴纸" class="headerlink" title="使用贴纸"></a>使用贴纸</h3><p>这条鱼看起来很平淡无味，不是吗？让我们添加贴纸为这一条鱼生动起来。要做到这一点，我们点击顶部的“贴纸”按钮。</p><p><img src="https://i.loli.net/2018/01/24/5a68567c0e284.jpg" alt=""></p><p>在右侧，我们点击脸部图标，然后挑一个漂亮的眼睛。</p><p><img src="https://i.loli.net/2018/01/24/5a6856a9be1da.jpg" alt=""></p><p>我们在鱼的身上点击鼠标来放置眼睛，调整眼睛的位置，然后点击右边的邮票图标。一旦完成，贴纸将被印在鱼上。贴纸工具继续保持活动，以方便我们粘贴多个眼睛。我们现在不想添加更多的眼睛，所以我们按 ESC 退出贴纸工具。</p><p><img src="https://i.loli.net/2018/01/24/5a68573d68303.jpg" alt=""></p><p>多贴几张贴纸后，我们就有了一个更生动活泼的鱼！</p><p><img src="https://i.loli.net/2018/01/24/5a68577ccd119.jpg" alt=""></p><h3 id="使用涂鸦"><a href="#使用涂鸦" class="headerlink" title="使用涂鸦"></a>使用涂鸦</h3><p>如果在预设中找不到需要的形状，那么你可以随时将常规涂鸦变为 3D 涂鸦。回到“3D 对象”菜单中，你可以选择在“3D 涂鸦”下绘制 3D 形状。你可能需要向下滚动才能看到它们。</p><p><img src="https://i.loli.net/2018/01/24/5a68580620044.jpg" alt=""></p><p>“锐边涂鸦”工具通过单击设置的锚点之间绘制直线，非常像其他绘图程序中的钢笔工具。当单击起始锚点时，画图 3D 将线条变成 3D 形状。这对于绘制像星星一样的东西非常棒，因为它使用的是锐角和直线。</p><p>“柔边涂鸦”可以让你画出自由的形状，并给予完成的形状一个圆形的外观，就像一个云。我们使用柔边涂鸦画了一个粗糙的水母。</p><p><img src="https://i.loli.net/2018/01/24/5a6859e21dc0d.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;原文链接：&lt;br&gt;&lt;a href=&quot;https://www.maketecheasier.com/what-is-paint-3d/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;What Is “Paint 3D,” and How Is It Used
+      
+    
+    </summary>
+    
+      <category term="翻译" scheme="http://ysir.me/categories/%E7%BF%BB%E8%AF%91/"/>
+    
+    
+      <category term="翻译" scheme="http://ysir.me/tags/%E7%BF%BB%E8%AF%91/"/>
+    
+      <category term="maketecheasier" scheme="http://ysir.me/tags/maketecheasier/"/>
+    
+      <category term="Windows" scheme="http://ysir.me/tags/Windows/"/>
+    
+      <category term="工具" scheme="http://ysir.me/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="画图" scheme="http://ysir.me/tags/%E7%94%BB%E5%9B%BE/"/>
+    
+  </entry>
   
   <entry>
     <title>macOS上最好的6款截屏工具</title>
@@ -559,33 +592,6 @@ TARGET = conf
 &lt;p&gt;终端显示：&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;[1]+  Stopped                 vim test.txt
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt;[1
-      
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://ysir.me/categories/Linux/"/>
-    
-    
-      <category term="命令" scheme="http://ysir.me/tags/%E5%91%BD%E4%BB%A4/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>man命令详解</title>
-    <link href="http://ysir.me/2015/09/16/man%E5%91%BD%E4%BB%A4%E8%AF%A6%E8%A7%A3/"/>
-    <id>http://ysir.me/2015/09/16/man命令详解/</id>
-    <published>2015-09-16T15:27:53.000Z</published>
-    <updated>2017-06-04T10:32:24.579Z</updated>
-    
-    <content type="html"><![CDATA[<p><code>man</code><br>manual手册，通常放在/usr/share/man，可以修改/etc/man.config(man.conf或manpath.conf)来改善这个目录</p><p>例如<br><code>man date</code></p><pre><code>DATE(1)                   BSD General Commands Manual                  DATE(1)DATE(1) 中数字的含义1 用户在shell环境中可以操作的命令或可执行文件2 系统内核可调用的函数与工具等3 一些常用函数与函数库，大部分为C函数库4 设备文件的说明，通常在/dev下的文件5 配置文件或者是某些文件的格式6 游戏7 惯例与协议等，例如linux文件系统、网络协议、ASCII code等说明8 系统管理员可用的管理命令9 跟kernel有关的文件NAME    date -- display or set date and time命令的完整全名及简单用途说明SYNOPSIS    date [-ju] [-rseconds] [-v [+|-]val[ymwdHMS]]... [+output_fmt]    date [-jnu] [[[mm]dd]HH]MM[[cc]yy][.ss]    date [-jnu]-finput_fmtnew_date [+output_fmt]    date [-ddst] [-tminutes_west]命令的基本语法DESCRIPTION    When invoked without arguments, thedate utility displays the current    date and time.  Otherwise, depending on the options specified,date will    set the date and time or print it in a user-defined way.    Thedate utility displays the date and time read from the kernel clock.    When used to set the date and time, both the kernel clock and the hard-    ware clock are updated.    Only the superuser may set the date, and if the system securelevel (see    securelevel(8)) is greater than 1, the time may not be changed by more    than 1 second.    The options are as follows:    -ddst  Set the kernel&apos;s value for daylight saving time.  Ifdst is non-            zero, future calls to gettimeofday(2) will return a non-zero for            tz_dsttime.详细说明用法，-d为短参数名称，--date为完整参数名（Linux下和Mac有不同）</code></pre><p>man page大致分为下面几个部分</p><pre><code>NAME            简短的命令、数据名称说明SYNOPSIS       简短的命令执行语法简介DESCRIPTION    较为完整的说明OPTIONS        针对SYNOPSIS部分中，有列举的所有可用的选项说明COMMANDS     当这个程序在执行的时候，可以在此程序中执行的命令FILES            这个程序或数据所使用或参考或连接到的某些文件SEE ALSO       这个命令有关的其他说明EXAMPLE        范例BUGS            是否有相关的错误</code></pre><p>查询跟man命令有关的手册</p><p>man -f man 相当于 whatis man</p><p>只要有man关键字就将该说明列出来</p><p>man -k man 相当于 apropos man</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;&lt;code&gt;man&lt;/code&gt;&lt;br&gt;manual手册，通常放在/usr/share/man，可以修改/etc/man.config(man.conf或manpath.conf)来改善这个目录&lt;/p&gt;
-&lt;p&gt;例如&lt;br&gt;&lt;code&gt;man date&lt;/code&gt;&lt;/p&gt;
-
       
     
     </summary>

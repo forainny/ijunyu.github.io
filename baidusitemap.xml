@@ -4,6 +4,34 @@
 
     
   <url>
+    <loc>http://ysir.me/2018/01/25/%E5%A6%82%E4%BD%95%E4%BD%BF%E7%94%A8%E7%94%BB%E5%9B%BE3D/</loc>
+    <lastmod>2018-01-25T13:57:18.523Z</lastmod>
+    <data>
+        <display>
+        <title>如何使用画图3D</title>
+        <pubTime>2018-01-25T13:56:41.000Z</pubTime>
+        
+        <tag>翻译</tag>
+         
+        <tag>maketecheasier</tag>
+         
+        <tag>Windows</tag>
+         
+        <tag>工具</tag>
+         
+        <tag>画图</tag>
+         
+         
+           
+             
+              <breadCrumb title="翻译" url="http://ysir.me/categories/%E7%BF%BB%E8%AF%91/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://ysir.me/2018/01/22/macOS%E4%B8%8A%E6%9C%80%E5%A5%BD%E7%9A%846%E6%AC%BE%E6%88%AA%E5%B1%8F%E5%B7%A5%E5%85%B7/</loc>
     <lastmod>2018-01-22T14:33:50.227Z</lastmod>
     <data>
@@ -675,9 +703,9 @@
         <title>Qt：Invalid parameter passed to C runtime function.</title>
         <pubTime>2015-08-20T10:36:26.000Z</pubTime>
         
-        <tag>问题</tag>
-         
         <tag>Qt</tag>
+         
+        <tag>问题</tag>
          
          
            
@@ -969,9 +997,9 @@
         <title>Failed to import package with error: Couldn't decompress package</title>
         <pubTime>2015-06-11T03:14:39.000Z</pubTime>
         
-        <tag>Unity</tag>
-         
         <tag>问题</tag>
+         
+        <tag>Unity</tag>
          
          
            
@@ -1392,9 +1420,9 @@
         <title>Qt在各平台上的搭建qt-everywhere</title>
         <pubTime>2014-07-23T09:06:19.000Z</pubTime>
         
-        <tag>编译</tag>
-         
         <tag>Qt</tag>
+         
+        <tag>编译</tag>
          
         <tag>安装</tag>
          
